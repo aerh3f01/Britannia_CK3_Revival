@@ -1,0 +1,57 @@
+﻿
+# Have a look at _court_positions.info for documentation
+
+# COURT POSITIONS
+#Lawman
+
+lawman = {
+	max_available_positions = 1
+	category = court_position_category_royal
+	
+	opinion = {
+		value = regular_court_position_opinion
+	allowed_titles = {
+	  tier = kingdom
+	  OR = {
+		tier = empire
+	  }
+	}
+	opinion = {
+	  who = ROOT
+	  modifier = var:lawman_opinion_modifier
+	}
+	define_variable = {
+	  name = lawman_opinion_modifier
+	  value = {
+		multiply = {
+		  base_value = 5
+		  factor = {
+			character_aptitude = diplomacy
+		  }
+		}
+	  }
+	}
+  }
+  is_shown_character = {
+	scope:employee = {
+		is_imprisoned = no
+	}
+}
+
+
+valid_character = {
+	scope:employee = {
+		OR = {
+			is_vassal_of = scope:liege
+			is_courtier_of = scope:liege
+		}
+	}
+}
+
+revoke_cost = {
+	prestige =  {
+		value = major_court_position_prestige_revoke_cost
+
+		}
+	}
+}
