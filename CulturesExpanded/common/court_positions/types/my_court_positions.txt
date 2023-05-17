@@ -46,7 +46,7 @@ Herald_court_position = {
 			is_imprisoned = no
 		}
 					}
-			
+	}		
 
 	revoke_cost = {
 		prestige =  {
