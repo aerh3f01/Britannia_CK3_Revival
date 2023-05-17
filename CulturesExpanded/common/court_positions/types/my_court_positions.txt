@@ -5,7 +5,7 @@
 #Herald
 
 Herald_court_position = {
-	max_available_positions = 3
+	max_available_positions = 1
 	category = court_position_category_royal
 	minimum_rank = kingdom
 
@@ -39,13 +39,13 @@ Herald_court_position = {
 			OR = {
 				is_vassal_of = scope:liege
 				is_courtier_of = scope:liege
-	}
+			}
 		}
-	is_shown_character = {
-		scope:employee = {
+		is_shown_character = {
+			scope:employee = {
 			is_imprisoned = no
+			}
 		}
-					}
 	}		
 
 	revoke_cost = {
