@@ -1,9 +1,10 @@
-version="0.01"
+version="0.0.2"
 tags={
 	"Utilities"
 	"Historical"
 	"Gameplay"
 	"Events"
+	"Culture"
 }
 name="Cultures Expanded"
-supported_version="1.9.0.4"
+supported_version="1.9.0.*"
