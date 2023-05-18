@@ -18,7 +18,7 @@
   <p align="center">
     !!project_description!!
     <br />
-    <a href="https://github.com/LordNapoleon/CulturesExpanded-Ck3"><strong>Explore the mod! »</strong></a>
+    <a href="https://github.com/LordNapoleon/CulturesExpanded-Ck3/tree/main/CulturesExpanded"><strong>Explore the mod! »</strong></a>
     <br />
     <br />
     <a href="https://github.com/LordNapoleon/CulturesExpanded-Ck3/issues">Report Bug</a>
