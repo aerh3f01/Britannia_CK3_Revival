@@ -2,7 +2,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/LordNapoleon/CulturesExpanded-Ck3">
-    <img src="blank.png" alt="Logo" height="200">
+    <img src="cultures_expanded.png" alt="Logo" height="200">
   </a>
 
 <h3 align="center">Cultures Expanded</h3>
