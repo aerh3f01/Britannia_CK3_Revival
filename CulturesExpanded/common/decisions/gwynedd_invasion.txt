@@ -1,0 +1,20 @@
+﻿gwynedd_invasion_decision = {
+		is_shown = {
+			is_landed = yes
+
+		}
+		cost = {
+			prestige = 300
+		}
+		effect = {
+
+		# Add effects of the decision here.
+
+	}
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_available_adult = yes
+		is_at_war = no
+	}
+	ai_check_interval = 1 # Change this value if you want the AI to consider this decision.
+}
