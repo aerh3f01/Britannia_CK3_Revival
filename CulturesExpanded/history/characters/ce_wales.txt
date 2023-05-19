@@ -7,6 +7,7 @@
 	stewardship = 15
 	religion = "catholic"	
 	culture = "welsh"
+	sexuality = heterosexual
 	1010.4.8 = {
 		birth = yes
 	}
@@ -24,6 +25,7 @@
     stewardship = 15
     religion = "catholic"
     culture = "welsh"
+    sexuality = heterosexual
     1072.4.4 = {
         death = yes
     }
