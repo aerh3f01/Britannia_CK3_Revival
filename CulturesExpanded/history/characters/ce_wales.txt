@@ -1,0 +1,32 @@
+6651442 = {
+	name = "Gruffydd"	#ap Llywelyn
+	dynasty = 2100001 #Lyon
+	martial = 20
+	diplomacy = 23
+	intrigue = 10
+	stewardship = 15
+	religion = "catholic"	
+	culture = "welsh"
+	1010.4.8 = {
+		birth = yes
+	}
+	1063.8.5 = {
+		death = yes
+	}
+}
+
+4542731 = {
+    name = "Maredudd" #ab Owain ab Edwin
+    dynasty = 2100001 #Lyon
+    martial = 20
+    diplomacy = 23
+    intrigue = 10
+    stewardship = 15
+    religion = "catholic"
+    culture = "welsh"
+    1072.4.4 = {
+        death = yes
+    }
+}
+
+
