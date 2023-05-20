@@ -1,0 +1,33 @@
+welsh_decisions.0001 = {
+	key = call_the_gaels
+	potential = {
+		ai = no
+		culture = welsh
+		OR = {
+			has_landed_title = k_wales
+			has_landed_title = d_wales
+		}
+	}
+	allow = {
+		war = yes
+	}
+
+	immediate = {
+        # Add any necessary conditions for the event to trigger
+
+        spawn_unit = {
+            template = archers
+            location = {
+                type = capital
+                who = ROOT
+            }
+            owner = ROOT
+            commander = yes
+		size = 400
+       		 }
+		
+			}
+	ai_will_do = {
+		factor = 0
+	}
+}
