@@ -1,4 +1,4 @@
-k_cymru = {
+k_wales = {
 	867.1.1 = { change_development_level = 4 }
 	1066.1.1 = { change_development_level = 8 }
 }
@@ -19,7 +19,7 @@ d_gwynedd = {
 }
 
 
-c_sir_aberteifi = {
+c_cardiganshire = {
     #Cardiganshire
 	1063.1.1 = {
 		holder = 138496 #Maredudd ap Owain ap Edwin
@@ -43,7 +43,7 @@ c_merioneth = {
 }
 
 
-c_sir_gaernarfon = {
+c_caernarfonshire = {
     #Caernarfonshire
 	1063.1.1 = {
 		holder = 6358 #Bleddyn ap Cynfyn
@@ -51,7 +51,7 @@ c_sir_gaernarfon = {
 }
 
 
-c_ynys_mon = {
+c_anglesey = {
     #anglesey
 	1063.1.1 = {
 		holder = 6358 #Bleddyn ap Cynfyn
@@ -59,7 +59,7 @@ c_ynys_mon = {
 }
 
 
-c_sir_ddinbych = {
+c_denbighshire = {
     #Denbighshire
 	1063.1.1 = {
 		liege = d_gwynedd
@@ -141,7 +141,7 @@ d_deheubarth = {
 }
 
 
-c_sir_gaerfyrddin = {
+c_carmarthenshire = {
     #Carmarthenshire
 	1066.1.1 = {
 		holder = 138496 #Maredudd ap Owain ap Edwin
@@ -189,7 +189,7 @@ c_pembrokeshire = {
 }
 
 
-c_morgannwg = {
+c_glamorgan = {
     #glamorgan
 	1065.1.1 = {
 		holder = 6362 #Cadwgan ap Meurig
@@ -219,7 +219,7 @@ c_morgannwg = {
 }
 
 
-c_sir_fynwy = {
+c_monmouthshire = {
 	#c_monmouthshire
 	1065.1.1 = {
 		holder = 6362 #Cadwgan ap Meurig
@@ -228,7 +228,7 @@ c_sir_fynwy = {
 }
 
 
-c_brycheiniog = {
+c_brecknockshire = {
 	#brecon
 	1060.1.1 = {
 		holder = 131704 #Bleddyn ap Maenyrch
