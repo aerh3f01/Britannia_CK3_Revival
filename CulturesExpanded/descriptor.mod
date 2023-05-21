@@ -7,4 +7,6 @@ tags={
 	"Culture"
 }
 name="Cultures Expanded"
-supported_version="1.9.0.*"
+picture="thumbnail.png"
+supported_version="1.9.0.4"
+remote_file_id="2977052017"
