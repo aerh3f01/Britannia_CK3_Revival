@@ -32,6 +32,6 @@
   <summary>Table of Contents</summary>
   <ol>
     <li><a href="#about-the-project">About The Project</a></li>
-    <li><a href="https://github.com/LordNapoleon/CulturesExpanded-Ck3/roadmap.md">Roadmap</a></li>
+    <li><a href="https://github.com/LordNapoleon/CulturesExpanded-Ck3/blob/main/roadmap.md">Roadmap</a></li>
    </ol>
 </details>
