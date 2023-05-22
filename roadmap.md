@@ -19,17 +19,33 @@ This version is to contain basic decisions and events for the Welsh rulers. It s
 Some of the potential decisions include:
 ```sh
 1067 - Gwynedd Rulers invade Herefordshire
-1067-1093 - Norman conquest into most of Wales {Historical/Non Historical Combatance}
-1136 - Welsh rise up against Norman invaders
+1067-1093 - Norman conquest into most of Wales ${Historical/Non Historical Combatance}
+1136 - Welsh rise up against Norman invaders 
 ```
 
 ### Version 1.2
 
 This version shall have increased decisions and events in Wales. It should refine the "Kingdom of Wales" and the decisions to reform the Kingdom historically and the events that follow.
 
+Some events may include:
+```sh
+Reuniting Wales through wars and alliances
+Defending from the Norman invaders and the English
+Repeated attacks from Henry II
+Power struggles between the Welsh Princes
+Owain Gwynedd's rise to power
+```
+
+ Potential decision may include:
+ `Canonization of St David`
+ `Making "David the Scot" the Bishop of Bangor`
+ `Moving the remains of Saint Dubricius to Llandaff`
+
 ### Version 1.3
 
 This version shall refine minor characters within the Welsh court. Other minor characters and decisions shall be added to the game.
+
+
 
 ### Version 2.0
 
