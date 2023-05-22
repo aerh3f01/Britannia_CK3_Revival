@@ -19,7 +19,7 @@ This version is to contain basic decisions and events for the Welsh rulers. It s
 Some of the potential decisions include:
 ```sh
 1067 - Gwynedd Rulers invade Herefordshire
-1067-1093 - Norman conquest into most of Wales ${Historical/Non Historical Combatance}
+1067-1093 - Norman conquest into most of Wales {Historical/Non Historical Combatance}
 1136 - Welsh rise up against Norman invaders 
 ```
 
@@ -33,12 +33,12 @@ Reuniting Wales through wars and alliances
 Defending from the Norman invaders and the English
 Repeated attacks from Henry II
 Power struggles between the Welsh Princes
-Owain Gwynedd's rise to power
+Owain Gwynedds rise to power
 ```
 
- Potential decision may include:
- `Canonization of St David`
- `Making "David the Scot" the Bishop of Bangor`
+ Potential decision may include:<br>
+ `Canonization of St David`<br>
+ `Making "David the Scot" the Bishop of Bangor`<br>
  `Moving the remains of Saint Dubricius to Llandaff`
 
 ### Version 1.3
