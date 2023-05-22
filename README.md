@@ -16,7 +16,7 @@
     <img src="https://img.shields.io/steam/subscriptions/2979045549?color=gold&style=flat-square" alt="subscriptions"/>
   </div>
   <p align="center">
-    !!project_description!!
+    A small scale culture expansion mod to the UK so far. Looking to update Wales, Scotland, Ireland and England with culture, decisions, characters and events to make a more enhanced experience through the years.
     <br />
     <a href="https://github.com/LordNapoleon/CulturesExpanded-Ck3/tree/main/CulturesExpanded"><strong>Explore the mod! »</strong></a>
     <br />
@@ -31,21 +31,7 @@
 <details>
   <summary>Table of Contents</summary>
   <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
-  </ol>
+    <li><a href="#about-the-project">About The Project</a></li>
+    <li><a href="https://github.com/LordNapoleon/CulturesExpanded-Ck3/roadmap.md">Roadmap</a></li>
+   </ol>
 </details>
