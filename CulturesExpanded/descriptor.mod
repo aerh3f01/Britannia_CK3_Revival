@@ -6,7 +6,7 @@ tags={
 	"Events"
 	"Culture"
 }
-name="Cultures Expanded"
+name="Brittania Expansion"
 picture="thumbnail.png"
 supported_version="1.9.0.4"
 remote_file_id="2977052017"
