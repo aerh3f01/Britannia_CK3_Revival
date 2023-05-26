@@ -1,0 +1,73 @@
+namespace = cultures_expanded
+
+character_event = {
+  id = my_coronation_event
+  title = "A Royal Coronation"
+  desc = "To be written pending writers"
+  picture = GFX_evt_feast_council
+  hide_window = yes
+
+  mean_time_to_happen = {
+    days = 365
+  }
+
+  trigger = {
+    title_event_triggered = {
+      days = 7
+      has_holder_trigger = yes
+      title_trigger = {
+        tier = kingdom
+        OR = {
+          tier = empire
+        }
+      }
+    }
+  }
+
+  immediate = {
+    has_landed_title = {
+      tier = kingdom
+      OR = {
+        tier = empire
+      }
+    }
+  }
+
+  option = {
+    name = "My vassals must be happy having such a good Ruler"
+    ai_chance = { factor = 1 }
+    trigger = {
+      has_landed_title = {
+        tier = kingdom
+		OR = {
+			tier = empire
+		}
+      }
+    }
+    effect = {
+      gain_prestige = 150
+      # Add any additional actions or effects you want to occur when this option is chosen
+    }
+  }
+
+  option = {
+    name = "Grateful to the vassals for supporting me"
+    ai_chance = { factor = 1 }
+    trigger = {
+      has_landed_title = {
+        tier = empire
+		OR ={
+			tier = kingdom 
+		}
+      }
+    }
+    effect = {
+      # Other effects of the action/event
+      modify_opinion = {
+        who = { has_liege = yes }
+        modifier = 10
+      }
+    }
+      # Add any additional actions or effects you want to occur when this option is chosen
+    }
+  }

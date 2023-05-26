@@ -1,0 +1,483 @@
+##################################################
+# Setup
+##################################################
+cultures = {
+    # Northern
+    english
+    pictish
+    scottish
+    irish
+    welsh
+    anglo_saxon
+    # Southern
+    norman
+    # Outsider
+    norse
+    # Minorities
+    jewish
+}
+
+faiths = {
+    # Christian
+    catholic
+    # Islamic
+    sunni
+    shia
+}
+
+regions = { 
+    world_europe_west_britannia
+}
+
+# A culture or faith becomes involved if 80% of the total number of counties belonging to it are inside the struggle region.
+involvement_prerequisite_percentage = 0.8
+
+on_start = {
+    # Starting Events
+    trigger_event = { on_action = fp2_britannia_struggle_starting_events }
+}
+
+on_change_phase = {
+
+    # Set up AI Intent
+    trigger_event = fp2_struggle.0003
+}
+
+# Root = the current struggle
+# scope:character = the character which has joined the struggle
+on_join = {
+    if = {
+        limit = {
+            is_ai = no
+        }
+
+        trigger_event = fp2_struggle.0501
+    }
+    else = {
+        # assign an intent to the freshly joined character
+        trigger_event = fp2_struggle.004
+    }
+}
+
+##################################################
+# Phases
+##################################################
+start_phase = struggle_britannia_phase_opportunity
+
+phase_list = {
+
+    # Opportunity Phase represents complacency after a long period of coexistence during Conciliation; people are comfortable that things are good and so actors with ill-intent can get away with things once again.
+    struggle_britannia_phase_opportunity = {
+        ##################################################
+        # General Set-Up
+
+        background = "gfx/interface/illustrations/struggle_backgrounds/struggle_opportunity_bg.dds"
+
+        future_phases = {
+            struggle_britannia_phase_hostility = {						
+                catalysts = {
+                    catalyst_passing_of_time = minimal_struggle_catalyst_gain
+                    catalyst_gain_claim_on_title = minor_struggle_catalyst_gain
+                    catalyst_win_any_war_within_the_region = minor_struggle_catalyst_gain
+                    catalyst_new_building_in_castle = minor_struggle_catalyst_gain
+                    catalyst_becomes_rival_with_involved = major_struggle_catalyst_gain
+                    catalyst_using_a_hook_on_very_important_character = medium_struggle_catalyst_gain
+                    catalyst_unnatural_death_important_character = medium_struggle_catalyst_gain
+                    catalyst_usurp_title = major_struggle_catalyst_gain
+                    catalyst_forced_conversion = medium_struggle_catalyst_gain
+                    catalyst_reveal_secret_important = major_struggle_catalyst_gain
+                    catalyst_broke_truce_against_important_character = massive_struggle_catalyst_gain
+                }
+            }
+            struggle_britannia_phase_conciliation = {
+                catalysts = {
+                    catalyst_improve_development_vassal_diff_faith_culture = minimal_struggle_catalyst_gain
+                    catalyst_gift_independent_ruler = minor_struggle_catalyst_gain
+                    catalyst_became_friend_lover_with_character = minor_struggle_catalyst_gain
+                    catalyst_learned_new_language_important = minor_struggle_catalyst_gain
+                    catalyst_new_building_in_city = minor_struggle_catalyst_gain
+                    catalyst_sign_truce_outside_war = minor_struggle_catalyst_gain
+                    catalyst_formed_interreligious_alliance_with_important_character = minor_struggle_catalyst_gain
+                    catalyst_ransom_important = medium
+	on_change_phase = {
+
+		# Set up AI Intent
+		trigger_event = fp2_struggle.0003
+	}
+	
+	# Root = the current struggle
+	# scope:character = the character which has joined the struggle
+ 	on_join = {
+		if = {
+			limit = {
+				is_ai = no
+			}
+
+			trigger_event = fp2_struggle.0501
+		}
+		else = {
+			# assign an intent to the freshly joined character
+			trigger_event = fp2_struggle.004
+		}
+ 	}  
+
+	##################################################
+	# Phases
+	##################################################
+	start_phase = struggle_britannia_phase_opportunity	
+	
+	phase_list = {
+
+		# Opportunity Phase represents complacency after a long period of coexistence during Conciliation; people are comfortable that things are good and so actors with ill-intent can get away with things once again.
+		struggle_britannia_phase_opportunity = {
+			##################################################
+			# General Set-Up
+
+			background = "gfx/interface/illustrations/struggle_backgrounds/struggle_opportunity_bg.dds"
+			
+			future_phases = {
+				struggle_britannia_phase_hostility = {						
+					catalysts = {
+						catalyst_passing_of_time = minimal_struggle_catalyst_gain
+						catalyst_gain_claim_on_title = minor_struggle_catalyst_gain
+						catalyst_win_any_war_within_the_region = minor_struggle_catalyst_gain # Good
+						catalyst_new_building_in_castle = minor_struggle_catalyst_gain # How to do AI?
+						catalyst_becomes_rival_with_involved = major_struggle_catalyst_gain # Good
+						catalyst_using_a_hook_on_very_important_character = medium_struggle_catalyst_gain # good
+						catalyst_unnatural_death_important_character = medium_struggle_catalyst_gain
+						catalyst_usurp_title = major_struggle_catalyst_gain # good
+						catalyst_forced_conversion = medium_struggle_catalyst_gain
+						catalyst_reveal_secret_important = major_struggle_catalyst_gain
+						catalyst_broke_truce_against_important_character = massive_struggle_catalyst_gain # Cannot motivate the AI to do that without code support
+					}
+				}
+				struggle_britannia_phase_conciliation = {
+					catalysts = {
+						catalyst_improve_development_vassal_diff_faith_culture = minimal_struggle_catalyst_gain # How to do AI?
+						catalyst_gift_independent_ruler = minor_struggle_catalyst_gain # AI done
+						catalyst_became_friend_lover_with_character = minor_struggle_catalyst_gain
+						catalyst_learned_new_language_important = minor_struggle_catalyst_gain # AI done
+						catalyst_new_building_in_city = minor_struggle_catalyst_gain # How to do AI?
+						catalyst_sign_truce_outside_war = minor_struggle_catalyst_gain # will need update when addding truce through wards
+						catalyst_formed_interreligious_alliance_with_important_character = minor_struggle_catalyst_gain
+						catalyst_ransom_important = medium_struggle_catalyst_gain
+						catalyst_grant_privilege_to_diff_faith_culture_vassal = medium_struggle_catalyst_gain
+						catalyst_invite_diff_faith_culture_to_feast = medium_struggle_catalyst_gain
+						catalyst_independence_from_non_dejure_vassal = major.
+					struggle_catalyst_gain # AI done
+					catalyst_vassalize_ruler = major_struggle_catalyst_gain # AI done
+					catalyst_formalize_alliance_with_important_character = major_struggle_catalyst_gain
+					catalyst_grant_title_to_important = major_struggle_catalyst_gain # AI done
+					catalyst_absorb_vassal = massive_struggle_catalyst_gain # AI done
+					catalyst_conquer_county = massive_struggle_catalyst_gain # AI done
+					catalyst_form_empire = massive_struggle_catalyst_gain # AI done
+				}
+			}
+		}
+		
+		##################################################
+		# Triggers
+	}
+
+	# Hostility Phase represents a resurgence of conflict and aggression as tensions rise and previous agreements and compromises begin to unravel.
+	struggle_britannia_phase_hostility = {
+		##################################################
+		# General Set-Up
+
+		background = "gfx/interface/illustrations/struggle_backgrounds/struggle_hostility_bg.dds"
+		
+		future_phases = {
+			struggle_britannia_phase_resolution = {						
+				catalysts = {
+					catalyst_passing_of_time = minimal_struggle_catalyst_gain
+					catalyst_gain_claim_on_title = minor_struggle_catalyst_gain
+					catalyst_win_any_war_within_the_region = minor_struggle_catalyst_gain # Good
+					catalyst_new_building_in_castle = minor_struggle_catalyst_gain # How to do AI?
+					catalyst_becomes_rival_with_involved = major_struggle_catalyst_gain # Good
+					catalyst_using_a_hook_on_very_important_character = medium_struggle_catalyst_gain # good
+					catalyst_unnatural_death_important_character = medium_struggle_catalyst_gain
+					catalyst_usurp_title = major_struggle_catalyst_gain # good
+					catalyst_forced_conversion = medium_struggle_catalyst_gain
+					catalyst_reveal_secret_important = major_struggle_catalyst_gain
+					catalyst_broke_truce_against_important_character = massive_struggle_catalyst_gain # Cannot motivate the AI to do that without code support
+				}
+			}
+			struggle_britannia_phase_conciliation = {
+				catalysts = {
+					catalyst_improve_development_vassal_diff_faith_culture = minimal_struggle_catalyst_gain # How to do AI?
+					catalyst_gift_independent_ruler = minor_struggle_catalyst_gain # AI done
+					catalyst_became_friend_lover_with_character = minor_struggle_catalyst_gain
+					catalyst_learned_new_language_important = minor_struggle_catalyst_gain # AI done
+					catalyst_new_building_in_city = minor_struggle_catalyst_gain # How to do AI?
+					catalyst_sign_truce_outside_war = minor_struggle_catalyst_gain # will need update when adding truce through wards
+					catalyst_formed_interreligious_alliance_with_important_character = minor_struggle_catalyst_gain
+					catalyst_ransom_important = medium_struggle_catalyst_gain
+					catalyst_grant_privilege_to_diff_faith_culture_vassal = medium_struggle_catalyst_gain
+					catalyst_invite_diff_faith_culture_to_feast = medium_struggle_catalyst_gain
+					catalyst_independence_from_non_dejure_vassal = medium_struggle_catalyst_gain
+					catalyst_secure_landing_in_county = major_struggle_catalyst_gain
+				}
+			}
+		}
+		
+		##################################################
+		# Triggers
+	}
+
+	# Resolution Phase represents the climax and culmination of the struggle, where major decisions and actions shape the outcome of the conflict.
+	struggle_britannia_phase_resolution = {
+		##################################################
+		# General Set-Up
+
+		background = "gfx/interface/illustrations/struggle_backgrounds/struggle_resolution_bg.dds"
+
+		# This phase ends the struggle, so no future phases.
+		
+		##################################################
+		# Triggers
+	}
+}
+
+##################################################
+# On Actions
+##################################################
+# On Actions
+
+# These actions trigger when certain conditions are met during the struggle.
+
+##################################
+# Hostility Phase Actions
+
+on_hostility_phase_start = {
+	# Actions to take at the start of the Hostility Phase
+}
+
+on_hostility_phase_end = {
+	# Actions to take at the end of the Hostility Phase
+}
+
+##################################
+# Conciliation Phase Actions
+
+on_conciliation_phase_start = {
+	# Actions to take at the start of the Conciliation Phase
+}
+
+on_conciliation_phase_end = {
+	# Actions to take at the end of the Conciliation Phase
+}
+
+##################################
+# Resolution Phase Actions
+
+on_resolution_phase_start = {
+	# Actions to take at the start of the Resolution Phase
+}
+
+on_resolution_phase_end = {
+	# Actions to take at the end of the Resolution Phase
+}
+
+##################################################
+# AI Personalities
+
+# Define the behaviors and decision-making patterns of the AI characters involved in the struggle.
+
+# AI Personality 1
+ai_personality_1 = {
+	# Define the characteristics and preferences of the AI personality
+}
+
+# AI Personality 2
+ai_personality_2 = {
+	# Define the characteristics and preferences of the AI personality
+}
+
+# AI Personality 3
+ai_personality_3 = {
+	# Define the characteristics and preferences of the AI personality
+}
+
+##################################################
+# Scopes
+
+# Define the scopes and conditions for different events and triggers within the struggle.
+
+scope_1 = {
+	# Define the conditions and actions for scope 1
+}
+
+scope_2 = {
+	# Define the conditions and actions for scope 2
+}
+
+scope_3 = {
+	# Define the conditions and actions for scope 3
+}
+
+# ... (additional scopes)
+
+##################################################
+# Events
+
+# Define the events that can occur during the struggle, triggering various actions and decisions.
+
+event_1 = {
+	# Define the conditions and actions for event 1
+}
+
+event_2 = {
+	# Define the conditions and actions for event 2
+}
+
+event_3 = {
+	# Define the conditions and actions for event 3
+}
+
+# ... (additional events)
+
+##################################################
+# Decisions
+
+# Define the decisions that can be made by characters during the struggle, influencing the course of the conflict.
+
+decision_1 = {
+	# Define the conditions and actions for decision 1
+}
+
+decision_2 = {
+	# Define the conditions and actions for decision 2
+}
+
+decision_3 = {
+	# Define the conditions and actions for decision 3
+}
+
+# ... (additional decisions)
+
+##################################################
+# Modifiers
+
+# Define the modifiers that can be applied during the struggle, affecting various aspects of the gameplay.
+
+modifier_1 = {
+	# Define the conditions and effects of modifier 1
+}
+
+modifier_2 = {
+	# Define the conditions and effects of modifier 2
+}
+
+modifier_3 = {
+	# Define the conditions and effects of modifier 3
+}
+
+# ... (additional modifiers)
+
+##################################################
+# Localization
+
+# Define the localized texts and descriptions for the struggle and its components.
+
+localization = {
+	# Define the localized texts
+}
+
+##################################################
+# Effects
+
+# Define the effects that can be applied during the struggle, altering various gameplay elements.
+
+effect_1 = {
+	# Define the conditions and effects of effect 1
+}
+
+effect_2 = {
+	# Define the conditions and effects of effect 2
+}
+
+effect_3 = {
+	# Define the conditions and effects of effect 3
+}
+
+# ... (additional effects)
+
+##################################################
+# Objectives
+
+# Define the objectives that players can pursue during the struggle, guiding their actions and goals.
+
+objective_1 = {
+	# Define the conditions and actions for objective 1
+}
+
+objective_2 = {
+	# Define the conditions and actions for objective 2
+}
+
+objective_3 = {
+	# Define the conditions and actions for objective 3
+}
+
+# ... (additional objectives)
+
+##################################################
+# Rewards
+
+# Define the rewards that players can receive upon achieving certain goals or milestones in the struggle.
+
+reward_1 = {
+	# Define the conditions and rewards for reward 1
+}
+
+reward_2 = {
+	# Define the conditions and rewards for reward 2
+}
+
+reward_3 = {
+	# Define the conditions and rewards for reward 3
+}
+
+# ... (additional rewards)
+
+##################################################
+# Goals
+
+# Define the goals that players can strive for during the struggle, providing a sense of progression and accomplishment.
+
+goal_1 = {
+	# Define the conditions and actions for goal 1
+}
+
+goal_2 = {
+	# Define the conditions and actions for goal 2
+}
+
+goal_3 = {
+	# Define the conditions and actions for goal 3
+}
+
+# ... (additional goals)
+
+##################################################
+# Outcomes
+
+# Define the possible outcomes of the struggle, reflecting the result of the players' actions and decisions.
+
+outcome_1 = {
+	# Define the conditions and effects of outcome 1
+}
+
+outcome_2 = {
+	# Define the conditions and effects of outcome 2
+}
+
+outcome_3 = {
+	# Define the conditions and effects of outcome 3
+}
+
+# ... (additional outcomes)
+
+##################################################
+# Struggle Design End
+
