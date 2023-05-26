@@ -32,9 +32,9 @@ struggle_name = {
 				}
 				struggle_iberia_phase_tension = {	}	
 			}
+	
+			war_effects/culture_effects/faith_effects/other_effects = {
 
-			war_effects/culture_effects/faith_effects/other_effects = 
-			{
 				common_parameters = {} # Parameters that generally affect everyone in the Struggle. (For grouping effect descriptions)
 
 				involved_parameters = {} # Parameters that affect Involved in the Struggle. (For grouping effect descriptions)
@@ -93,3 +93,5 @@ struggle_name = {
 	# Root = struggle
 	# scope:character = character (who has gone from uninvolved to interloper/involved in the struggle)
 	on_join = {}  
+
+}
