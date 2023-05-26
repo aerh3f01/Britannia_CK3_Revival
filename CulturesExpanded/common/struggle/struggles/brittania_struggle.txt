@@ -12,7 +12,7 @@ cultures = {
     # Southern
     norman
     # Outsider
-    viking
+    norse
     # Minorities
     jewish
 }
