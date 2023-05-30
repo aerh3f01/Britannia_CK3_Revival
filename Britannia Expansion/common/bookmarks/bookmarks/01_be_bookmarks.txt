@@ -5,15 +5,18 @@ bm_1066_gwynedd = {
 
     #Bleddyn ap Cynfyn (Prince of Wales) ID: 6358
     character = {
-        name = ""
-        dynasty = 
+        name = "bookmark_1066_bleddyn"
+        dynasty = 100064
         dynasty_splendor_level = 2
         type = male
-        birth = 
+        birth = 1025.1.1
         title = d_gwynedd
-        government =
+        government = fuedal_government
         culture = welsh
         religion = catholic
-        history_id = 
+        history_id = 6358
+        position = { 750 310 }
+		
+		animation = personality_honourable
     }
 }
