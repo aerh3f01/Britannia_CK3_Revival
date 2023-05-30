@@ -1,4 +1,4 @@
-version="0.0.2"
+version="0.0.4"
 tags={
 	"Utilities"
 	"Historical"
@@ -8,5 +8,5 @@ tags={
 }
 name="Brittania Expansion"
 picture="thumbnail.png"
-supported_version="1.9.0.4"
+supported_version="1.9.0.*"
 remote_file_id="2977052017"
