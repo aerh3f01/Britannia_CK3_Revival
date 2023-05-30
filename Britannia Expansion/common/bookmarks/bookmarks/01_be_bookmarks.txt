@@ -1,0 +1,19 @@
+bm_1066_gwynedd = {
+    start_date = 1066.1.1
+    is_playable = yes
+    group = bm_group_be
+
+    #Bleddyn ap Cynfyn (Prince of Wales) ID: 6358
+    character = {
+        name = ""
+        dynasty = 
+        dynasty_splendor_level = 2
+        type = male
+        birth = 
+        title = d_gwynedd
+        government =
+        culture = welsh
+        religion = catholic
+        history_id = 
+    }
+}
