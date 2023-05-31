@@ -2,7 +2,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/LordNapoleon/Brittania-expansion-Ck3">
-    <img src="cultures_expanded.png" alt="Logo" height="200">
+    <img src="britanniaexpansion.png" alt="Logo" height="200">
   </a>
 
 <h3 align="center">Britannia Expansion</h3>
