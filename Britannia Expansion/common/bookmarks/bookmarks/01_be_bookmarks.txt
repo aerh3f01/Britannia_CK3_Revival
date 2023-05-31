@@ -11,12 +11,37 @@ bm_1066_gwynedd = {
         type = male
         birth = 1025.1.1
         title = d_gwynedd
-        government = fuedal_government
+        government = feudal_government
         culture = welsh
         religion = catholic
         history_id = 6358
-        position = { 750 310 }
+        position = { 725 505 }
+        difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_EASY"
 		
-		animation = personality_honourable
+		animation = personality_honorable
+
+        character = { #Iorwerth ap Bleddyn (Prince of Powys) ID: 81857
+        name = "bookmark_1066_iorwerth"
+        relation = "BOOKMARK_RELATION_SON"
+        dynasty = 100064
+        type = male
+        birth = 1053.1.1
+        culture = welsh
+        religion = catholic
+        history_id = 81857 
+        animation = personality_diplomat
+        }
+        character = { #Cadwgan ap Bleddyn (King of Powys) ID: 6378 
+        name = "bookmark_1066_cadwgan"
+        relation = "BOOKMARK_RELATION_SON"
+        dynasty = 100064
+        type = male
+        birth = 1051.1.1
+        culture = welsh
+        religion = catholic
+        history_id = 6378 
+        animation = personality_diplomat
+        }
+
     }
 }

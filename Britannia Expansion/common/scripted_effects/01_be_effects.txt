@@ -1,0 +1,54 @@
+create_welsh_kingdom_scripted_effect = {
+	#Create Welsh Kingdom
+	
+	create_title_and_vassal_change = {
+		type = created
+		save_scope_as = change
+		add_claim_on_loss = no
+	}
+	title:k_gwynedd = {
+		change_title_holder = {
+			holder = root
+			change = scope:change
+		}
+	}
+	resolve_title_and_vassal_change = scope:change
+	hidden_effect = { set_primary_title_to = title:k_gwynedd }
+	every_held_title = { 
+		limit = {
+			OR = {
+				tier = tier_empire
+				tier = tier_kingdom
+			}
+			NOT = { this = title:k_gwynedd }
+		}
+		root = { destroy_title = prev }
+	}
+
+	
+	if = { 
+		limit ={
+			NOT = { capital_county = { this = title:c_cardiganshire } }
+		}
+		hidden_effect = {
+			if = { #Usurp if not held personally.
+				limit = {
+					NOT = { this = title:c_cardiganshire.holder }
+				}
+				create_title_and_vassal_change = {
+					type = returned
+					save_scope_as = change
+					add_claim_on_loss = no
+				}
+				title:c_cardiganshire = {
+					change_title_holder = {
+						holder = root
+						change = scope:change
+					}
+				}
+				resolve_title_and_vassal_change = scope:change
+			}
+		}
+		root = { set_realm_capital = title:c_cardiganshire }
+	}
+}

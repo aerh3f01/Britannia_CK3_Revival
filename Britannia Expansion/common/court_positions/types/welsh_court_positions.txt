@@ -2,14 +2,12 @@
 # COURT POSITIONS
 #Herald
 
-Herald_court_position = {
+falconer_court_position = {
 	max_available_positions = 1
 	category = court_position_category_royal
 	minimum_rank = kingdom
 
-	potential = {
-		has_title = k_wales
-	}
+
 
 		# How high the aptitude has to be to reach the 5 different modifier levels
 		# How good is this character in this position? root scope is the holder of the court position
@@ -17,6 +15,10 @@ Herald_court_position = {
 	is_shown = {
 		has_royal_court = yes
 		has_ep1_court_positions_dlc_trigger = yes
+		OR = {
+			has_title = k_wales
+			has_title = k_gwynedd
+		}
 	}
 
 	valid_position = {
@@ -41,9 +43,9 @@ Herald_court_position = {
 				limit = {
 					exists = dynasty
 					dynasty = { has_dynasty_perk = fp2_coterie_legacy_1 }
-					employs_court_position = Herald_court_position
+					employs_court_position = falconer_court_position
 					any_court_position_holder = {
-						type = Herald_court_position
+						type = falconer_court_position
 						exists = dynasty
 						house = prev.house
 					}
@@ -62,9 +64,9 @@ Herald_court_position = {
 					scope:liege = {
 						exists = dynasty
 						dynasty = { has_dynasty_perk = fp2_coterie_legacy_1 }
-						employs_court_position = Herald_court_position
+						employs_court_position = falconer_court_position
 						any_court_position_holder = {
-							type = Herald_court_position
+							type = falconer_court_position
 							exists = dynasty
 							house = prev.house
 						}	
@@ -79,9 +81,9 @@ Herald_court_position = {
 		    if = {
 			    limit = {
 				    scope:liege = {
-					    employs_court_position = Herald_court_position
+					    employs_court_position = falconer_court_position
 				    	any_court_position_holder = {
-				            type = Herald_court_position
+				            type = falconer_court_position
 				            scope:liege = {
 							    has_hook_of_type = {
 								    type = obligation_hook
@@ -100,7 +102,7 @@ Herald_court_position = {
 	}
 		# These modifiers are employed based on what level the aptitude reaches (levels are defined as breakpoints) 
 
-	custom_employer_modifier_description = Herald_employer_custom_effect_description
+	custom_employer_modifier_description = falconer_employer_custom_effect_description
 	modifier = {
 	    monthly_prestige = major_court_position_prestige_salary
 	}
@@ -142,7 +144,7 @@ Herald_court_position = {
 # These modifiers are employed based on what level the aptitude reaches (levels are defined as breakpoints) 
 	
 
-		custom_employer_modifier_description = Herald_employer_custom_effect_description
+		custom_employer_modifier_description = falconer_employer_custom_effect_description
 
 		modifier = {
 		monthly_prestige = major_court_position_prestige_salary

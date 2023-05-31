@@ -1,0 +1,28 @@
+namespace = be_welsh_kingdom
+###############################
+# Reuniting Wales
+###############################
+
+be_welsh_kingdom.1001 = {
+	type = character_event
+	title = welsh_kingdom.1001.t
+	desc = {
+		desc = welsh_kingdom.1001.desc.intro
+	}
+	theme = realm
+	left_portrait = {
+		character = scope:scoped_welsh_king
+		animation = personality_honorable
+	}
+	immediate = {
+		play_music_cue = "mx_cue_epic_sacral_moment"
+		save_scope_as = scoped_welsh_king
+		create_welsh_kingdom_scripted_effect = yes
+	}
+	option = {
+		name = welsh_kingdom.1001.a
+	}
+	
+}
+
+

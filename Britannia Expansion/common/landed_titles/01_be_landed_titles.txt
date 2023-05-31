@@ -1,4 +1,280 @@
-﻿k_wales = {
+﻿@correct_culture_primary_score = 100
+
+
+k_gwynedd ={
+	color = { 135 25 3 }
+	capital = c_cardiganshire # Gwynedd
+	
+	ai_primary_priority = {
+		if = {
+			limit = {
+				culture = culture:welsh
+			}
+			add = @correct_culture_primary_score
+		}
+	}
+	can_create = {
+		trigger_if = {
+			culture = { has_cultural_pillar = heritage_brythonic }
+		}
+	}
+
+
+	d_gwynedd = {
+		color = { 100 0 0 }
+
+		capital = c_cardiganshire # Cardigan
+
+		c_cardiganshire = {	#Ceredigion
+			color = { 110 10 0 }
+
+			cultural_names = {
+				name_list_norman = cn_cardiganshire
+				name_list_english = cn_cardiganshire
+			}
+
+			b_cardigan = {	#Aberteifi
+				province = 1657
+
+				color = { 110 10 0 }
+
+				cultural_names = {
+					name_list_norman = cn_cardigan
+					name_list_english = cn_cardigan
+				}
+			}
+
+			b_aberystwyth = {
+				province = 1658
+
+				color = { 110 10 0 }
+			}
+		}
+
+		c_merioneth = {	#Merionnydd
+			color = { 105 20 20 }
+
+			cultural_names = {
+				name_list_norman = cn_merionethshire
+				name_list_english = cn_merionethshire
+			}
+
+			b_dolgellau = {	#Harlech
+				province = 1665
+
+				color = { 105 20 20 }
+			}
+
+			b_corwen = {
+				province = 1666
+
+				color = { 105 20 20 }
+			}
+		}
+
+		c_caernarfonshire = {	#Eryri
+			color = { 90 25 0 }
+
+			cultural_names = {
+				name_list_norman = cn_caernarvonshire
+				name_list_english = cn_caernarvonshire
+			}
+
+			b_caernarfon = {
+				province = 1667
+
+				color = { 90 25 0 }
+			}
+
+			b_llyn = {
+				province = 1668
+
+				color = { 90 25 0 }
+			}
+
+			b_llandudno = {
+				province = 1669
+
+				color = { 90 25 0 }
+			}
+		}
+
+		c_anglesey = {	#Ynys Mon
+			color = { 85 0 0 }
+
+			cultural_names = {
+				name_list_norman = cn_anglesey
+				name_list_english = cn_anglesey
+			}
+
+			b_yns_mon = {
+				province = 1673
+
+				color = { 85 0 0 }
+			}
+
+			b_holyhead = {	#Caer Gybi
+				province = 1674
+
+				color = { 85 0 0 }
+
+				cultural_names = {
+					name_list_norman = cn_holyhead
+					name_list_english = cn_holyhead
+				}
+			}
+		}
+
+		c_denbighshire = {	#Perfeddwlad
+			color = { 125 0 10 }
+
+			cultural_names = {
+				name_list_norman = cn_denbighshire
+				name_list_english = cn_denbighshire
+			}
+
+			b_denbigh = {	#Dinbych
+				province = 1670
+
+				color = { 125 0 10 }
+
+				cultural_names = {
+					name_list_norman = cn_denbigh
+					name_list_english = cn_denbigh
+				}
+			}
+
+			b_wrexham = {	#Tegeingl
+				province = 1671
+
+				color = { 125 0 10 }
+
+				cultural_names = {
+					name_list_norman = cn_wrexham
+					name_list_english = cn_wrexham
+				}
+			}
+
+			b_ruthin = {	#Rhuthun
+				province = 1672
+
+				color = { 125 0 10 }
+
+				cultural_names = {
+					name_list_norman = cn_ruthin
+					name_list_english = cn_ruthin
+				}
+			}
+		}
+	}
+
+	d_powys = {
+		color = { 115 30 30 }
+
+		capital = c_maldwyn # Maldwyn / Mathrafal near Welshpool
+
+		c_maldwyn = {	#Penllyn (Cantrefi, not the peninsula)
+			color = { 110 25 25 }
+
+			cultural_names = {
+				name_list_norman = cn_montgomeryshire
+				name_list_english = cn_montgomeryshire
+			}
+
+			b_welshpool = {	#Mathrafal
+				province = 1663
+
+				color = { 110 25 25 }
+
+				cultural_names = {
+					#Technically a different town: Welshpool is Y Trallwng, whereas b_welshpool is currently Mathrafal, historic seat of the Princes of Powys.
+					name_list_norman = cn_welshpool
+					name_list_english = cn_welshpool
+				}
+			}
+
+			b_newtown = {	#Machynlleth
+				province = 1664
+
+				color = { 110 25 25 }
+
+				cultural_names = {
+					#Technically a different settlement, as Newtown wouldn't be founded till the 1300s, but b_newtown is currently Machynlleth, which was a more important Welsh site previously.
+					name_list_norman = cn_newtown
+					name_list_english = cn_newtown
+				}
+			}
+		}
+
+		c_sir_faesyfed = {	#Ferlix
+			color = { 95 30 30 }
+
+			cultural_names = {
+				name_list_norman = cn_radnorshire
+				name_list_english = cn_radnorshire
+			}
+
+			b_llandrindod = {
+				province = 1661
+
+				cultural_names = {
+					name_list_norman = cn_llandrindod_wells
+					name_list_english = cn_llandrindod_wells
+				}
+
+				color = { 95 30 30 }
+			}
+
+			b_rhayader = {	#Rhaeadr Gwy
+				province = 1662
+
+				 cultural_names = {
+					name_list_norman = cn_rhayader
+					name_list_english = cn_rhayader
+				}
+
+				color = { 95 30 30 }
+			}
+		}
+
+		c_hereford = {
+			color = { 110 45 35 }
+
+			cultural_names = {
+				#This name is actually Anglo-Saxon, but the original Welsh name, Ergyng, is long dead by 867. Arcenefelde is the archaic term for the area after the conquest, and the name used by/to refer to the Welsh-speaking portions of the county, with Herefordshire referring to the Anglo-Saxons/English.
+				name_list_welsh = cn_arcenefelde
+				name_list_cumbrian = cn_arcenefelde
+			}
+
+			b_hereford = {
+				province = 1632
+
+				cultural_names = {
+					name_list_welsh = cn_hennffordd
+					name_list_cumbrian = cn_hennffordd
+				}
+
+				color = { 110 45 35 }
+			}
+
+			b_wigmore = {
+				province = 1633
+
+				color = { 110 45 35 }
+			}
+
+			b_clifford = {
+				province = 1634
+
+				color = { 110 45 35 }
+			}
+		}
+	}
+
+
+
+}
+k_wales = {
 		color = { 135 25 3 }
 
 		capital = c_cardiganshire # Gwynedd
