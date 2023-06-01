@@ -1,0 +1,8 @@
+# Used in the trigger for court positions to make sure that they don't already have a "job"
+# If a court position is considered a full time job, the character cannot hold another similar position
+court_position_is_courtier_trigger = {
+	custom_tooltip = {
+		text = is_courtier_tooltip
+	}
+}
+

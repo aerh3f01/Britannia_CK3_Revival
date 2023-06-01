@@ -1,0 +1,39 @@
+#Creating the Welsh Kingdomship through reunification of Gwynedd and Powys. Forming title of Prince of Wales
+reunite_the_north_decision = {
+
+	picture = "gfx/interface/illustrations/decisions/decision_realm.dds"
+	major = yes
+	ai_check_interval = 120
+	desc = reunite_the_north_decision_desc
+	selection_tooltip = reunite_the_north_decision_effect_tooltip
+	
+
+	is_shown = {
+		game_start_date = 1066.1.1 
+		culture = culture:welsh
+		NOT = { exists = title:k_gwynedd.holder }
+	}
+
+	is_valid_showing_failures_only = {
+		is_independent_ruler = yes
+		#Can't be fighting elsewhere.
+		is_at_war = no
+	}
+	
+	effect = {
+		show_as_tooltip = {
+			create_welsh_kingdom_scripted_effect = yes
+		}
+		trigger_event = {
+			id = be_welsh_kingdom.1001
+		}
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+	ai_potential = {
+		always = no
+	}
+
+}

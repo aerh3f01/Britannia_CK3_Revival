@@ -5,9 +5,9 @@ namespace = be_welsh_kingdom
 
 be_welsh_kingdom.1001 = {
 	type = character_event
-	title = welsh_kingdom.1001.t
+	title = be_welsh_kingdom.1001.t
 	desc = {
-		desc = welsh_kingdom.1001.desc.intro
+		desc = be_welsh_kingdom.1001.desc.intro
 	}
 	theme = realm
 	left_portrait = {
@@ -20,7 +20,7 @@ be_welsh_kingdom.1001 = {
 		create_welsh_kingdom_scripted_effect = yes
 	}
 	option = {
-		name = welsh_kingdom.1001.a
+		name = be_welsh_kingdom.1001.a
 	}
 	
 }

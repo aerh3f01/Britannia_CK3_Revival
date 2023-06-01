@@ -1,5 +1,0 @@
-l_english:
- reunite_the_north_decision:1 "Reunite the Welsh"
- reunite_the_north_decision_confirm: "I will unite the Welsh!"
- reunite_the_north_decision_desc: "I will unite the Welsh lords and drive the English out of Wales!"
- reunite_the_north_decision_effect_tooltip: "Become the Prince of Wales under the $k_gwynedd$!"

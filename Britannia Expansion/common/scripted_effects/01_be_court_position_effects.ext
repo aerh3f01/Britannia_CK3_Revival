@@ -1,0 +1,123 @@
+#Basic effect for gaining a court position
+basic_gained_court_position_effect = {
+	scope:employee = {
+		if = {
+			limit = {
+				is_ruler = yes
+				has_vassal_stance = courtly
+			}
+			add_opinion = {
+				target = scope:liege
+				modifier = courtly_court_position_opinion
+			}
+		}
+	}
+	#Would any courtier feel scorned for not getting this title? We might have them complain in  court.5050
+	hidden_effect = {
+		scope:liege = {
+			if = {
+				limit = {
+					has_royal_court = yes
+					NOT = { has_character_flag = had_event_court_5050 }
+					age >= 10
+					any_courtier = {
+						is_adult = yes
+						has_any_court_position = no
+						can_be_employed_in_any_court_position_trigger = yes
+					}
+				}
+				random = {
+					chance = 1
+					modifier = {
+						add = 4
+						any_courtier = {
+							is_adult = yes
+							has_any_court_position = no
+							can_be_employed_in_any_court_position_trigger = yes
+							ai_boldness >= 0
+							OR = {
+								has_trait = ambitious
+								has_trait = arrogant
+								ai_greed >= medium_positive_greed
+							}
+						}
+					}
+					random_courtier = {
+						limit = {
+							is_adult = yes
+							has_any_court_position = no
+							can_be_employed_in_any_court_position_trigger = yes
+							ai_boldness >= 0
+							OR = {
+								has_trait = ambitious
+								has_trait = arrogant
+								ai_greed >= medium_positive_greed
+							}
+						}
+						alternative_limit = {
+							is_adult = yes
+							has_any_court_position = no
+							can_be_employed_in_any_court_position_trigger = yes
+						}
+						weight = {
+							base = 1
+							ai_value_modifier = {
+								ai_greed = 0.75
+								ai_boldness = 0.75
+								ai_energy = 0.25
+								ai_compassion = -0.25
+							}
+						}
+						save_scope_as = courtier
+					}
+					scope:employee = { save_scope_as = courtier_given_title }
+					trigger_event = {
+						id = court.5050
+						days = { 7 14 }
+					}
+				}
+			}
+		}
+	}
+}
+
+#Basic effect for losing a court position
+basic_revoked_court_position_effect = {
+	scope:employee = {
+		if = {
+			limit = {
+				has_opinion_modifier = {
+					modifier = courtly_court_position_opinion
+					target = scope:liege
+				}
+			}
+			remove_opinion = {
+				modifier = courtly_court_position_opinion
+				target = scope:liege
+			}
+		}
+		add_opinion = {
+			modifier = revoked_court_position_opinion
+			target = scope:liege
+			opinion = -30
+		}
+	}
+}
+
+#Basic effect for a court position invalidating
+basic_invalidated_court_position_effect = {
+	
+}
+
+
+
+# falconer
+falconer_title_accepted_effect = {
+	basic_gained_court_position_effect = yes
+}
+falconer_title_revoked_effect = {
+	basic_revoked_court_position_effect = yes
+}
+falconer_title_invalidated_effect = {
+	basic_invalidated_court_position_effect = yes
+}
