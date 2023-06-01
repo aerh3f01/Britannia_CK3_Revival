@@ -1,4 +1,40 @@
 ﻿l_english:
+
+#Creation of Gwynedd Kingdom
  be_welsh_kingdom.1001.t: "The Welsh Unite!"
  be_welsh_kingdom.1001.desc.intro: "The North of Wales has been united once more under the Kingdom of Gwynedd. \nWith the restoration of the Kingdom of Wales underway, surely the English will be driven out of Wales once and for all!"
  be_welsh_kingdom.1001.a: "Cymru am byth!"
+
+#Canonization of St. David
+be_canonization.1001.t: "Canonization of St. David"
+be_canonization.1001.desc.intro: "The Welsh people have long held St. David in high regard. \n\nIt is time to make him a Saint!"
+be_canonization.1001.a: "Send the request to the Pope!"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###############
+# Random decisions that dont work outside of this file
+###############
+
+#Making of Gwynedd Kingdom
+ reunite_the_north_decision: "Reunite the Welsh!"
+ reunite_the_north_decision_confirm: "I will be the Prince of Wales!"
+ reunite_the_north_decision_desc: "I will unite the Welsh lords and drive the English out of Wales!" 
+ reunite_the_north_decision_effect_tooltip: "Become the Prince of Wales under the $k_gwynedd$!"
+
+#Canonization of St. David
+ make_saint_decision: "Canonize St. David"
+ make_saint_decision_confirm: "I will make St. David a Saint!"
+ make_saint_decision_desc: "David was a Welsh Bishop of Mynyw during the 6th century. His most famous miricle being the creation of a hill beneath him as he preached to the people at the Synod of Brefi.\n\nLater will make this decision more historically accurate as we build more onto the mod."
+ make_saint_decision_effect_tooltip: "Propose the Canonization of St David!"

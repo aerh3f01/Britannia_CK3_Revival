@@ -1,0 +1,26 @@
+namespace = be_canonization
+
+###############################
+# Canonization of St. David
+###############################
+
+be_canonization.0001 = {
+	type = character_event
+	title = be_canonization.1001.t
+	desc = {
+		desc = be_canonization.1001.desc.intro
+	}
+	theme = faith
+	left_portrait = {
+		character = scope:canonization
+		animation = personality_honorable
+	}
+	immediate = {
+		play_music_cue = "mx_cue_epic_sacral_moment"
+		save_scope_as = canonization
+		create_canonization_scripted_effect = yes
+	}
+	option = {
+		name = be_canonization.1001.a
+	}
+}

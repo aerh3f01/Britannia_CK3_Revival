@@ -1,0 +1,42 @@
+make_saint_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
+	sort_order = 1000
+
+	desc = make_saint_decision_desc
+	selection_tooltip = make_saint_decision_effect_tooltip
+
+	ai_check_interval = 1000
+
+	is_shown = {
+		current_year >= 1067
+		has_culture = culture:welsh
+		
+	}
+
+	is_valid_showing_failures_only = {
+		is_independent_ruler = yes
+		#Can't be fighting elsewhere.
+		is_at_war = no
+	}
+	
+	effect = {
+		show_as_tooltip = {
+			create_canonization_scripted_effect = yes
+		}
+		trigger_event = {
+			id = be_canonization.0001
+		}
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+	ai_potential = {
+		always = no
+	}
+}
+
+
+
+#what is the name when you make someone a saint?
+
