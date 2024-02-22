@@ -11,11 +11,14 @@
       <img src="https://www.pngmart.com/files/22/Steam-Logo-PNG.png" alt="steam" height="25"/>
     </a>
   <div id="badges">
-    <img src="https://img.shields.io/github/contributors/LordNapoleon/Brittania-expansion-Ck3?color=green&style=flat-square" alt="contributors"/>
-    <img src="https://img.shields.io/steam/update-date/2979045549?color=white&style=flat-square" alt="steam update"/>
-    <img src="https://img.shields.io/steam/subscriptions/2979045549?color=gold&style=flat-square" alt="subscriptions"/>
+    <img style="margin-right:5px;" src="https://img.shields.io/github/contributors/LordNapoleon/Brittania-expansion-Ck3?color=green&style=flat-square" alt="contributors"/>
+    <img style="margin-right:5px;" src="https://img.shields.io/steam/update-date/2979045549?color=white&style=flat-square" alt="steam update"/>
+    <img style="margin-right:5px;" src="https://img.shields.io/steam/subscriptions/2979045549?color=gold&style=flat-square" alt="subscriptions"/>
   </div>
-  <p align="center">
+  <h2>2024 REVIVAL!</h2>
+    <p>Looking to bring life back into this mod over the coming months / summer of 2024! <br>
+    Will bring updates as they come in here.</p>
+    <p align="justified">
     A small scale culture expansion mod to the UK so far. Looking to update Wales, Scotland, Ireland and England with culture, decisions, characters and events to make a more enhanced experience through the years.
     <br />
     <a href="https://github.com/LordNapoleon/Brittania-expansion-Ck3/tree/main/CulturesExpanded"><strong>Explore the mod! »</strong></a>
