@@ -1,5 +1,5 @@
 <div align="center">
-  <a href="https://github.com/aerh3f01/Brittania-expansion-Ck3">
+  <a href="https://github.com/aerh3f01/Britannia_CK3_Revival">
     <img src="britanniaexpansion_updated.png" alt="Logo" height="200">
   </a>
 </div>
