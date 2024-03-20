@@ -1,3 +1,9 @@
+<div align="center">
+  <a href="https://github.com/aerh3f01/Brittania-expansion-Ck3">
+    <img src="britanniaexpansion_updated.png" alt="Logo" height="200">
+  </a>
+</div>
+
 # Roadmap
 
 This is the roadmap for the mod. It is subject to change and is not a definitive list of what will be added to the mod. It is a rough guide to what will be added to the mod and when.
