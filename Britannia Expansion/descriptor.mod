@@ -1,10 +1,12 @@
-version="0.1.7"
+version="1.1.0-dev"
 tags={
-	"Utilities"
 	"Historical"
-	"Gameplay"
-	"Events"
 	"Culture"
+	"Events"
+	"Gameplay"
+	"Utilities"
+	"Character"
+	"Decisions"
 }
 name="Britannia Expansion"
 picture="thumbnail.png"
