@@ -1,0 +1,380 @@
+# Welsh Event Window Styling
+# Custom event window widgets with Welsh cultural theming
+
+types WelshEventTypes {
+	type welsh_event_background = widget {
+		size = { 100% 100% }
+		
+		# Base event background
+		using = Window_Background_Subwindow
+		
+		# Welsh parchment texture overlay
+		icon = {
+			size = { 100% 100% }
+			texture = "GFX_welsh_parchment_background"
+			alpha = 0.15
+		}
+		
+		# Celtic border pattern
+		icon = {
+			size = { 100% 100% }
+			texture = "GFX_welsh_event_border"
+			alpha = 0.8
+		}
+		
+		# Corner illuminations
+		icon = {
+			parentanchor = top|left
+			position = { 15 15 }
+			size = { 48 48 }
+			texture = "GFX_welsh_illumination_corner"
+		}
+		
+		icon = {
+			parentanchor = top|right
+			position = { -63 15 }
+			size = { 48 48 }
+			texture = "GFX_welsh_illumination_corner"
+			mirror = horizontal
+		}
+	}
+	
+	type welsh_event_title = text_single {
+		layoutpolicy_horizontal = expanding
+		align = center
+		fontsize = 20
+		default_format = "#high"
+		
+		# Welsh title styling
+		using = Font_Size_Big
+		margin = { 20 10 }
+		
+		# Red accent underline
+		icon = {
+			parentanchor = bottom|hcenter
+			position = { 0 5 }
+			size = { 80 2 }
+			texture = "gfx/interface/colors/red.dds"
+			alpha = 0.7
+		}
+	}
+	
+	type welsh_event_description = text_multi {
+		layoutpolicy_horizontal = expanding
+		max_width = 420
+		fontsize = 14
+		default_format = "#weak"
+		margin = { 25 15 }
+		
+		# Parchment text styling
+		using = Font_Size_Medium
+		alpha = 0.95
+	}
+	
+	type welsh_event_option = button_standard_clean {
+		size = { 450 60 }
+		
+		background = {
+			using = Background_Area_With_Header
+			
+			# Welsh cultural accent
+			icon = {
+				parentanchor = left|vcenter
+				position = { 0 0 }
+				size = { 6 100% }
+				texture = "gfx/interface/colors/red.dds"
+				alpha = 0.6
+			}
+			
+			# Celtic knotwork detail
+			icon = {
+				parentanchor = right|vcenter
+				position = { -10 0 }
+				size = { 24 24 }
+				texture = "GFX_welsh_knotwork_small"
+				alpha = 0.4
+			}
+		}
+		
+		hbox = {
+			layoutpolicy_horizontal = expanding
+			layoutpolicy_vertical = expanding
+			margin = { 20 12 }
+			spacing = 10
+			
+			# Option icon
+			icon = {
+				size = { 32 32 }
+				parentanchor = vcenter
+				
+				block "option_icon" {
+					texture = "GFX_event_option_icon"
+				}
+			}
+			
+			# Option text
+			vbox = {
+				layoutpolicy_horizontal = expanding
+				layoutpolicy_vertical = expanding
+				spacing = 2
+				
+				# Main option text
+				text_single = {
+					layoutpolicy_horizontal = expanding
+					fontsize = 14
+					
+					block "option_text" {
+						text = "EVENT_OPTION_TEXT"
+					}
+					
+					default_format = "#clickable"
+					using = Font_Size_Medium
+				}
+				
+				# Tooltip hint
+				text_single = {
+					layoutpolicy_horizontal = expanding
+					fontsize = 11
+					alpha = 0.7
+					
+					block "option_tooltip" {
+						text = "EVENT_OPTION_TOOLTIP"
+						visible = no
+					}
+					
+					default_format = "#weak"
+				}
+			}
+		}
+		
+		# Hover state
+		state = {
+			name = _mouse_hover
+			
+			modify_texture = {
+				texture = "gfx/interface/colors/red.dds"
+				blend_mode = overlay
+				alpha = 0.08
+			}
+		}
+		
+		# Pressed state
+		state = {
+			name = _mouse_press
+			
+			modify_texture = {
+				texture = "gfx/interface/colors/red.dds"
+				blend_mode = overlay
+				alpha = 0.15
+			}
+		}
+	}
+	
+	type welsh_event_portrait = widget {
+		size = { 120 120 }
+		
+		# Portrait frame with Welsh styling
+		icon = {
+			size = { 100% 100% }
+			texture = "GFX_welsh_portrait_frame"
+		}
+		
+		# Character portrait
+		portrait = {
+			size = { 100 100 }
+			parentanchor = center
+			
+			block "portrait_character" {
+				# Will be set by specific events
+			}
+			
+			# Portrait effects
+			effectname = "NoHighlight"
+			portrait_scale = 0.8
+			portrait_offset = { 0 10 }
+		}
+		
+		# Cultural rank indicator
+		icon = {
+			parentanchor = bottom|right
+			position = { -5 -5 }
+			size = { 24 24 }
+			
+			block "rank_icon" {
+				texture = "GFX_welsh_rank_indicator"
+				visible = no
+			}
+		}
+	}
+	
+	type welsh_event_illustration = widget {
+		size = { 200 150 }
+		
+		# Main illustration
+		icon = {
+			size = { 100% 100% }
+			
+			block "illustration_texture" {
+				texture = "GFX_welsh_event_illustration_default"
+			}
+			
+			# Illustration frame
+			icon = {
+				size = { 100% 100% }
+				texture = "GFX_welsh_illustration_frame"
+			}
+		}
+		
+		# Welsh cultural watermark
+		icon = {
+			parentanchor = bottom|right
+			position = { -10 -10 }
+			size = { 32 32 }
+			texture = "GFX_welsh_dragon_watermark"
+			alpha = 0.3
+		}
+	}
+}
+
+# Enhanced Welsh Event Window
+window = {
+	name = "welsh_enhanced_event_window"
+	parentanchor = center
+	size = { 600 500 }
+	layer = windows
+	
+	using = welsh_event_background
+	
+	vbox = {
+		layoutpolicy_horizontal = expanding
+		layoutpolicy_vertical = expanding
+		margin = { 30 25 }
+		spacing = 15
+		
+		# Header section
+		hbox = {
+			layoutpolicy_horizontal = expanding
+			spacing = 15
+			
+			# Event illustration or portrait
+			block "event_visual" {
+				welsh_event_portrait = {
+					block "portrait_setup" {}
+				}
+			}
+			
+			# Title and basic info
+			vbox = {
+				layoutpolicy_horizontal = expanding
+				spacing = 8
+				
+				welsh_event_title = {
+					block "event_title" {
+						text = "EVENT_TITLE"
+					}
+				}
+				
+				# Event type indicator
+				text_single = {
+					text = "WELSH_CULTURAL_EVENT"
+					fontsize = 12
+					default_format = "#low"
+					alpha = 0.8
+				}
+				
+				# Date and location
+				hbox = {
+					spacing = 15
+					
+					text_single = {
+						text = "[GetCurrentDate.GetString]"
+						fontsize = 11
+						default_format = "#weak"
+					}
+					
+					text_single = {
+						text = "[GetPlayer.GetPrimaryTitle.GetNameNoTooltip]"
+						fontsize = 11
+						default_format = "#weak"
+					}
+				}
+			}
+			
+			# Close button
+			button_close = {
+				parentanchor = top|right
+				onclick = "[EventWindow.Close]"
+			}
+		}
+		
+		divider_decorative = {}
+		
+		# Event description
+		scrollbox = {
+			layoutpolicy_horizontal = expanding
+			layoutpolicy_vertical = expanding
+			
+			using = Background_Area_Dark
+			
+			blockoverride "scrollbox_content" {
+				welsh_event_description = {
+					block "event_description" {
+						text = "EVENT_DESCRIPTION"
+					}
+				}
+			}
+		}
+		
+		# Event options
+		vbox = {
+			layoutpolicy_horizontal = expanding
+			spacing = 8
+			margin_top = 10
+			
+			block "event_options" {
+				welsh_event_option = {
+					block "option_a" {}
+				}
+				
+				welsh_event_option = {
+					block "option_b" {}
+				}
+			}
+		}
+		
+		# Footer with Welsh cultural elements
+		hbox = {
+			layoutpolicy_horizontal = expanding
+			spacing = 10
+			margin_top = 10
+			
+			# Cultural authenticity indicator
+			hbox = {
+				spacing = 5
+				
+				icon = {
+					size = { 16 16 }
+					texture = "GFX_welsh_authenticity_seal"
+				}
+				
+				text_single = {
+					text = "WELSH_CULTURAL_AUTHENTICITY"
+					fontsize = 10
+					default_format = "#weak"
+					alpha = 0.6
+				}
+			}
+			
+			expand = {}
+			
+			# Event ID for debugging
+			text_single = {
+				text = "[Event.GetID]"
+				fontsize = 9
+				default_format = "#debug"
+				alpha = 0.4
+				visible = "[InDebugMode]"
+			}
+		}
+	}
+}

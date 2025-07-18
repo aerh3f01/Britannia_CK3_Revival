@@ -1,0 +1,398 @@
+# Welsh Court Positions
+# Based on traditional Welsh court structure and historical roles
+
+pencerdd_court_poet = {
+	# Chief Poet - highest cultural position in Welsh court
+	
+	skill = learning
+	max_available_positions = 1
+	category = court_position_category_special
+	
+	minimum_rank = duke
+	
+	# Only available to Welsh rulers
+	is_shown = {
+		culture = { has_cultural_pillar = heritage_brythonic }
+	}
+	
+	valid_position = {
+		culture = { has_cultural_pillar = heritage_brythonic }
+	}
+	
+	revoke_cost = {
+		prestige = medium_prestige_value
+	}
+	
+	salary_cost = {
+		gold = medium_gold_value
+	}
+	
+	# Requirements for the position holder
+	valid_character = {
+		scope:employee = {
+			is_adult = yes
+			learning >= 12
+			culture = { has_cultural_pillar = heritage_brythonic }
+			
+			OR = {
+				has_trait = poet
+				has_trait = scholar
+				has_trait = gregarious
+				learning >= 15
+			}
+		}
+	}
+	
+	# Benefits for the court
+	character_modifier = {
+		monthly_prestige = 0.3
+		court_grandeur_base_value = 3
+		learning_lifestyle_xp_mult = 0.1
+		cultural_acceptance_gain_mult = 0.15
+	}
+	
+	# Benefits for position holder
+	aptitude_level_2 = {
+		is_shown = { scope:employee = { learning >= 12 } }
+		employee_modifier = {
+			monthly_prestige = 0.2
+			learning_lifestyle_xp_mult = 0.25
+		}
+		character_modifier = {
+			monthly_prestige = 0.1
+			court_grandeur_base_value = 1
+		}
+	}
+	
+	aptitude_level_3 = {
+		is_shown = { scope:employee = { learning >= 16 } }
+		employee_modifier = {
+			monthly_prestige = 0.3
+			learning_lifestyle_xp_mult = 0.35
+		}
+		character_modifier = {
+			monthly_prestige = 0.15
+			court_grandeur_base_value = 2
+			cultural_head_fascination_mult = 0.1
+		}
+	}
+	
+	aptitude_level_4 = {
+		is_shown = { scope:employee = { learning >= 20 } }
+		employee_modifier = {
+			monthly_prestige = 0.4
+			learning_lifestyle_xp_mult = 0.45
+		}
+		character_modifier = {
+			monthly_prestige = 0.2
+			court_grandeur_base_value = 3
+			cultural_head_fascination_mult = 0.15
+		}
+	}
+	
+	# Special events
+	base_employer_modifier = {
+		monthly_court_grandeur_change_mult = 0.1
+	}
+	
+	# AI hiring preferences
+	hire_oprion_liege = {
+		value = 100
+		
+		modifier = {
+			add = 50
+			culture = { has_cultural_pillar = heritage_brythonic }
+		}
+		
+		modifier = {
+			add = 25
+			culture = { has_cultural_tradition = tradition_bardic_courts }
+		}
+	}
+}
+
+penteulu_warband_leader = {
+	# Head of household warriors (teulu)
+	
+	skill = martial
+	max_available_positions = 1
+	category = court_position_category_special
+	
+	minimum_rank = count
+	
+	is_shown = {
+		culture = { has_cultural_pillar = heritage_brythonic }
+	}
+	
+	valid_position = {
+		culture = { has_cultural_pillar = heritage_brythonic }
+	}
+	
+	revoke_cost = {
+		prestige = medium_prestige_value
+	}
+	
+	salary_cost = {
+		gold = medium_gold_value
+	}
+	
+	valid_character = {
+		scope:employee = {
+			is_adult = yes
+			martial >= 12
+			culture = { has_cultural_pillar = heritage_brythonic }
+			
+			OR = {
+				has_trait = brave
+				has_trait = brilliant_strategist
+				has_trait = skilled_tactician
+				martial >= 15
+			}
+		}
+	}
+	
+	character_modifier = {
+		prowess = 2
+		monthly_prestige = 0.2
+		levy_reinforcement_rate_mult = 0.1
+		army_damage_mult = 0.05
+	}
+	
+	aptitude_level_2 = {
+		is_shown = { scope:employee = { martial >= 12 } }
+		employee_modifier = {
+			monthly_prestige = 0.2
+			martial_lifestyle_xp_mult = 0.2
+		}
+		character_modifier = {
+			levy_size = 0.05
+			army_damage_mult = 0.05
+		}
+	}
+	
+	aptitude_level_3 = {
+		is_shown = { scope:employee = { martial >= 16 } }
+		employee_modifier = {
+			monthly_prestige = 0.3
+			martial_lifestyle_xp_mult = 0.3
+		}
+		character_modifier = {
+			levy_size = 0.1
+			army_damage_mult = 0.1
+			levy_reinforcement_rate_mult = 0.15
+		}
+	}
+	
+	aptitude_level_4 = {
+		is_shown = { scope:employee = { martial >= 20 } }
+		employee_modifier = {
+			monthly_prestige = 0.4
+			martial_lifestyle_xp_mult = 0.4
+		}
+		character_modifier = {
+			levy_size = 0.15
+			army_damage_mult = 0.15
+			levy_reinforcement_rate_mult = 0.2
+			men_at_arms_recruitment_cost_mult = -0.1
+		}
+	}
+	
+	base_employer_modifier = {
+		knight_effectiveness_mult = 0.1
+	}
+	
+	hire_oprion_liege = {
+		value = 100
+		
+		modifier = {
+			add = 50
+			culture = { has_cultural_pillar = heritage_brythonic }
+		}
+		
+		modifier = {
+			add = 25
+			any_character_war = { using_cb = conquest }
+		}
+	}
+}
+
+distain_seneschal = {
+	# Welsh steward with expanded clan negotiation duties
+	
+	skill = stewardship
+	max_available_positions = 1
+	category = court_position_category_special
+	
+	minimum_rank = count
+	
+	is_shown = {
+		culture = { has_cultural_pillar = heritage_brythonic }
+	}
+	
+	valid_position = {
+		culture = { has_cultural_pillar = heritage_brythonic }
+	}
+	
+	revoke_cost = {
+		prestige = medium_prestige_value
+	}
+	
+	salary_cost = {
+		gold = medium_gold_value
+	}
+	
+	valid_character = {
+		scope:employee = {
+			is_adult = yes
+			stewardship >= 12
+			culture = { has_cultural_pillar = heritage_brythonic }
+		}
+	}
+	
+	character_modifier = {
+		monthly_income_mult = 0.1
+		vassal_opinion = 5
+		stewardship_lifestyle_xp_mult = 0.1
+		domain_tax_mult = 0.05
+	}
+	
+	aptitude_level_2 = {
+		is_shown = { scope:employee = { stewardship >= 12 } }
+		employee_modifier = {
+			monthly_prestige = 0.15
+			stewardship_lifestyle_xp_mult = 0.2
+		}
+		character_modifier = {
+			domain_tax_mult = 0.05
+			monthly_income_mult = 0.05
+		}
+	}
+	
+	aptitude_level_3 = {
+		is_shown = { scope:employee = { stewardship >= 16 } }
+		employee_modifier = {
+			monthly_prestige = 0.2
+			stewardship_lifestyle_xp_mult = 0.3
+		}
+		character_modifier = {
+			domain_tax_mult = 0.1
+			monthly_income_mult = 0.1
+			vassal_opinion = 3
+		}
+	}
+	
+	aptitude_level_4 = {
+		is_shown = { scope:employee = { stewardship >= 20 } }
+		employee_modifier = {
+			monthly_prestige = 0.25
+			stewardship_lifestyle_xp_mult = 0.4
+		}
+		character_modifier = {
+			domain_tax_mult = 0.15
+			monthly_income_mult = 0.15
+			vassal_opinion = 5
+			development_growth_factor = 0.05
+		}
+	}
+	
+	base_employer_modifier = {
+		monthly_county_control_change_mult = 0.1
+	}
+	
+	hire_oprion_liege = {
+		value = 100
+		
+		modifier = {
+			add = 50
+			culture = { has_cultural_pillar = heritage_brythonic }
+		}
+	}
+}
+
+hebogydd_falconer = {
+	# Chief falconer with expanded hunting and scouting duties
+	
+	skill = prowess
+	max_available_positions = 1
+	category = court_position_category_special
+	
+	minimum_rank = count
+	
+	is_shown = {
+		culture = { has_cultural_pillar = heritage_brythonic }
+	}
+	
+	valid_position = {
+		culture = { has_cultural_pillar = heritage_brythonic }
+	}
+	
+	revoke_cost = {
+		prestige = minor_prestige_value
+	}
+	
+	salary_cost = {
+		gold = minor_gold_value
+	}
+	
+	valid_character = {
+		scope:employee = {
+			is_adult = yes
+			prowess >= 10
+			culture = { has_cultural_pillar = heritage_brythonic }
+		}
+	}
+	
+	character_modifier = {
+		stress_loss_mult = 0.1
+		prowess_lifestyle_xp_mult = 0.1
+		hunt_success_chance = 0.15
+	}
+	
+	aptitude_level_2 = {
+		is_shown = { scope:employee = { prowess >= 12 } }
+		employee_modifier = {
+			monthly_prestige = 0.1
+			prowess_lifestyle_xp_mult = 0.15
+		}
+		character_modifier = {
+			hunt_success_chance = 0.1
+			enemy_hostile_scheme_success_chance_add = -5
+		}
+	}
+	
+	aptitude_level_3 = {
+		is_shown = { scope:employee = { prowess >= 16 } }
+		employee_modifier = {
+			monthly_prestige = 0.15
+			prowess_lifestyle_xp_mult = 0.25
+		}
+		character_modifier = {
+			hunt_success_chance = 0.15
+			enemy_hostile_scheme_success_chance_add = -10
+			hostile_scheme_discovery_chance_mult = 0.1
+		}
+	}
+	
+	aptitude_level_4 = {
+		is_shown = { scope:employee = { prowess >= 20 } }
+		employee_modifier = {
+			monthly_prestige = 0.2
+			prowess_lifestyle_xp_mult = 0.35
+		}
+		character_modifier = {
+			hunt_success_chance = 0.2
+			enemy_hostile_scheme_success_chance_add = -15
+			hostile_scheme_discovery_chance_mult = 0.15
+			movement_speed_mult = 0.05
+		}
+	}
+	
+	hire_oprion_liege = {
+		value = 50
+		
+		modifier = {
+			add = 25
+			culture = { has_cultural_pillar = heritage_brythonic }
+		}
+	}
+}

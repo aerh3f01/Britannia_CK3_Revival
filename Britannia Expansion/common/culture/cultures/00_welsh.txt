@@ -1,0 +1,281 @@
+# Welsh Culture Definition for Britannia Expansion
+# Based on historical Welsh culture from 867-1453
+
+brythonic = {
+	color = hsv { 0.98 0.8 0.8 }
+	
+	created = 100.1.1
+	parents = { briton }
+	
+	ethos = ethos_ceremonial
+	heritage = heritage_west_germanic
+	language = language_welsh
+	martial_custom = martial_custom_male_only
+	traditions = {
+		tradition_storytellers
+		tradition_mountain_homes
+		tradition_warrior_culture
+		tradition_zealotry
+	}
+	
+	name_list = name_list_welsh
+	
+	coa_gfx = { brythonic_group_coa_gfx }
+	building_gfx = { western_building_gfx }
+	clothing_gfx = { western_clothing_gfx }
+	unit_gfx = { western_unit_gfx }
+	
+	# Welsh Culture Features
+	character_modifier = {
+		prowess = 1
+		monthly_prestige = 0.1
+		hostile_scheme_resistance_add = 5
+	}
+	
+	# Special mechanics for Welsh culture
+	can_keep_culture_traditions_on_hybrid = yes
+	
+	# Innovation bonuses reflecting Welsh expertise
+	innovation_chance_multiplier = {
+		innovation_longbows = 1.5
+		innovation_battlements = 1.3
+		innovation_burhs = 1.2
+	}
+}
+
+welsh = {
+	color = { 0.8 0.2 0.2 }
+	
+	created = 600.1.1
+	parents = { brythonic }
+	
+	ethos = ethos_ceremonial
+	heritage = heritage_brythonic
+	language = language_welsh
+	martial_custom = martial_custom_male_only
+	
+	# Cultural parameters for Welsh-specific features
+	cultural_parameter = {
+		welsh_court_positions = yes
+		welsh_building_bonuses = yes
+		welsh_terrain_mastery = yes
+		welsh_succession_laws = yes
+	}
+	
+	traditions = {
+		tradition_storytellers        # Bardic tradition - core Welsh identity
+		tradition_mountain_homes      # Terrain mastery in Welsh mountains
+		tradition_warrior_culture     # Military focus and prowess
+		tradition_zealotry           # Strong Celtic Christian faith
+		tradition_poetry            # Poetic and cultural arts
+		tradition_longbow_competitions # Welsh longbow mastery
+		tradition_clan_vengeance     # Honor and family loyalty
+	}
+	
+	name_list = name_list_welsh
+	
+	coa_gfx = { brythonic_group_coa_gfx }
+	building_gfx = { western_building_gfx }
+	clothing_gfx = { western_clothing_gfx }
+	unit_gfx = { western_unit_gfx }
+	
+	# Welsh cultural bonuses reflecting historical strengths
+	character_modifier = {
+		prowess = 2                    # Welsh warrior tradition
+		monthly_prestige = 0.15        # Cultural pride and bardic fame
+		hostile_scheme_resistance_add = 10  # Clan loyalty and suspicion
+		monthly_piety = 0.1           # Celtic Christian devotion
+		stress_gain_mult = -0.05      # Strong community support
+	}
+	
+	# Military advantages in Welsh terrain
+	army_modifier = {
+		mountains_attrition_mult = -0.5
+		hills_attrition_mult = -0.3
+		mountains_movement_speed_mult = 0.2
+		hills_movement_speed_mult = 0.15
+	}
+	
+	# Innovation bonuses reflecting Welsh specializations
+	innovation_chance_multiplier = {
+		innovation_longbows = 2.0          # Famous Welsh longbowmen
+		innovation_battlements = 1.5       # Castle building expertise
+		innovation_burhs = 1.3            # Hill fort traditions
+		innovation_chronicle_writing = 1.4 # Bardic literary tradition
+		innovation_advanced_bowmaking = 1.8
+		innovation_mountain_skirmishing = 1.6
+	}
+	
+	# Court type preferences
+	court_type_preference = {
+		court_administrative = 0.2
+		court_diplomatic = 0.3
+		court_intrigue = 0.2
+		court_scholarly = 0.4          # Bardic learning tradition
+		court_warlike = 0.6           # Warrior culture
+	}
+	
+	# Men-at-Arms preferences
+	men_at_arms_preference = {
+		light_footmen = 20
+		bowmen = 40                   # Welsh longbow preference
+		skirmishers = 30
+		heavy_infantry = 10
+	}
+}
+
+# Sub-cultures representing regional Welsh differences
+
+welsh_gwynedd = {
+	color = { 0.9 0.1 0.1 }
+	
+	created = 800.1.1
+	parents = { welsh }
+	
+	ethos = ethos_bellicose
+	heritage = heritage_brythonic
+	language = language_welsh
+	martial_custom = martial_custom_male_only
+	
+	# Cultural parameters inherited from parent Welsh culture
+	cultural_parameter = {
+		welsh_court_positions = yes
+		welsh_building_bonuses = yes
+		welsh_terrain_mastery = yes
+		welsh_succession_laws = yes
+	}
+	
+	traditions = {
+		tradition_storytellers
+		tradition_mountain_homes
+		tradition_warrior_culture
+		tradition_zealotry
+		tradition_poetry
+		tradition_longbow_competitions
+		tradition_highland_warriors    # Northern mountain specialization
+		tradition_martial_admiration
+	}
+	
+	name_list = name_list_welsh_gwynedd
+	
+	# Gwynedd bonuses - most militaristic Welsh kingdom
+	character_modifier = {
+		prowess = 3
+		monthly_prestige = 0.2
+		hostile_scheme_resistance_add = 15
+		monthly_piety = 0.1
+		dread_per_tyranny_add = 0.5
+	}
+	
+	army_modifier = {
+		mountains_attrition_mult = -0.7
+		mountains_movement_speed_mult = 0.3
+		siege_weapon_siege_value_mult = 0.1
+	}
+	
+	innovation_chance_multiplier = {
+		innovation_longbows = 2.2
+		innovation_battlements = 1.8
+		innovation_mountain_skirmishing = 2.0
+	}
+}
+
+welsh_powys = {
+	color = { 0.7 0.3 0.1 }
+	
+	created = 800.1.1
+	parents = { welsh }
+	
+	ethos = ethos_administrative
+	heritage = heritage_brythonic
+	language = language_welsh
+	martial_custom = martial_custom_male_only
+	
+	# Cultural parameters inherited from parent Welsh culture
+	cultural_parameter = {
+		welsh_court_positions = yes
+		welsh_building_bonuses = yes
+		welsh_terrain_mastery = yes
+		welsh_succession_laws = yes
+	}
+	
+	traditions = {
+		tradition_storytellers
+		tradition_mountain_homes
+		tradition_warrior_culture
+		tradition_zealotry
+		tradition_poetry
+		tradition_border_guards       # Border kingdom specialization
+		tradition_diplomacy_first     # Political maneuvering
+		tradition_adaptive_skirmishing
+	}
+	
+	name_list = name_list_welsh_powys
+	
+	# Powys bonuses - diplomatic and adaptive
+	character_modifier = {
+		prowess = 1
+		diplomacy = 1
+		monthly_prestige = 0.1
+		hostile_scheme_resistance_add = 8
+		monthly_piety = 0.1
+		diplomacy_lifestyle_xp_mult = 0.1
+	}
+	
+	innovation_chance_multiplier = {
+		innovation_casus_belli = 1.5
+		innovation_royal_prerogative = 1.4
+		innovation_plenary_assemblies = 1.3
+	}
+}
+
+welsh_deheubarth = {
+	color = { 0.6 0.4 0.2 }
+	
+	created = 900.1.1
+	parents = { welsh }
+	
+	ethos = ethos_ceremonial
+	heritage = heritage_brythonic
+	language = language_welsh
+	martial_custom = martial_custom_male_only
+	
+	# Cultural parameters inherited from parent Welsh culture
+	cultural_parameter = {
+		welsh_court_positions = yes
+		welsh_building_bonuses = yes
+		welsh_terrain_mastery = yes
+		welsh_succession_laws = yes
+	}
+	
+	traditions = {
+		tradition_storytellers
+		tradition_mountain_homes
+		tradition_warrior_culture
+		tradition_zealotry
+		tradition_poetry
+		tradition_longbow_competitions
+		tradition_culture_blending     # Southern cultural mixing
+		tradition_scholarly_circles    # Learning tradition of Hywel Dda
+	}
+	
+	name_list = name_list_welsh_deheubarth
+	
+	# Deheubarth bonuses - cultural and legal tradition
+	character_modifier = {
+		prowess = 1
+		learning = 2
+		monthly_prestige = 0.15
+		hostile_scheme_resistance_add = 10
+		monthly_piety = 0.15
+		learning_lifestyle_xp_mult = 0.15
+	}
+	
+	innovation_chance_multiplier = {
+		innovation_chronicle_writing = 1.8
+		innovation_currency_01 = 1.4
+		innovation_currency_02 = 1.4
+		innovation_ledger = 1.5
+		innovation_gavelkind = 1.6        # Hywel's legal reforms
+	}
+}

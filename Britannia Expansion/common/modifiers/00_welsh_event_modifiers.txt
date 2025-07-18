@@ -1,0 +1,62 @@
+# Welsh Event Modifiers
+# Character and County modifiers for Welsh events
+
+# Border tension modifiers
+border_tensions = {
+	levy_size = -0.1
+	tax_mult = -0.05
+	monthly_county_control_change_mult = -0.1
+}
+
+welsh_border_fortifications = {
+	damage_mult = 0.15
+	toughness_mult = 0.1
+	siege_defense_mult = 0.2
+}
+
+wartime_preparations = {
+	levy_size = 0.2
+	tax_mult = -0.1
+	monthly_development = -0.05
+	siege_defense_mult = 0.15
+}
+
+# Norman construction modifiers
+norman_castle_construction = {
+	siege_defense_mult = 0.3
+	levy_size = 0.15
+	monthly_county_control_change_mult = 0.2
+}
+
+welsh_counter_fortifications = {
+	siege_defense_mult = 0.25
+	monthly_development = 0.1
+	tax_mult = 0.05
+}
+
+# Military modifiers
+guerrilla_raids = {
+	movement_speed_mult = 0.2
+	retreat_losses_mult = -0.3
+	enemy_attrition_mult = 0.15
+}
+
+great_welsh_uprising = {
+	levy_reinforcement_rate_mult = 0.3
+	movement_speed_mult = 0.15
+	monthly_prestige = 0.5
+}
+
+resistance_leader = {
+	monthly_prestige = 1.0
+	prowess = 3
+	monthly_tyranny = -0.1
+	army_damage_mult = 0.2
+}
+
+# Alliance modifiers
+welsh_defensive_alliance = {
+	diplomacy = 2
+	monthly_prestige = 0.3
+	alliance_acceptance = 25
+}

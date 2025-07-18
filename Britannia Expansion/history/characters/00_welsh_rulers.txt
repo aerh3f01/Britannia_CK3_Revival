@@ -1,0 +1,834 @@
+# Welsh Character History
+# Based on WELSH_CHARACTERS.md database - Key Welsh rulers
+
+# Hywel Dda ap Cadell (c. 880-950) - The Good
+200001 = {
+	name = "Hywel"
+	dynasty = 100001 # Dinefwr Dynasty
+	religion = catholic
+	culture = welsh
+	
+	867.1.1 = {
+		birth = yes
+		trait = temperate
+		trait = just
+		trait = diligent
+		trait = patient
+		
+		# Historical lawgiver
+		add_character_flag = codified_welsh_law
+		
+		# Base stats reflecting his wisdom and leadership
+		diplomacy = 18
+		martial = 12
+		stewardship = 20
+		intrigue = 14
+		learning = 22
+		prowess = 10
+	}
+	
+	942.1.1 = {
+		# Becomes King of Deheubarth and later most of Wales
+		add_pressed_claim = k_wales
+		add_pressed_claim = d_deheubarth
+		add_pressed_claim = d_gwynedd
+		add_pressed_claim = d_powys
+		
+		# Codified Welsh law
+		add_character_modifier = {
+			modifier = cyfraith_hywel_legacy
+			days = -1
+		}
+	}
+	
+	950.1.1 = {
+		death = yes
+	}
+}
+
+# Anarawd ap Rhodri (d. 916) - King of Gwynedd
+200002 = {
+	name = "Anarawd"
+	dynasty = 100001 # Dinefwr Dynasty
+	religion = catholic
+	culture = welsh
+	father = 200000 # Rhodri Mawr (would need to be defined)
+	
+	867.1.1 = {
+		birth = yes
+		trait = brave
+		trait = ambitious
+		trait = wrathful
+		
+		diplomacy = 14
+		martial = 18
+		stewardship = 12
+		intrigue = 16
+		learning = 10
+		prowess = 16
+	}
+	
+	878.1.1 = {
+		# Inherits Gwynedd after Rhodri's death
+		add_pressed_claim = d_gwynedd
+	}
+	
+	916.1.1 = {
+		death = yes
+	}
+}
+
+# Merfyn ap Rhodri (d. 900) - King of Powys
+200003 = {
+	name = "Merfyn"
+	dynasty = 100001 # Dinefwr Dynasty
+	religion = catholic
+	culture = welsh
+	father = 200000 # Rhodri Mawr
+	
+	867.1.1 = {
+		birth = yes
+		trait = content
+		trait = generous
+		trait = trusting
+		
+		diplomacy = 16
+		martial = 12
+		stewardship = 14
+		intrigue = 8
+		learning = 12
+		prowess = 11
+	}
+	
+	878.1.1 = {
+		# Inherits Powys
+		add_pressed_claim = d_powys
+	}
+	
+	900.1.1 = {
+		death = yes
+	}
+}
+
+# Cadell ap Rhodri (d. 909) - King of Deheubarth
+200004 = {
+	name = "Cadell"
+	dynasty = 100001 # Dinefwr Dynasty
+	religion = catholic
+	culture = welsh
+	father = 200000 # Rhodri Mawr
+	
+	867.1.1 = {
+		birth = yes
+		trait = patient
+		trait = diligent
+		trait = honest
+		
+		diplomacy = 15
+		martial = 14
+		stewardship = 18
+		intrigue = 12
+		learning = 16
+		prowess = 10
+	}
+	
+	878.1.1 = {
+		# Inherits Deheubarth
+		add_pressed_claim = d_deheubarth
+	}
+	
+	909.1.1 = {
+		death = yes
+	}
+}
+
+# Llywelyn ap Merfyn (d. 942)
+200005 = {
+	name = "Llywelyn"
+	dynasty = 100001
+	religion = catholic
+	culture = welsh
+	father = 200003 # Merfyn ap Rhodri
+	
+	890.1.1 = {
+		birth = yes
+		trait = brave
+		trait = ambitious
+		
+		diplomacy = 12
+		martial = 16
+		stewardship = 10
+		intrigue = 14
+		learning = 8
+		prowess = 15
+	}
+	
+	900.1.1 = {
+		# Inherits Powys from father
+		add_pressed_claim = d_powys
+	}
+	
+	942.1.1 = {
+		death = yes
+	}
+}
+
+# Iago ab Idwal (d. 979) - King of Gwynedd
+200010 = {
+	name = "Iago"
+	dynasty = 100002 # Aberffraw Dynasty
+	religion = catholic
+	culture = welsh
+	
+	920.1.1 = {
+		birth = yes
+		trait = wrathful
+		trait = brave
+		trait = stubborn
+		
+		diplomacy = 10
+		martial = 18
+		stewardship = 8
+		intrigue = 16
+		learning = 6
+		prowess = 17
+	}
+	
+	950.1.1 = {
+		# Takes control of Gwynedd after Hywel's death
+		add_pressed_claim = d_gwynedd
+	}
+	
+	979.1.1 = {
+		death = yes
+	}
+}
+
+# Owain ap Hywel (d. 988)
+200011 = {
+	name = "Owain"
+	dynasty = 100001
+	religion = catholic
+	culture = welsh
+	father = 200001 # Hywel Dda
+	
+	925.1.1 = {
+		birth = yes
+		trait = patient
+		trait = generous
+		trait = content
+		
+		diplomacy = 16
+		martial = 12
+		stewardship = 14
+		intrigue = 10
+		learning = 18
+		prowess = 8
+	}
+	
+	950.1.1 = {
+		# Inherits parts of father's kingdom
+		add_pressed_claim = d_deheubarth
+		add_pressed_claim = d_powys
+	}
+	
+	988.1.1 = {
+		death = yes
+	}
+}
+
+# Owain ap Hywel of Deheubarth (different person)
+200012 = {
+	name = "Owain"
+	dynasty = 100001
+	religion = catholic
+	culture = welsh
+	father = 200001 # Hywel Dda
+	
+	927.1.1 = {
+		birth = yes
+		trait = temperate
+		trait = just
+		trait = diligent
+		
+		diplomacy = 14
+		martial = 10
+		stewardship = 16
+		intrigue = 12
+		learning = 16
+		prowess = 9
+	}
+	
+	950.1.1 = {
+		add_pressed_claim = d_powys
+	}
+	
+	986.1.1 = {
+		death = yes
+	}
+}
+
+# Llywelyn ap Seisyll (d. 1023) - King of Gwynedd and Deheubarth
+200015 = {
+	name = "Llywelyn"
+	dynasty = 100002
+	religion = catholic
+	culture = welsh
+	
+	980.1.1 = {
+		birth = yes
+		trait = brave
+		trait = ambitious
+		trait = just
+		
+		diplomacy = 16
+		martial = 20
+		stewardship = 14
+		intrigue = 18
+		learning = 12
+		prowess = 18
+	}
+	
+	1018.1.1 = {
+		# Conquers Deheubarth and unites much of Wales
+		add_pressed_claim = d_gwynedd
+		add_pressed_claim = d_deheubarth
+		
+		add_character_modifier = {
+			modifier = welsh_resistance_leader
+			years = 5
+		}
+	}
+	
+	1023.1.1 = {
+		death = yes
+	}
+}
+
+# Maredudd ab Owain (d. 999)
+200020 = {
+	name = "Maredudd"
+	dynasty = 100001
+	religion = catholic
+	culture = welsh
+	father = 200011 # Owain ap Hywel
+	
+	965.1.1 = {
+		birth = yes
+		trait = patient
+		trait = brave
+		trait = diligent
+		
+		diplomacy = 15
+		martial = 17
+		stewardship = 13
+		intrigue = 14
+		learning = 11
+		prowess = 16
+	}
+	
+	986.1.1 = {
+		# Becomes ruler of Deheubarth
+		add_pressed_claim = d_deheubarth
+	}
+	
+	999.1.1 = {
+		death = yes
+	}
+}
+
+# Gruffudd ap Llywelyn (d. 1063) - King of Wales
+200025 = {
+	name = "Gruffudd"
+	dynasty = 100002
+	religion = catholic
+	culture = welsh
+	father = 200015 # Llywelyn ap Seisyll
+	
+	1010.1.1 = {
+		birth = yes
+		trait = brave
+		trait = ambitious
+		trait = wrathful
+		trait = strong
+		
+		diplomacy = 18
+		martial = 22
+		stewardship = 16
+		intrigue = 20
+		learning = 14
+		prowess = 20
+	}
+	
+	1039.1.1 = {
+		# Becomes King of Gwynedd
+		add_pressed_claim = d_gwynedd
+	}
+	
+	1055.1.1 = {
+		# Unifies Wales - the only ruler to control all Welsh kingdoms
+		add_pressed_claim = k_wales
+		add_pressed_claim = d_powys
+		add_pressed_claim = d_deheubarth
+		
+		add_character_modifier = {
+			modifier = welsh_resistance_leader
+			years = 8
+		}
+		
+		add_prestige = 3000
+	}
+	
+	1063.8.5 = {
+		death = yes # Killed by Harold Godwinson's forces
+	}
+}
+
+# Bleddyn ap Cynfyn (d. 1075) - King of Gwynedd and Powys
+200030 = {
+	name = "Bleddyn"
+	dynasty = 100003 # Mathrafal Dynasty
+	religion = catholic
+	culture = welsh
+	
+	1025.1.1 = {
+		birth = yes
+		trait = patient
+		trait = just
+		trait = brave
+		
+		diplomacy = 17
+		martial = 16
+		stewardship = 15
+		intrigue = 13
+		learning = 14
+		prowess = 15
+	}
+	
+	1063.8.5 = {
+		# Becomes joint ruler with Rhiwallon after Gruffudd's death
+		add_pressed_claim = d_gwynedd
+		add_pressed_claim = d_powys
+	}
+	
+	1075.1.1 = {
+		death = yes
+	}
+}
+
+# Iorwerth ap Bleddyn (d. 1111)
+200032 = {
+	name = "Iorwerth"
+	dynasty = 100003
+	religion = catholic
+	culture = welsh
+	father = 200030 # Bleddyn ap Cynfyn
+	
+	1055.1.1 = {
+		birth = yes
+		trait = content
+		trait = generous
+		trait = patient
+		
+		diplomacy = 14
+		martial = 12
+		stewardship = 16
+		intrigue = 10
+		learning = 13
+		prowess = 11
+	}
+	
+	1075.1.1 = {
+		# Inherits Powys
+		add_pressed_claim = d_powys
+	}
+	
+	1111.1.1 = {
+		death = yes
+	}
+}
+
+# Trahaern ap Caradog (d. 1081) - King of Gwynedd
+200035 = {
+	name = "Trahaern"
+	dynasty = 100004 # Arwystli Dynasty
+	religion = catholic
+	culture = welsh
+	
+	1030.1.1 = {
+		birth = yes
+		trait = brave
+		trait = ambitious
+		trait = honest
+		
+		diplomacy = 12
+		martial = 18
+		stewardship = 10
+		intrigue = 14
+		learning = 8
+		prowess = 17
+	}
+	
+	1075.1.1 = {
+		# Seizes Gwynedd after Bleddyn's death
+		add_pressed_claim = d_gwynedd
+	}
+	
+	1081.1.1 = {
+		death = yes # Killed in battle by Gruffudd ap Cynan
+	}
+}
+
+# Gruffudd ap Cynan (d. 1137) - King of Gwynedd
+200040 = {
+	name = "Gruffudd"
+	dynasty = 100002
+	religion = catholic
+	culture = welsh
+	
+	1055.1.1 = {
+		birth = yes
+		trait = brave
+		trait = patient
+		trait = ambitious
+		trait = viking # Had Norse connections
+		
+		diplomacy = 16
+		martial = 19
+		stewardship = 14
+		intrigue = 17
+		learning = 15
+		prowess = 18
+	}
+	
+	1081.1.1 = {
+		# Defeats Trahaern and becomes King of Gwynedd
+		add_pressed_claim = d_gwynedd
+		
+		add_character_modifier = {
+			modifier = welsh_resistance_leader
+			years = 10
+		}
+	}
+	
+	1137.1.1 = {
+		death = yes
+	}
+}
+
+# Owain Gwynedd (d. 1170) - King of Gwynedd
+200045 = {
+	name = "Owain"
+	dynasty = 100002
+	religion = catholic
+	culture = welsh
+	father = 200040 # Gruffudd ap Cynan
+	
+	1100.1.1 = {
+		birth = yes
+		trait = brave
+		trait = ambitious
+		trait = just
+		trait = strong
+		
+		diplomacy = 18
+		martial = 20
+		stewardship = 16
+		intrigue = 15
+		learning = 14
+		prowess = 19
+	}
+	
+	1137.1.1 = {
+		# Inherits Gwynedd and expands territory
+		add_pressed_claim = d_gwynedd
+		
+		add_character_modifier = {
+			modifier = welsh_resistance_leader
+			years = 15
+		}
+	}
+	
+	1170.1.1 = {
+		death = yes
+	}
+}
+
+# Rhys ab Owain (d. 1078)
+200048 = {
+	name = "Rhys"
+	dynasty = 100001
+	religion = catholic
+	culture = welsh
+	
+	1040.1.1 = {
+		birth = yes
+		trait = brave
+		trait = wrathful
+		
+		diplomacy = 10
+		martial = 16
+		stewardship = 8
+		intrigue = 12
+		learning = 6
+		prowess = 15
+	}
+	
+	1063.8.5 = {
+		add_pressed_claim = d_deheubarth
+	}
+	
+	1078.1.1 = {
+		death = yes
+	}
+}
+
+# Rhys ap Gruffudd "The Lord Rhys" (d. 1197) - Prince of Deheubarth
+200050 = {
+	name = "Rhys"
+	dynasty = 100001
+	religion = catholic
+	culture = welsh
+	
+	1132.1.1 = {
+		birth = yes
+		trait = brave
+		trait = ambitious
+		trait = just
+		trait = patient
+		trait = poet # Patron of arts
+		
+		diplomacy = 20
+		martial = 18
+		stewardship = 17
+		intrigue = 16
+		learning = 19
+		prowess = 16
+	}
+	
+	1155.1.1 = {
+		# Becomes Prince of Deheubarth
+		add_pressed_claim = d_deheubarth
+		add_pressed_claim = k_wales
+		
+		# Established the first recorded Eisteddfod
+		add_character_flag = established_eisteddfod
+		
+		add_character_modifier = {
+			modifier = eisteddfod_patron
+			years = 20
+		}
+		
+		add_character_modifier = {
+			modifier = welsh_resistance_leader
+			years = 20
+		}
+	}
+	
+	1197.4.28 = {
+		death = yes
+	}
+}
+
+# Cadwgan ap Bleddyn (d. 1111)
+200055 = {
+	name = "Cadwgan"
+	dynasty = 100003
+	religion = catholic
+	culture = welsh
+	father = 200030 # Bleddyn ap Cynfyn
+	
+	1060.1.1 = {
+		birth = yes
+		trait = brave
+		trait = ambitious
+		trait = wrathful
+		
+		diplomacy = 12
+		martial = 17
+		stewardship = 10
+		intrigue = 15
+		learning = 8
+		prowess = 16
+	}
+	
+	1111.1.1 = {
+		death = yes
+	}
+}
+
+# Madog ap Maredudd (d. 1160) - King of Powys
+200060 = {
+	name = "Madog"
+	dynasty = 100003
+	religion = catholic
+	culture = welsh
+	
+	1097.1.1 = {
+		birth = yes
+		trait = patient
+		trait = just
+		trait = diligent
+		
+		diplomacy = 16
+		martial = 14
+		stewardship = 18
+		intrigue = 12
+		learning = 15
+		prowess = 12
+	}
+	
+	1132.1.1 = {
+		add_pressed_claim = d_powys
+	}
+	
+	1160.1.1 = {
+		death = yes
+	}
+}
+
+# Gwenwynwyn ap Owain (d. 1216) - Prince of Powys Wenwynwyn
+200065 = {
+	name = "Gwenwynwyn"
+	dynasty = 100003
+	religion = catholic
+	culture = welsh
+	
+	1165.1.1 = {
+		birth = yes
+		trait = ambitious
+		trait = brave
+		trait = wrathful
+		
+		diplomacy = 14
+		martial = 17
+		stewardship = 12
+		intrigue = 16
+		learning = 10
+		prowess = 16
+	}
+	
+	1195.1.1 = {
+		add_pressed_claim = d_powys
+	}
+	
+	1216.1.1 = {
+		death = yes
+	}
+}
+
+# Llywelyn ap Iorwerth "The Great" (d. 1240) - Prince of Wales
+200070 = {
+	name = "Llywelyn"
+	dynasty = 100002
+	religion = catholic
+	culture = welsh
+	
+	1173.1.1 = {
+		birth = yes
+		trait = brave
+		trait = ambitious
+		trait = just
+		trait = patient
+		trait = strong
+		trait = brilliant_strategist
+		
+		diplomacy = 20
+		martial = 22
+		stewardship = 18
+		intrigue = 19
+		learning = 17
+		prowess = 20
+	}
+	
+	1195.1.1 = {
+		# Becomes ruler of Gwynedd
+		add_pressed_claim = d_gwynedd
+		add_pressed_claim = k_wales
+		
+		add_character_modifier = {
+			modifier = welsh_resistance_leader
+			years = 25
+		}
+		
+		# Recognized by English crown as Prince of Wales
+		add_prestige = 2500
+	}
+	
+	1240.4.11 = {
+		death = yes
+	}
+}
+
+# Gruffudd ap Rhys II (d. 1201)
+200075 = {
+	name = "Gruffudd"
+	dynasty = 100001
+	religion = catholic
+	culture = welsh
+	father = 200050 # Rhys ap Gruffudd
+	
+	1153.1.1 = {
+		birth = yes
+		trait = brave
+		trait = ambitious
+		
+		diplomacy = 14
+		martial = 16
+		stewardship = 12
+		intrigue = 13
+		learning = 11
+		prowess = 15
+	}
+	
+	1197.4.28 = {
+		# Inherits Deheubarth
+		add_pressed_claim = d_deheubarth
+	}
+	
+	1201.1.1 = {
+		death = yes
+	}
+}
+
+# Llywelyn ap Gruffudd "The Last" (d. 1282) - Last Prince of Wales
+200080 = {
+	name = "Llywelyn"
+	dynasty = 100002
+	religion = catholic
+	culture = welsh
+	
+	1223.1.1 = {
+		birth = yes
+		trait = brave
+		trait = ambitious
+		trait = stubborn
+		trait = wrathful
+		trait = strong
+		
+		diplomacy = 16
+		martial = 20
+		stewardship = 14
+		intrigue = 17
+		learning = 12
+		prowess = 19
+	}
+	
+	1246.4.11 = {
+		# Becomes Prince of Wales
+		add_pressed_claim = k_wales
+		add_pressed_claim = d_gwynedd
+		
+		add_character_modifier = {
+			modifier = welsh_resistance_leader
+			years = 15
+		}
+		
+		# Last independent Welsh prince
+		add_prestige = 2000
+	}
+	
+	1282.12.11 = {
+		death = yes # Killed in ambush by English forces
+	}
+}

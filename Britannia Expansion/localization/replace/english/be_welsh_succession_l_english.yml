@@ -1,0 +1,44 @@
+l_english:
+ # Welsh Succession Laws
+ cyfran_succession: "Cyfran (Welsh Partible Inheritance)"
+ cyfran_succession_desc: "Following traditional Welsh law, all legitimate sons inherit equally from their father. This ancient system preserves family unity and Welsh customs, though it may weaken central authority."
+ 
+ tanistry_welsh: "Welsh Tanistry"
+ tanistry_welsh_desc: "The worthiest member of the dynasty is chosen to rule, based on prowess, wisdom, and adherence to Welsh values. This ensures capable leadership while maintaining dynastic continuity."
+ 
+ # Succession Effects
+ respects_tradition_opinion: "Respects Welsh Tradition"
+ fair_succession_opinion: "Fair Succession"
+ welsh_inheritance_laws: "Welsh Inheritance Laws"
+ 
+ # Event Text for Succession
+ welsh_succession.0001.t: "The Brothers' Council"
+ welsh_succession.0001.desc: "Following ancient Welsh custom, the sons of the late ruler gather to divide the inheritance. The traditional laws of cyfran ensure each receives his fair share, though some may argue for a different arrangement."
+ welsh_succession.0001.a: "Honor the ancient ways."
+ welsh_succession.0001.b: "Perhaps we can negotiate..."
+ welsh_succession.0001.c: "The strongest should rule all!"
+ 
+ # Succession Requirements
+ welsh_succession_requirement: "Must understand traditional Welsh law"
+ welsh_succession_requirement_desc: "The ruler must have knowledge of Cyfraith Hywel or wise counselors who can guide the implementation of traditional succession."
+ 
+ # Cultural Context
+ welsh_law_tradition: "Cyfraith Hywel"
+ welsh_law_tradition_desc: "The laws codified by Hywel Dda remain the foundation of Welsh justice and inheritance. These ancient customs balance individual rights with family unity and social harmony."
+ 
+ # Succession Benefits and Drawbacks
+ welsh_partible_benefit: "Traditional Authority"
+ welsh_partible_benefit_desc: "Following ancient customs enhances legitimacy among the Welsh people and strengthens family bonds."
+ 
+ welsh_partible_drawback: "Divided Realm"
+ welsh_partible_drawback_desc: "Multiple heirs may lead to smaller, weaker realms that struggle against unified enemies."
+ 
+ welsh_tanistry_benefit: "Chosen Leadership"
+ welsh_tanistry_benefit_desc: "The most capable ruler is selected, ensuring strong leadership and Welsh values are maintained."
+ 
+ # Historical References
+ rhodri_mawr_inheritance: "The Legacy of Rhodri Mawr"
+ rhodri_mawr_inheritance_desc: "Even the great Rhodri Mawr's realm was divided among his sons according to Welsh custom, creating the kingdoms that would define Wales for centuries."
+ 
+ hywel_dda_laws: "The Wisdom of Hywel Dda"
+ hywel_dda_laws_desc: "King Hywel Dda's legal reforms balanced traditional Welsh customs with practical governance, creating a system that served Wales well for generations."

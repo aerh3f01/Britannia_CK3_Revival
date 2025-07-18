@@ -1,0 +1,132 @@
+﻿l_english:
+ # Welsh Buildings
+ mountain_fortress_01:0 "Mountain Fortress"
+ mountain_fortress_01_desc:0 "A fortified stronghold built into the mountainous terrain, utilizing natural defenses and Welsh engineering knowledge to create an nearly impregnable position."
+ mountain_fortress_02:0 "Great Mountain Fortress"
+ mountain_fortress_02_desc:0 "An expanded mountain fortress with additional defensive works, watchtowers, and underground passages carved into the living rock."
+ mountain_fortress_03:0 "Legendary Mountain Citadel"
+ mountain_fortress_03_desc:0 "The ultimate expression of Welsh defensive architecture, this citadel commands the surrounding valleys and passes with unassailable authority."
+ 
+ eisteddfod_hall_01:0 "Eisteddfod Hall"
+ eisteddfod_hall_01_desc:0 "A grand hall dedicated to the celebration of Welsh culture, poetry, and music. Bards and poets gather here to compete and preserve the oral traditions of Wales."
+ eisteddfod_hall_02:0 "Great Eisteddfod Hall"
+ eisteddfod_hall_02_desc:0 "An magnificent cultural center that attracts the finest artists from across the Celtic world, fostering learning and cultural exchange."
+ eisteddfod_hall_03:0 "Royal Eisteddfod Palace"
+ eisteddfod_hall_03_desc:0 "The premier venue for the greatest Eisteddfod competitions, where legendary bards are crowned and Welsh culture reaches its highest expression."
+ 
+ cattle_pastures_01:0 "Cattle Pastures"
+ cattle_pastures_01_desc:0 "Extensive grazing lands for the prized Welsh cattle, fundamental to both the economy and culture of medieval Wales."
+ cattle_pastures_02:0 "Great Cattle Ranches"
+ cattle_pastures_02_desc:0 "Vast pastoral estates that support thousands of cattle, providing wealth and prestige through the ancient Welsh tradition of cattle-keeping."
+ cattle_pastures_03:0 "Royal Cattle Grounds"
+ cattle_pastures_03_desc:0 "The finest pastoral lands in the realm, where the royal herds graze and legendary cattle raids begin."
+ 
+ bardic_school_01:0 "Bardic School"
+ bardic_school_01_desc:0 "A center of learning where young bards study the ancient laws, genealogies, and poetic traditions of Wales."
+ bardic_school_02:0 "Great Bardic College"
+ bardic_school_02_desc:0 "A renowned institution of Welsh learning, preserving the oral traditions and training the next generation of cultural guardians."
+ bardic_school_03:0 "Royal Bardic Academy"
+ bardic_school_03_desc:0 "The most prestigious center of Welsh scholarship, where master bards train the cultural elite and preserve the deepest secrets of Celtic wisdom."
+ 
+ welsh_mines_01:0 "Welsh Mines"
+ welsh_mines_01_desc:0 "Mountain mines extracting precious metals and stone, worked by skilled Welsh miners who know the secrets of the hills."
+ welsh_mines_02:0 "Great Welsh Mines"
+ welsh_mines_02_desc:0 "Extensive mining operations that tap into the rich mineral wealth hidden within the Welsh mountains."
+ welsh_mines_03:0 "Royal Welsh Mining Works"
+ welsh_mines_03_desc:0 "The most productive mines in the kingdom, their wealth flows directly to the royal treasury and funds the realm's ambitions."
+ 
+ # Building Requirements
+ building_requirement_castle_02:0 "Requires Castle level 2"
+ building_requirement_castle_01:0 "Requires Castle level 1"
+ building_requirement_city_01:0 "Requires City level 1"
+ building_requirement_city_02:0 "Requires City level 2"
+ building_requirement_temple_01:0 "Requires Temple level 1"
+ 
+ # Welsh Terrain Features
+ snowdonia_passes:0 "Snowdonia Mountain Passes"
+ snowdonia_passes_desc:0 "The treacherous mountain passes of Snowdonia, known only to local Welsh guides and defenders."
+ 
+ cambrian_mountains:0 "Cambrian Mountains"
+ cambrian_mountains_desc:0 "The ancient backbone of Wales, these mountains provide both protection and valuable mineral resources."
+ 
+ black_mountains:0 "Black Mountains"
+ black_mountains_desc:0 "The dark peaks of southern Wales, offering strategic defensive positions and hidden valleys."
+ 
+ cardigan_bay:0 "Cardigan Bay"
+ cardigan_bay_desc:0 "The western waters of Wales, providing fishing grounds and trade routes to Ireland and beyond."
+ 
+ bristol_channel:0 "Bristol Channel"
+ bristol_channel_desc:0 "The southern waters connecting Wales to England and the continent, rich with trading opportunities."
+ 
+ anglesey_farmlands:0 "Anglesey - Mam Cymru"
+ anglesey_farmlands_desc:0 "The fertile island of Anglesey, known as 'Mam Cymru' (Mother of Wales) for its agricultural abundance."
+ 
+ # Welsh Holding Names and Descriptions
+ b_deganwy:0 "Deganwy"
+ b_deganwy_desc:0 "Ancient stronghold guarding the Conway estuary, seat of power for the princes of Gwynedd since time immemorial."
+ 
+ b_aberffraw:0 "Aberffraw"
+ b_aberffraw_desc:0 "The traditional seat of the princes of Gwynedd, where the royal court has held sway over northern Wales for generations."
+ 
+ b_caernarfon:0 "Caernarfon"
+ b_caernarfon_desc:0 "The fortress in Arfon, commanding the Menai Strait and serving as a key defensive position for Gwynedd."
+ 
+ b_llangefni:0 "Llangefni"
+ b_llangefni_desc:0 "The center of the fertile island of Anglesey, surrounded by rich farmlands that feed much of northern Wales."
+ 
+ b_beaumaris:0 "Beaumaris"
+ b_beaumaris_desc:0 "A strategic port controlling access to Anglesey, originally known as Llanfaes in the Welsh tongue."
+ 
+ b_mathrafal:0 "Mathrafal"
+ b_mathrafal_desc:0 "The ancient capital of Powys, seat of the royal court and center of power in central Wales."
+ 
+ b_welshpool:0 "Y Trallwng"
+ b_welshpool_desc:0 "A prosperous market town in the heart of Powys, known for its cattle markets and strategic location."
+ 
+ b_dinefwr:0 "Dinefwr"
+ b_dinefwr_desc:0 "The royal seat of Deheubarth, ancient stronghold of the southern Welsh princes and their ancestral home."
+ 
+ b_carmarthen:0 "Caerfyrddin"
+ b_carmarthen_desc:0 "Merlin's fortress, steeped in legend and serving as the principal town of Deheubarth."
+ 
+ b_cardiff:0 "Caerdydd"
+ b_cardiff_desc:0 "The fort on the River Taff, controlling the rich coastal plains of Morgannwg."
+ 
+ b_aberystwyth:0 "Aberystwyth"
+ b_aberystwyth_desc:0 "The mouth of the River Ystwyth, a key port and stronghold on the western coast of Wales."
+ 
+ b_st_davids:0 "Tyddewi"
+ b_st_davids_desc:0 "The sacred site of Saint David, patron saint of Wales, and the spiritual heart of the Welsh nation."
+ 
+ # County Descriptions
+ c_gwynedd:0 "Gwynedd"
+ c_gwynedd_desc:0 "The mountainous heartland of northern Wales, stronghold of ancient princes and guardians of Welsh independence."
+ 
+ c_anglesey:0 "Anglesey"
+ c_anglesey_desc:0 "The sacred isle of Mona, known as the Mother of Wales for its fertile fields that feed the realm."
+ 
+ c_mathrafal:0 "Mathrafal"
+ c_mathrafal_desc:0 "The central seat of Powys, controlling the mountain passes and valleys of middle Wales."
+ 
+ c_dinefwr:0 "Dinefwr"
+ c_dinefwr_desc:0 "The royal seat of Deheubarth, heart of southern Welsh power and culture."
+ 
+ c_cardiff:0 "Cardiff"
+ c_cardiff_desc:0 "The coastal stronghold of Morgannwg, gateway between Wales and the wider world."
+ 
+ # Kingdom Descriptions
+ k_gwynedd:0 "Kingdom of Gwynedd"
+ k_gwynedd_desc:0 "The ancient kingdom of northern Wales, protected by mountain fortresses and sustained by the courage of its people."
+ 
+ k_powys:0 "Kingdom of Powys"
+ k_powys_desc:0 "The central Welsh kingdom, holding the mountain passes and valleys that connect north and south."
+ 
+ k_deheubarth:0 "Kingdom of Deheubarth"
+ k_deheubarth_desc:0 "The southern Welsh kingdom, rich in land and culture, home to the greatest Welsh poets and lawmakers."
+ 
+ k_morgannwg:0 "Kingdom of Morgannwg"
+ k_morgannwg_desc:0 "The coastal kingdom of southern Wales, prosperous from trade and blessed with fertile lowlands."
+ 
+ # Empire Description
+ e_wales:0 "Empire of Wales"
+ e_wales_desc:0 "The unified realm of all Welsh kingdoms, fulfilling the ancient dream of a united Cymru under one crown."

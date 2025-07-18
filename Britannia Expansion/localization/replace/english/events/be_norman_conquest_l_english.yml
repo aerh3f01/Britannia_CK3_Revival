@@ -1,0 +1,56 @@
+l_english:
+ # Norman Conquest Events
+ be_norman_conquest.0001.t: "The Norman Tide"
+ be_norman_conquest.0001.desc: "Iron-clad warriors bearing Norman banners have been sighted along our borders. [norman_aggressor.GetTitledFirstName] and [norman_aggressor.GetHerHis] Norman lords eye our lands with hungry gazes. The conquest of England has emboldened them, and now they turn their attention to Wales. Our scouts report the construction of new fortifications and the gathering of armed men. The age of Welsh independence faces its greatest challenge since the Saxon invasions.\n\nHow shall we respond to this Norman threat?"
+ be_norman_conquest.0001.a: "Fortify our lands and prepare for war!"
+ be_norman_conquest.0001.b: "Perhaps diplomacy can spare us bloodshed..."
+ be_norman_conquest.0001.c: "Rally all Welsh kingdoms against this threat!"
+
+ be_norman_conquest.0002.t: "Norman Castles Rise"
+ be_norman_conquest.0002.desc: "The Normans waste no time in establishing their dominance. Stone by stone, timber by timber, alien fortresses rise from our ancestral soil. These are not the hill-forts of our fathers, but foreign strongholds designed to cow the Welsh people into submission. From these towers, Norman eyes watch our every movement, and Norman soldiers patrol lands that have known Welsh rule for generations.\n\nWe must act before their grip tightens further."
+ be_norman_conquest.0002.a: "Strike at these castles while they still build!"
+ be_norman_conquest.0002.b: "Build our own fortifications to match theirs."
+
+ be_norman_conquest.0010.t: "The Welsh Alliance"
+ be_norman_conquest.0010.desc: "Word has spread throughout Wales of the Norman threat. Prince calls to prince, and the ancient bonds of kinship and shared culture stir once more. Though we have long fought amongst ourselves for supremacy, the specter of foreign domination awakens something deeper - the unity of the Welsh people. Messengers ride the mountain paths carrying proposals for alliance.\n\nPerhaps divided Wales shall fall, but united Wales might yet stand."
+ be_norman_conquest.0010.a: "Unite the Welsh kingdoms in common cause!"
+
+ be_norman_conquest.0020.t: "The Great Uprising"
+ be_norman_conquest.0020.desc: "The spark of resistance has become a wildfire! Across Wales, the red dragon banners fly once more as our people cast off the Norman yoke. Castle walls that seemed impregnable are stormed by Welsh fury, and Norman lords who thought themselves secure find their strongholds reduced to smoking ruins.\n\nThis is our moment - the hour when Wales might reclaim its freedom or be crushed forever beneath the Norman heel."
+ be_norman_conquest.0020.a: "Lead Wales to victory or glorious defeat!"
+
+ # Modifiers
+ border_tensions: "Border Tensions"
+ border_tensions_desc: "The presence of Norman forces nearby has put everyone on edge."
+
+ welsh_border_fortifications: "Border Fortifications"
+ welsh_border_fortifications_desc: "Hastily constructed defenses guard against Norman expansion."
+
+ wartime_preparations: "Wartime Preparations"
+ wartime_preparations_desc: "The county mobilizes for conflict, strengthening defenses at the cost of development."
+
+ norman_castle_construction: "Norman Castle Construction"
+ norman_castle_construction_desc: "Norman lords build imposing stone fortifications to secure their dominance."
+
+ guerrilla_raids: "Guerrilla Warfare"
+ guerrilla_raids_desc: "Using hit-and-run tactics to harass the enemy."
+
+ welsh_counter_fortifications: "Welsh Counter-Fortifications"
+ welsh_counter_fortifications_desc: "Competing fortifications built to match Norman military architecture."
+
+ welsh_defensive_alliance: "Welsh Defensive Alliance"
+ welsh_defensive_alliance_desc: "United with fellow Welsh rulers against foreign threats."
+
+ great_welsh_uprising: "Great Welsh Uprising"
+ great_welsh_uprising_desc: "All of Wales rises against Norman domination."
+
+ resistance_leader: "Resistance Leader"
+ resistance_leader_desc: "Leading the fight for Welsh independence."
+
+ # Opinion Modifiers
+ attempted_diplomacy: "Attempted Diplomacy"
+ welsh_unity_call: "Called for Welsh Unity"
+
+ # Casus Belli
+ border_raid_war: "Border Raid"
+ welsh_liberation_war: "Welsh Liberation"

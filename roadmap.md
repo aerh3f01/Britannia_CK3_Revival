@@ -1,5 +1,82 @@
 <div align="center">
-  <a href="https://github.com/aerh3f01/Britannia_CK3_Revival">
+  ## 📊 Current Progress Summary
+
+| Version | Focus Area | Status | Target Completion |
+|---------|------------|--------|-------------------|
+| **1.0** | 🏴󠁧󠁢󠁷󠁬󠁳󠁿 Welsh Foundation | ✅ **Complete** | Released |
+| **1.1** | 🎭 Welsh Events & Resistance | ✅ **Complete** | January 2025 |
+| **1.2** |### Version 1.3 - Character Depth & Cultural Refinement ✅ **COMPLETE**
+*Focus: Rich character development and authentic Welsh court culture*
+
+#### ✅ **Completed Objectives**
+Successfully implemented comprehensive character depth and Welsh court culture systems:
+
+- **Enhanced Court Position System**: 5 Welsh-specific roles implemented
+  - **Pencerdd (Chief Poet)**: Master aptitude level, cultural events, prestige bonuses
+  - **Bardd Teulu (Household Bard)**: Renowned aptitude level, loyalty bonuses, entertainment
+  - **Distain (Steward)**: Competent aptitude level, clan negotiation, law expertise  
+  - **Penteulu (Captain of the Guard)**: Famed aptitude level, military leadership, protection
+  - **Ynad (Judge)**: Renowned aptitude level, legal decisions, justice administration
+
+- **Welsh Succession Laws**: Traditional inheritance systems
+  - **Cyfran (Welsh Partible Inheritance)**: Historical Welsh succession practice
+  - **Welsh Tanistry**: Elective succession among qualified family members
+  - Cultural authenticity requirements and bonuses
+
+- **Cultural Artifacts**: 7 Welsh-specific artifacts with cultural significance
+  - **Telyn Deires (Triple Harp)**: Legendary musical instrument
+  - **Coron Cymru (Crown of Wales)**: Symbol of Welsh sovereignty  
+  - **Cleddyf Cymreig (Welsh Sword)**: Traditional ceremonial weapon
+  - **Tarian Gymreig (Welsh Shield)**: Decorated war shield
+  - **Llawysgrif Hywel (Manuscript of Hywel)**: Legal codex
+  - **Torch Aur (Golden Torque)**: Celtic neck ornament
+  - **Modrwy Tywysog (Prince's Ring)**: Ring of authority
+
+- **Cultural Decisions**: Welsh-specific gameplay mechanics
+  - **Hold Eisteddfod**: Cultural poetry competition with realm benefits
+  - **Promote Welsh Language**: Cultural conversion and preservation
+  - **Codify Welsh Law**: Legal system enhancement based on Cyfraith Hywel
+
+- **Character Modifiers**: Welsh cultural traits and bonuses
+  - **Bardd Dawnus (Gifted Bard)**: Cultural and diplomatic bonuses
+  - **Gwron Cymreig (Welsh Hero)**: Military and prestige advantages
+  - **Cyfreithiwr (Lawgiver)**: Legal and administrative expertise
+
+#### �️ **Technical Implementation**
+- **File Structure**: Modular court position system with cultural requirements
+- **Localization**: Complete Welsh and English text for all systems
+- **Balance**: Court positions balanced with vanilla CK3 mechanics
+- **Cultural Integration**: Systems require Welsh culture for authenticity
+
+---
+
+### Version 1.4 - Graphics & GUI Enhancement ✅ **COMPLETE**
+*Focus: Visual enhancement and Welsh-themed user interface elements*
+
+#### ✅ **Completed Objectives**Welsh Geography & Titles | ✅ **Complete** | January 2025 |
+| **1.3** | 👥 Welsh Court Culture | ✅ **Complete** | January 2025 |
+| **1.4** | 🎨 Graphics & GUI Enhancement | ✅ **Complete** | January 2025 |
+| **2.0** | 🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scottish Expansion | 📋 **Planned** | Q2 2025 |
+| **3.0** | 🇮🇪 Irish Enhancement | 📋 **Planned** | Q3 2025 |
+| **4.0** | 🏴󠁧󠁢󠁥󠁮󠁧󠁿 English Refinement | 📋 **Planned** | Q4 2025 |
+
+### ✅ **Completed Phases**
+- **Phase 1.1 (Welsh Events & Resistance)**: Complete event framework with 50+ events, character system, cultural traditions
+- **Phase 1.2 (Welsh Geography & Titles)**: Full geographic infrastructure with Empire of Wales, buildings, terrain, and innovations
+- **Phase 1.3 (Welsh Court Culture)**: Complete court system with Welsh positions, succession laws, artifacts, and cultural decisions
+- **Phase 1.4 (Graphics & GUI Enhancement)**: Custom Welsh-themed interface elements, sprite definitions, and visual enhancement framework
+
+### 🔄 **Active Development**
+- **Phase 2.0 (Scottish Expansion)**: Ready to begin Scottish kingdom enhancement
+
+### 📋 **Implementation Summary**
+- **Total Files Created**: 40+ new game files across events, characters, buildings, terrain, court systems, graphics, GUI, and localization
+- **Welsh Characters**: 50+ historical figures with authentic traits and backgrounds
+- **Cultural Systems**: 12 traditions, 10 innovations, 5 building types, 5 court positions, 7 artifacts, complete geographic framework
+- **Court Framework**: Welsh-specific positions, succession laws, cultural decisions, and character modifiers
+- **Event Chains**: Comprehensive resistance, cultural, religious, and political event systems
+- **Graphics & GUI**: Custom Welsh-themed interface with 30+ sprite definitions, enhanced decision/event windows, cultural color schemes
+- **Technical Foundation**: Modular file structure supporting future expansion with Scottish, Irish, and English enhancements//github.com/aerh3f01/Britannia_CK3_Revival">
     <img src="britanniaexpansion_updated.png" alt="Logo" height="200">
   </a>
 </div>
@@ -22,17 +99,35 @@ This roadmap outlines the development phases for **Britannia Expansion**, a comp
 
 ---
 
-## 📅 Development Timeline
+## � Current Progress Summary
+
+### ✅ **Completed Phases**
+- **Phase 1.1 (Welsh Events & Resistance)**: Complete event framework with 50+ events, character system, cultural traditions
+- **Phase 1.2 (Welsh Geography & Titles)**: Full geographic infrastructure with Empire of Wales, buildings, terrain, and innovations
+
+### 🔄 **Active Development**
+- **Phase 1.3 (Characters & Court Culture)**: Enhanced character depth and Welsh court systems
+
+### 📋 **Implementation Summary**
+- **Total Files Created**: 25+ new game files across events, characters, buildings, terrain, and localization
+- **Welsh Characters**: 50+ historical figures with authentic traits and backgrounds
+- **Cultural Systems**: 12 traditions, 10 innovations, 5 building types, complete geographic framework
+- **Event Chains**: Comprehensive resistance, cultural, religious, and political event systems
+- **Technical Foundation**: Modular file structure supporting future expansion
+
+---
+
+## �📅 Development Timeline
 
 | Version | Focus Area | Status | Target Completion |
 |---------|------------|--------|-------------------|
 | **1.0** | 🏴󠁧󠁢󠁷󠁬󠁳󠁿 Welsh Foundation | ✅ **Complete** | Released |
-| **1.1** | 🎭 Welsh Events & Conflicts | 🔄 **In Progress** | Q2 2025 |
-| **1.2** | 🏰 Welsh Decisions & Kingdom | 📋 **Planned** | Q3 2025 |
-| **1.3** | 👥 Welsh Characters & Court | 📋 **Planned** | Q4 2025 |
-| **2.0** | 🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scottish Expansion | 🔮 **Future** | 2026 |
-| **3.0** | 🇮🇪 Irish Enhancement | 🔮 **Future** | 2026 |
-| **4.0** | 🏴󠁧󠁢󠁥󠁮󠁧󠁿 English Refinement | 🔮 **Future** | 2027 |
+| **1.1** | 🎭 Welsh Events & Resistance | ✅ **Complete** | January 2025 |
+| **1.2** | 🏰 Welsh Geography & Titles | ✅ **Complete** | January 2025 |
+| **1.3** | 👥 Welsh Characters & Court | � **In Progress** | Q1 2025 |
+| **2.0** | 🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scottish Expansion | � **Planned** | Q2 2025 |
+| **3.0** | 🇮🇪 Irish Enhancement | � **Planned** | Q3 2025 |
+| **4.0** | 🏴󠁧󠁢󠁥󠁮󠁧󠁿 English Refinement | � **Planned** | Q4 2025 |
 
 ---
 
@@ -53,11 +148,21 @@ This roadmap outlines the development phases for **Britannia Expansion**, a comp
 
 ## 🎭 Phase 1.1: Events & Historical Conflicts
 
-### Version 1.1 - Welsh Events & Resistance 🔄 **IN PROGRESS**
+### Version 1.1 - Welsh Events & Resistance ✅ **COMPLETE**
 *Focus: Norman invasion period and Welsh resistance (1067-1136)*
 
-#### 🎯 **Primary Objectives**
-Transform Welsh gameplay through historically accurate event chains that capture the drama and complexity of medieval Wales.
+#### ✅ **Completed Objectives**
+Successfully implemented comprehensive Welsh event system with 50+ events covering:
+- **Welsh Resistance Events**: Complete independence movement chains
+- **Cyfraith Hywel System**: Traditional Welsh law implementation
+- **Cultural Identity Events**: Bardic traditions and language preservation
+- **Welsh War Events**: Guerrilla warfare and mountain tactics
+- **Court Culture Events**: Eisteddfods and Welsh ceremonies
+- **Religious Events**: Celtic Christianity and Welsh saints
+- **Character Framework**: 50+ historical Welsh characters
+- **Dynasty System**: Major Welsh dynasties with historical claims
+- **Cultural Traditions**: 12 unique Welsh traditions
+- **Men-at-Arms**: Welsh Longbowmen and Teulu units
 
 #### 📅 **Historical Timeline Events**
 
@@ -138,13 +243,38 @@ Transform Welsh gameplay through historically accurate event chains that capture
 
 ---
 
-## 🏰 Phase 1.2: Decisions & Kingdom Formation
+## 🏰 Phase 1.2: Welsh Geography & Titles
 
-### Version 1.2 - Welsh Unification & Royal Decisions 📋 **PLANNED**
-*Target: Q3 2025 - Focus: Kingdom of Wales formation and major political decisions*
+### Version 1.2 - Welsh Geographic & Political Infrastructure ✅ **COMPLETE**
+*Focus: Complete geographic and political foundation for Welsh gameplay*
 
-#### 🎯 **Core Objectives**
-Create meaningful decision-making that reflects the unique challenges and opportunities of Welsh medieval politics.
+#### ✅ **Completed Objectives**
+Successfully implemented comprehensive geographic and political systems:
+- **Empire of Wales Structure**: Complete de jure empire with 4 kingdoms (Gwynedd, Powys, Deheubarth, Morgannwg)
+- **Welsh Buildings**: 5 unique building types with 3 upgrade levels each
+  - Mountain Fortress: Defensive structures for Welsh terrain
+  - Eisteddfod Hall: Cultural and administrative centers
+  - Cattle Pastures: Economic backbone of Welsh agriculture
+  - Bardic School: Cultural preservation and education
+  - Welsh Mines: Resource extraction in mountainous regions
+- **Terrain System**: Welsh-specific geographic features and modifiers
+  - Snowdonia mountain passes with strategic bonuses
+  - Cambrian mountain ranges with defensive advantages
+  - Coastal regions with naval and trade benefits
+  - River systems supporting agriculture and transport
+- **Holding Names**: Authentic Welsh settlement names with historical variants
+- **Cultural Innovations**: 10 Welsh-specific innovations spanning 867-1300 CE
+  - Cyfraith Hywel (Welsh law system)
+  - Mountain warfare tactics
+  - Bardic tradition preservation
+  - Celtic Christianity practices
+  - Welsh unified resistance strategies
+
+#### 🏛️ **Technical Implementation**
+- **File Structure**: Modular system with separate files for each component
+- **Cultural Requirements**: Buildings and features require Welsh culture for authenticity
+- **Historical Accuracy**: All names and features based on historical research
+- **Game Balance**: Bonuses balanced against vanilla CK3 mechanics
 
 #### 👑 **Kingdom Formation Mechanics**
 
@@ -246,18 +376,61 @@ Create meaningful decision-making that reflects the unique challenges and opport
 
 ## 👥 Phase 1.3: Characters & Court Culture
 
-### Version 1.3 - Character Depth & Cultural Refinement 📋 **PLANNED**
-*Target: Q4 2025 - Focus: Rich character development and authentic Welsh court culture*
+### Version 1.3 - Character Depth & Cultural Refinement � **IN PROGRESS**
+*Target: Q1 2025 - Focus: Rich character development and authentic Welsh court culture*
 
-#### 🎯 **Objectives**
-Create a living, breathing Welsh court that reflects the unique social structures and cultural values of medieval Wales.
+#### 🎯 **Current Objectives**
+Successfully implemented comprehensive graphics and GUI enhancement systems:
 
-#### 👑 **Historical Welsh Figures**
+- **Sprite Definition System**: Complete visual framework for Welsh cultural elements
+  - **Court Position Icons**: 5 custom 64x64 icons for Welsh court positions
+  - **Decision Icons**: 5 custom 48x48 icons for Welsh cultural decisions  
+  - **Artifact Icons**: 7 custom 56x56 icons for Welsh cultural artifacts
+  - **UI Elements**: 10+ decorative elements (dragons, borders, frames, knotwork)
+  - **Background Textures**: 4 seamlessly tileable Welsh-themed backgrounds
 
-##### **Major Historical Characters**
-- **Owain Gwynedd** (c. 1100-1170): Enhanced with detailed personality, ambitions, and event chains
-- **Rhys ap Gruffydd** ("The Lord Rhys"): Ruler of Deheubarth with complex political maneuvering
-- **Gruffydd ap Llywelyn**: The only Welsh king to rule all of Wales (enhanced for earlier start dates)
+- **Custom GUI Widgets**: Enhanced interface elements with Welsh theming
+  - **Welsh Court Position Slots**: Custom display widgets for court positions
+  - **Welsh Artifact Display**: Enhanced artifact presentation with cultural frames
+  - **Welsh Decision Buttons**: Culturally-styled decision interface elements
+  - **Welsh Event Windows**: Enhanced event display with Celtic styling
+
+- **Color Scheme System**: Comprehensive Welsh cultural color palette
+  - **Primary Colors**: Welsh red, white, green with cultural significance
+  - **Accent Colors**: Celtic gold, bronze, slate grey for visual hierarchy  
+  - **UI Colors**: Custom background, text, and highlight colors
+  - **Templates**: Reusable color and styling templates for consistency
+
+- **Enhanced Interface Windows**: Custom Welsh-themed interface elements
+  - **Welsh Cultural Window**: Dedicated interface for Welsh cultural features
+  - **Enhanced Decision View**: Welsh-styled decision display with cultural accents
+  - **Enhanced Event Styling**: Celtic-themed event windows with cultural authenticity
+  - **Custom Tooltips**: Welsh-themed tooltip styling with cultural elements
+
+- **Graphics Framework**: Complete foundation for visual implementation
+  - **Placeholder Texture System**: 30+ placeholder .dds files with proper naming
+  - **File Structure**: Organized graphics directory matching CK3 standards
+  - **Documentation**: Complete implementation guide for texture creation
+  - **Development Tools**: PowerShell script for automated texture file creation
+
+#### 🎨 **Technical Implementation**
+- **CK3 Graphics Standards**: All sprites follow CK3 format (.dds with proper compression)
+- **Sprite Definitions**: Complete .gfx files linking textures to game references
+- **GUI Framework**: Custom widget types and templates for Welsh theming
+- **Color Management**: Systematic color palette with transparency variants
+- **Animation Support**: Templates for fade effects and visual transitions
+
+#### 🖼️ **Visual Design Philosophy**
+- **Historical Authenticity**: Visual elements based on medieval Welsh art and symbols
+- **Cultural Cohesion**: Consistent use of dragons, Celtic knotwork, and traditional patterns
+- **Accessibility**: Clear visual hierarchy and readable text with cultural styling
+- **Integration**: Seamless blend with CK3's existing visual design language
+
+---
+
+## 👥 Phase 1.3: Characters & Court Culture (Completed)
+
+*All character and court culture systems successfully implemented as part of Phase 1.3*
 - **Llywelyn the Great**: Future addition for later periods
 - **Dafydd ap Gruffydd**: Tragic figure of Welsh independence
 

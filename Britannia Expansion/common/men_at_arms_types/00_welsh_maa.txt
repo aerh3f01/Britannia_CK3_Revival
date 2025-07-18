@@ -1,0 +1,376 @@
+# Welsh Men-at-Arms Units
+# Unique military units reflecting Welsh warfare traditions
+
+welsh_longbowmen = {
+	type = bowmen
+	
+	damage = 30
+	toughness = 12
+	pursuit = 8
+	screen = 14
+	
+	terrain_bonus = {
+		hills = { damage = 8 toughness = 4 }
+		mountains = { damage = 12 toughness = 6 }
+		forest = { damage = 6 toughness = 2 }
+	}
+	
+	counters = {
+		heavy_infantry = 1.5
+		cavalry = 1.2
+		light_cavalry = 0.8
+	}
+	
+	can_recruit = {
+		culture = {
+			OR = {
+				this = culture:welsh
+				this = culture:welsh_gwynedd
+				this = culture:welsh_powys
+				this = culture:welsh_deheubarth
+				has_cultural_tradition = tradition_longbow_mastery
+			}
+		}
+	}
+	
+	cost = {
+		gold = 100
+		prestige = 25
+	}
+	
+	low_maintenance_modifier = {
+		damage_mult = -0.4
+		toughness_mult = -0.4
+		pursuit_mult = -0.4
+		screen_mult = -0.4
+	}
+	
+	maintenance_multiplier = {
+		culture_welsh = 0.85
+		culture_welsh_gwynedd = 0.8
+		culture_welsh_powys = 0.9
+		culture_welsh_deheubarth = 0.85
+	}
+	
+	icon = welsh_longbowmen
+	
+	hire_cost = 150
+	low_maintenance_cost = 1.0
+	high_maintenance_cost = 5.0
+	
+	holy_order = no
+	mercenary_company = no
+	
+	# Historical effectiveness
+	graphical_culture = { welsh_culture_group }
+	
+	upgrades_from = bowmen
+	
+	winter_bonus = {
+		toughness = 2
+		damage = -2
+	}
+	
+	ai_quality = {
+		value = @[maa_buy_ai_value|E]
+		
+		if = {
+			limit = {
+				culture = {
+					OR = {
+						this = culture:welsh
+						this = culture:welsh_gwynedd
+						this = culture:welsh_powys
+						this = culture:welsh_deheubarth
+					}
+				}
+			}
+			add = @[maa_buy_ai_value|E]
+		}
+	}
+}
+
+welsh_mountain_warriors = {
+	type = light_footmen
+	
+	damage = 20
+	toughness = 18
+	pursuit = 25
+	screen = 22
+	
+	terrain_bonus = {
+		mountains = { damage = 15 toughness = 10 pursuit = 15 screen = 10 }
+		hills = { damage = 10 toughness = 8 pursuit = 12 screen = 8 }
+		forest = { damage = 8 toughness = 6 pursuit = 10 screen = 6 }
+	}
+	
+	counters = {
+		heavy_infantry = 0.6
+		cavalry = 1.8
+		light_cavalry = 1.4
+		bowmen = 1.2
+	}
+	
+	can_recruit = {
+		culture = {
+			OR = {
+				this = culture:welsh
+				this = culture:welsh_gwynedd
+				this = culture:welsh_powys
+				this = culture:welsh_deheubarth
+				has_cultural_tradition = tradition_mountain_warfare
+			}
+		}
+		capital_county = {
+			OR = {
+				terrain = mountains
+				terrain = hills
+				any_county_province = { terrain = mountains }
+				any_county_province = { terrain = hills }
+			}
+		}
+	}
+	
+	cost = {
+		gold = 80
+		prestige = 20
+	}
+	
+	low_maintenance_modifier = {
+		damage_mult = -0.4
+		toughness_mult = -0.4
+		pursuit_mult = -0.2
+		screen_mult = -0.3
+	}
+	
+	maintenance_multiplier = {
+		culture_welsh = 0.9
+		culture_welsh_gwynedd = 0.85
+		terrain_mountains = 0.8
+		terrain_hills = 0.85
+	}
+	
+	icon = welsh_mountain_warriors
+	
+	hire_cost = 120
+	low_maintenance_cost = 0.8
+	high_maintenance_cost = 4.0
+	
+	holy_order = no
+	mercenary_company = no
+	
+	graphical_culture = { welsh_culture_group }
+	
+	upgrades_from = light_footmen
+	
+	# Special ability: Terrain expertise
+	stack_modifier = {
+		mountains_attrition_mult = -0.5
+		hills_attrition_mult = -0.3
+		movement_speed_mult = 0.15
+	}
+	
+	ai_quality = {
+		value = @[maa_buy_ai_value|E]
+		
+		if = {
+			limit = {
+				culture = { this = culture:welsh_gwynedd }
+			}
+			add = @[maa_buy_ai_value|E]
+		}
+		
+		if = {
+			limit = {
+				capital_county = { terrain = mountains }
+			}
+			add = 20
+		}
+	}
+}
+
+teulu_household_guard = {
+	type = heavy_infantry
+	
+	damage = 28
+	toughness = 32
+	pursuit = 12
+	screen = 18
+	
+	terrain_bonus = {
+		mountains = { damage = 6 toughness = 8 }
+		hills = { damage = 4 toughness = 6 }
+		plains = { damage = 2 toughness = 2 }
+	}
+	
+	counters = {
+		light_footmen = 1.8
+		bowmen = 1.5
+		skirmishers = 2.0
+		cavalry = 0.7
+	}
+	
+	can_recruit = {
+		culture = {
+			OR = {
+				this = culture:welsh
+				this = culture:welsh_gwynedd
+				this = culture:welsh_powys
+				this = culture:welsh_deheubarth
+			}
+		}
+		highest_held_title_tier >= tier_duchy
+		prestige_level >= 2
+	}
+	
+	cost = {
+		gold = 200
+		prestige = 50
+	}
+	
+	low_maintenance_modifier = {
+		damage_mult = -0.5
+		toughness_mult = -0.5
+		pursuit_mult = -0.5
+		screen_mult = -0.5
+	}
+	
+	maintenance_multiplier = {
+		culture_welsh = 0.9
+		culture_welsh_gwynedd = 0.85
+		culture_welsh_powys = 0.9
+		culture_welsh_deheubarth = 0.9
+	}
+	
+	icon = teulu_household_guard
+	
+	hire_cost = 300
+	low_maintenance_cost = 2.0
+	high_maintenance_cost = 8.0
+	
+	holy_order = no
+	mercenary_company = no
+	
+	graphical_culture = { welsh_culture_group }
+	
+	upgrades_from = heavy_infantry
+	
+	# Elite unit bonuses
+	character_modifier = {
+		monthly_prestige = 0.2
+		prowess = 1
+		dread_per_tyranny_add = 0.25
+	}
+	
+	stack_modifier = {
+		friendly_territory_movement_speed_mult = 0.1
+		siege_weapon_siege_value_mult = 0.1
+	}
+	
+	max_sub_regiments = 4
+	
+	ai_quality = {
+		value = @[maa_buy_ai_value|E]
+		
+		if = {
+			limit = {
+				culture = {
+					OR = {
+						this = culture:welsh
+						this = culture:welsh_gwynedd
+						this = culture:welsh_powys
+						this = culture:welsh_deheubarth
+					}
+				}
+				highest_held_title_tier >= tier_kingdom
+			}
+			add = 50
+		}
+	}
+}
+
+welsh_cattle_raiders = {
+	type = light_cavalry
+	
+	damage = 15
+	toughness = 12
+	pursuit = 35
+	screen = 20
+	
+	terrain_bonus = {
+		plains = { pursuit = 10 screen = 5 }
+		farmlands = { pursuit = 8 screen = 4 }
+		hills = { pursuit = 5 screen = 3 }
+	}
+	
+	counters = {
+		bowmen = 1.6
+		skirmishers = 1.4
+		heavy_infantry = 0.5
+		heavy_cavalry = 0.3
+	}
+	
+	can_recruit = {
+		culture = {
+			OR = {
+				this = culture:welsh
+				this = culture:welsh_gwynedd
+				this = culture:welsh_powys
+				this = culture:welsh_deheubarth
+				has_cultural_tradition = tradition_cattle_raids
+			}
+		}
+	}
+	
+	cost = {
+		gold = 120
+		prestige = 30
+	}
+	
+	low_maintenance_modifier = {
+		damage_mult = -0.3
+		toughness_mult = -0.4
+		pursuit_mult = -0.2
+		screen_mult = -0.3
+	}
+	
+	maintenance_multiplier = {
+		culture_welsh = 0.85
+		tradition_cattle_raids = 0.8
+	}
+	
+	icon = welsh_cattle_raiders
+	
+	hire_cost = 180
+	low_maintenance_cost = 1.2
+	high_maintenance_cost = 6.0
+	
+	holy_order = no
+	mercenary_company = no
+	
+	graphical_culture = { welsh_culture_group }
+	
+	upgrades_from = light_cavalry
+	
+	# Raiding bonuses
+	character_modifier = {
+		raid_speed_mult = 0.25
+		movement_speed_mult = 0.1
+	}
+	
+	stack_modifier = {
+		movement_speed_mult = 0.2
+		retreat_losses_mult = -0.3
+	}
+	
+	ai_quality = {
+		value = @[maa_buy_ai_value|E]
+		
+		if = {
+			limit = {
+				culture = { has_cultural_tradition = tradition_cattle_raids }
+			}
+			add = 30
+		}
+	}
+}

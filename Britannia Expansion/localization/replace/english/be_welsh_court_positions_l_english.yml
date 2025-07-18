@@ -1,0 +1,56 @@
+l_english:
+ # Welsh Court Positions
+ pencerdd: "Pencerdd"
+ pencerdd_desc: "The Pencerdd is the chief of song, the premier bard of the Welsh court. This honored position carries great cultural significance, as the Pencerdd preserves the lineage, laws, and legends of the people through poetry and song."
+ 
+ bardd_teulu: "Bardd Teulu"
+ bardd_teulu_desc: "The Bardd Teulu is the household bard, personal poet and entertainer to the ruler. They compose verses celebrating their lord's deeds and provide counsel through the wisdom of ancient tales."
+ 
+ distain: "Distain"
+ distain_desc: "The Distain serves as the chief administrative officer of the Welsh court, managing the ruler's household, finances, and day-to-day governance with traditional Welsh efficiency."
+ 
+ penteulu: "Penteulu"
+ penteulu_desc: "The Penteulu commands the Teulu, the ruler's household guard and elite warriors. This position combines military leadership with personal loyalty to the royal household."
+ 
+ ynad: "Ynad"
+ ynad_desc: "The Ynad is a keeper of Cyfraith Hywel, the traditional Welsh laws. They serve as judge and legal advisor, ensuring that ancient Welsh customs and justice are properly maintained."
+ 
+ # Court Position Categories
+ court_position_category_welsh: "Welsh Positions"
+ court_position_category_welsh_desc: "Traditional positions unique to Welsh courts, reflecting the cultural values and administrative needs of medieval Wales."
+ 
+ # Court Position Effects
+ pencerdd_court_effect: "Cultural Prestige: The Pencerdd enhances the court's cultural reputation through masterful poetry and storytelling."
+ bardd_teulu_court_effect: "Personal Entertainment: The household bard provides comfort and inspiration to the ruler through songs and tales."
+ distain_court_effect: "Administrative Efficiency: The Distain's management skills improve the court's financial and organizational effectiveness."
+ penteulu_court_effect: "Military Leadership: The Penteulu's command enhances the training and readiness of the household guard."
+ ynad_court_effect: "Legal Wisdom: The Ynad's knowledge of Welsh law reduces conflicts and improves justice administration."
+ 
+ # Aptitude Descriptions
+ pencerdd_aptitude_1: "Competent Bard"
+ pencerdd_aptitude_2: "Skilled Poet"
+ pencerdd_aptitude_3: "Master of Song"
+ 
+ bardd_teulu_aptitude_1: "Household Singer"
+ bardd_teulu_aptitude_2: "Trusted Bard"
+ bardd_teulu_aptitude_3: "Beloved Poet"
+ 
+ distain_aptitude_1: "Capable Administrator"
+ distain_aptitude_2: "Skilled Steward"
+ distain_aptitude_3: "Master Administrator"
+ 
+ penteulu_aptitude_1: "Guard Captain"
+ penteulu_aptitude_2: "Veteran Commander"
+ penteulu_aptitude_3: "Elite War Leader"
+ 
+ ynad_aptitude_1: "Local Judge"
+ ynad_aptitude_2: "Learned Jurist"
+ ynad_aptitude_3: "Master of Law"
+ 
+ # Position Benefits
+ welsh_court_cultural_bonus: "Welsh Court Culture"
+ welsh_court_cultural_bonus_desc: "The traditional Welsh court positions enhance cultural prestige and administrative efficiency."
+ 
+ # Historical Context
+ welsh_court_tradition: "Ancient Welsh Traditions"
+ welsh_court_tradition_desc: "These court positions reflect the sophisticated administrative and cultural systems developed in medieval Welsh kingdoms, based on centuries of Celtic tradition and adapted to the political realities of the age."

@@ -1,0 +1,49 @@
+l_english:
+ # Welsh Cultural Decisions
+ establish_eisteddfod_decision: "Establish the Royal Eisteddfod"
+ establish_eisteddfod_decision_desc: "The Eisteddfod is the greatest expression of Welsh culture, where bards compete in poetry and song while nobles celebrate the heritage of Wales. Establishing a royal Eisteddfod will enhance our court's prestige and strengthen Welsh cultural identity throughout our realm."
+ establish_eisteddfod_decision_effect_tooltip: "The Royal Eisteddfod will permanently enhance court culture and spread Welsh traditions."
+ 
+ promote_welsh_language_decision: "Promote the Welsh Language"
+ promote_welsh_language_decision_desc: "The Welsh tongue carries the wisdom of our ancestors and the soul of our people. By promoting Welsh language and literacy throughout our realm, we strengthen cultural bonds and preserve our heritage for future generations."
+ promote_welsh_language_decision_effect_tooltip: "Welsh language promotion will increase cultural acceptance and may convert some counties to Welsh culture."
+ 
+ codify_welsh_law_decision: "Codify Cyfraith Hywel"
+ codify_welsh_law_decision_desc: "The laws of Hywel Dda have guided Welsh justice for generations, but they exist mainly in the memories of judges and the songs of bards. By codifying these ancient laws in writing, we ensure their preservation and create a unified legal system for all Welsh lands."
+ codify_welsh_law_decision_effect_tooltip: "Codifying Welsh law will improve justice, reduce tyranny, and strengthen legitimacy among Welsh subjects."
+ 
+ # Cultural Modifiers
+ annual_eisteddfod: "Royal Eisteddfod"
+ annual_eisteddfod_desc: "The court hosts an annual Eisteddfod, attracting the finest bards and poets from across Wales. This cultural festival enhances prestige and strengthens Welsh traditions."
+ 
+ promoting_welsh_culture: "Promoting Welsh Culture"
+ promoting_welsh_culture_desc: "Active efforts to promote Welsh language, customs, and traditions are increasing cultural acceptance and strengthening Welsh identity."
+ 
+ codified_welsh_law: "Codified Welsh Law"
+ codified_welsh_law_desc: "The ancient laws of Hywel Dda have been formally codified, creating a unified system of Welsh justice that enhances legitimacy and reduces arbitrary rule."
+ 
+ welsh_law_implemented: "Welsh Law Established"
+ welsh_law_implemented_desc: "The codified laws of Hywel Dda are being implemented in this county, improving justice and administration according to Welsh traditions."
+ 
+ # Cultural Events
+ welsh_culture.0001.t: "The Royal Eisteddfod"
+ welsh_culture.0001.desc: "The first Royal Eisteddfod has been established in our court! Bards and poets from across Wales gather to compete in contests of skill and artistry. The greatest among them will earn places of honor at our court, while their songs and stories spread our fame far and wide."
+ welsh_culture.0001.a: "Let the finest bards join our court!"
+ welsh_culture.0001.b: "We shall judge the contests personally."
+ 
+ welsh_culture.0002.t: "The Language of Our Fathers"
+ welsh_culture.0002.desc: "Our efforts to promote the Welsh language are bearing fruit. Children in our realm are learning to read and write in Welsh, while scribes copy important documents in our native tongue. The language that carries our laws, our poetry, and our prayers grows stronger with each passing season."
+ welsh_culture.0002.a: "Welsh shall flourish in our lands."
+ welsh_culture.0002.b: "Knowledge belongs to all our people."
+ 
+ welsh_culture.0003.t: "The Laws of Hywel Dda"
+ welsh_culture.0003.desc: "The ancient laws of Hywel Dda have been successfully codified and are now being implemented throughout our realm. These laws, which balance justice with mercy and individual rights with community needs, represent the wisdom accumulated over centuries of Welsh governance."
+ welsh_culture.0003.a: "Justice shall flow like a clear stream."
+ welsh_culture.0003.b: "The old ways have proven their worth."
+ 
+ # Historical Context
+ welsh_eisteddfod_tradition: "The Eisteddfod Tradition"
+ welsh_eisteddfod_tradition_desc: "The Eisteddfod is an ancient Welsh institution where bards, poets, and musicians gather to compete and celebrate the arts. These festivals preserve Welsh culture and provide a forum for artistic expression and cultural exchange."
+ 
+ cyfraith_hywel_context: "Cyfraith Hywel - The Laws of Hywel Dda"
+ cyfraith_hywel_context_desc: "King Hywel Dda (c. 880-948) codified a comprehensive legal system that became the foundation of Welsh law. These laws emphasized compensation over punishment, protected the rights of women and children, and balanced individual liberty with social responsibility."

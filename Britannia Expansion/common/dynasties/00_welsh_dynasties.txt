@@ -1,0 +1,277 @@
+# Welsh Dynasties
+# Based on historical Welsh royal houses
+
+# House of Dinefwr (Deheubarth) - descendants of Rhodri Mawr
+100001 = {
+	name = "dynn_dinefwr"
+	culture = welsh
+	
+	# Coat of arms - traditional Welsh colors
+	coat_of_arms = {
+		pattern = "pattern_solid"
+		color1 = "red"
+		color2 = "white"
+		
+		colored_emblem = {
+			color1 = "white"
+			texture = "ce_dragon_01"
+		}
+	}
+	
+	motto = "motto_dinefwr" # "Undeb a Nerth" (Unity and Strength)
+	
+	# Hywel Dda was the most famous member
+	prestige = 500
+	
+	# Dynasty legacy
+	dynasty_modifier = {
+		monthly_prestige_gain_mult = 0.05
+		same_culture_opinion = 5
+	}
+}
+
+# House of Aberffraw (Gwynedd) - also descendants of Rhodri Mawr
+100002 = {
+	name = "dynn_aberffraw"
+	culture = welsh
+	
+	coat_of_arms = {
+		pattern = "pattern_solid"
+		color1 = "red"
+		color2 = "yellow"
+		
+		colored_emblem = {
+			color1 = "yellow"
+			texture = "ce_eagle_01"
+		}
+	}
+	
+	motto = "motto_aberffraw" # "Cymru am Byth" (Wales Forever)
+	
+	# House of Llywelyn the Great and Llywelyn the Last
+	prestige = 600
+	
+	dynasty_modifier = {
+		monthly_prestige_gain_mult = 0.06
+		same_culture_opinion = 6
+		levy_size = 0.05
+	}
+}
+
+# House of Mathrafal (Powys)
+100003 = {
+	name = "dynn_mathrafal"
+	culture = welsh
+	
+	coat_of_arms = {
+		pattern = "pattern_solid"
+		color1 = "blue"
+		color2 = "white"
+		
+		colored_emblem = {
+			color1 = "white"
+			texture = "ce_lion_01"
+		}
+	}
+	
+	motto = "motto_mathrafal" # "Dewrder a Doethder" (Courage and Wisdom)
+	
+	# Bleddyn ap Cynfyn's house
+	prestige = 400
+	
+	dynasty_modifier = {
+		monthly_prestige_gain_mult = 0.04
+		same_culture_opinion = 4
+		stewardship = 1
+	}
+}
+
+# House of Arwystli
+100004 = {
+	name = "dynn_arwystli"
+	culture = welsh
+	
+	coat_of_arms = {
+		pattern = "pattern_solid"
+		color1 = "green"
+		color2 = "white"
+		
+		colored_emblem = {
+			color1 = "white"
+			texture = "ce_stag_01"
+		}
+	}
+	
+	motto = "motto_arwystli" # "Rhyddid neu Farwolaeth" (Freedom or Death)
+	
+	# Trahaern ap Caradog's house
+	prestige = 300
+	
+	dynasty_modifier = {
+		monthly_prestige_gain_mult = 0.03
+		same_culture_opinion = 3
+		martial = 1
+	}
+}
+
+# House of Gwerthrynion (minor Welsh dynasty)
+100005 = {
+	name = "dynn_gwerthrynion"
+	culture = welsh
+	
+	coat_of_arms = {
+		pattern = "pattern_solid"
+		color1 = "black"
+		color2 = "gold"
+		
+		colored_emblem = {
+			color1 = "gold"
+			texture = "ce_raven_01"
+		}
+	}
+	
+	motto = "motto_gwerthrynion" # "Cadernid yn y Gogledd" (Strength in the North)
+	
+	prestige = 250
+	
+	dynasty_modifier = {
+		monthly_prestige_gain_mult = 0.02
+		same_culture_opinion = 2
+		intrigue = 1
+	}
+}
+
+# House of Brycheiniog
+100006 = {
+	name = "dynn_brycheiniog"
+	culture = welsh
+	
+	coat_of_arms = {
+		pattern = "pattern_solid"
+		color1 = "purple"
+		color2 = "silver"
+		
+		colored_emblem = {
+			color1 = "silver"
+			texture = "ce_wolf_01"
+		}
+	}
+	
+	motto = "motto_brycheiniog" # "Yn Gryf fel y Mynyddoedd" (Strong as the Mountains)
+	
+	prestige = 200
+	
+	dynasty_modifier = {
+		monthly_prestige_gain_mult = 0.02
+		same_culture_opinion = 2
+		diplomacy = 1
+	}
+}
+
+# House of Morgannwg (Glamorgan)
+100007 = {
+	name = "dynn_morgannwg"
+	culture = welsh
+	
+	coat_of_arms = {
+		pattern = "pattern_solid"
+		color1 = "yellow"
+		color2 = "red"
+		
+		colored_emblem = {
+			color1 = "red"
+			texture = "ce_boar_01"
+		}
+	}
+	
+	motto = "motto_morgannwg" # "Mewn Undod mae Cryfder" (In Unity there is Strength)
+	
+	prestige = 300
+	
+	dynasty_modifier = {
+		monthly_prestige_gain_mult = 0.03
+		same_culture_opinion = 3
+		learning = 1
+	}
+}
+
+# House of Ceredigion
+100008 = {
+	name = "dynn_ceredigion"
+	culture = welsh
+	
+	coat_of_arms = {
+		pattern = "pattern_solid"
+		color1 = "blue"
+		color2 = "gold"
+		
+		colored_emblem = {
+			color1 = "gold"
+			texture = "ce_dolphin_01"
+		}
+	}
+	
+	motto = "motto_ceredigion" # "Mor a Mynydd" (Sea and Mountain)
+	
+	prestige = 250
+	
+	dynasty_modifier = {
+		monthly_prestige_gain_mult = 0.025
+		same_culture_opinion = 2
+		stewardship = 1
+	}
+}
+
+# House of Gwynllŵg
+100009 = {
+	name = "dynn_gwynllwg"
+	culture = welsh
+	
+	coat_of_arms = {
+		pattern = "pattern_solid"
+		color1 = "white"
+		color2 = "green"
+		
+		colored_emblem = {
+			color1 = "green"
+			texture = "ce_oak_01"
+		}
+	}
+	
+	motto = "motto_gwynllwg" # "Fel Derwen yn Sefyll" (Standing like an Oak)
+	
+	prestige = 200
+	
+	dynasty_modifier = {
+		monthly_prestige_gain_mult = 0.02
+		same_culture_opinion = 2
+		prowess = 1
+	}
+}
+
+# House of Dyfed (ancient house)
+100010 = {
+	name = "dynn_dyfed"
+	culture = welsh
+	
+	coat_of_arms = {
+		pattern = "pattern_solid"
+		color1 = "red"
+		color2 = "black"
+		
+		colored_emblem = {
+			color1 = "black"
+			texture = "ce_cross_01"
+		}
+	}
+	
+	motto = "motto_dyfed" # "Ffydd a Dewrder" (Faith and Courage)
+	
+	prestige = 350
+	
+	dynasty_modifier = {
+		monthly_prestige_gain_mult = 0.035
+		same_culture_opinion = 4
+		piety = 1
+	}
+}

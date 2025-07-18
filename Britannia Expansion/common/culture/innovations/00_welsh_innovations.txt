@@ -1,0 +1,377 @@
+# Welsh Cultural Innovations
+# Unique innovations for Welsh culture reflecting their historical achievements
+
+# Tribal Era Innovations (867-1000)
+innovation_cyfraith_hywel = {
+	group = culture_group_civic
+	
+	culture = {
+		culture:welsh
+	}
+	
+	# Unlocked by codifying Welsh law decision
+	unlock_date = 950.1.1  # Hywel Dda's reforms
+	
+	character_modifier = {
+		monthly_prestige = 0.5
+		domain_limit = 1
+		stewardship = 1
+	}
+	
+	culture_modifier = {
+		cultural_acceptance_gain_mult = 0.1
+		cultural_head_acceptance_gain_mult = 0.15
+	}
+	
+	county_modifier = {
+		county_opinion_add = 10
+		development_growth = 0.05
+	}
+	
+	flag = "innovation_cyfraith_hywel"
+}
+
+innovation_mountain_warfare = {
+	group = culture_group_military
+	
+	culture = {
+		culture:welsh
+		culture:gwynedd
+		culture:powys
+	}
+	
+	unlock_date = 900.1.1
+	
+	# Mountain terrain advantages
+	character_modifier = {
+		mountains_movement_speed = 0.25
+		mountains_advantage = 10
+		hills_advantage = 5
+	}
+	
+	culture_modifier = {
+		men_at_arms_maintenance = -0.1
+		men_at_arms_recruitment_cost = -0.15
+	}
+	
+	# Unlocks Welsh mountain troops
+	unlock_maa = welsh_mountain_warriors
+	unlock_maa = welsh_longbowmen
+	
+	flag = "innovation_mountain_warfare"
+}
+
+innovation_bardic_tradition = {
+	group = culture_group_regional
+	
+	culture = {
+		culture:welsh
+		culture:deheubarth
+	}
+	
+	unlock_date = 950.1.1
+	
+	character_modifier = {
+		monthly_prestige = 0.75
+		learning = 2
+		cultural_acceptance_gain_mult = 0.15
+	}
+	
+	# Unlocks bardic court positions
+	unlock_court_position = pencerdd_court_poet
+	
+	# Cultural conversion resistance
+	county_modifier = {
+		county_culture_conversion_mult = -0.25
+	}
+	
+	flag = "innovation_bardic_tradition"
+}
+
+innovation_cattle_culture = {
+	group = culture_group_regional
+	
+	culture = {
+		culture:welsh
+	}
+	
+	unlock_date = 867.1.1  # Available from start
+	
+	# Economic benefits from cattle
+	character_modifier = {
+		monthly_income = 0.15
+		diplomacy = 1
+	}
+	
+	# Unlock cattle-based buildings and units
+	unlock_building = cattle_pastures_01
+	unlock_maa = welsh_cattle_raiders
+	
+	flag = "innovation_cattle_culture"
+}
+
+# Early Medieval Innovations (1000-1200)
+innovation_eisteddfod_system = {
+	group = culture_group_civic
+	
+	culture = {
+		culture:welsh
+	}
+	
+	unlock_date = 1176.1.1  # First recorded Eisteddfod by Lord Rhys
+	
+	character_modifier = {
+		monthly_prestige = 1.0
+		learning = 2
+		same_culture_opinion = 15
+	}
+	
+	culture_modifier = {
+		cultural_acceptance_gain_mult = 0.2
+		innovation_gain_mult = 0.1
+	}
+	
+	# Unlock Eisteddfod buildings and laws
+	unlock_building = eisteddfod_hall_01
+	unlock_law = eisteddfod_tradition
+	
+	flag = "innovation_eisteddfod_system"
+}
+
+innovation_longbow_mastery = {
+	group = culture_group_military
+	
+	culture = {
+		culture:welsh
+		culture:gwynedd
+	}
+	
+	unlock_date = 1100.1.1
+	
+	# Enhanced longbow effectiveness
+	character_modifier = {
+		archer_effectiveness = 0.25
+		archer_damage = 0.2
+		archer_toughness = 0.1
+	}
+	
+	# Terrain bonuses for archers
+	maa_modifier = {
+		welsh_longbowmen = {
+			damage = 0.25
+			toughness = 0.15
+			screen = 0.1
+		}
+	}
+	
+	flag = "innovation_longbow_mastery"
+}
+
+innovation_mountain_mining = {
+	group = culture_group_regional
+	
+	culture = {
+		culture:welsh
+		culture:morgannwg
+		culture:powys
+	}
+	
+	unlock_date = 1000.1.1
+	
+	# Mining bonuses
+	character_modifier = {
+		monthly_income = 0.2
+		stewardship = 1
+	}
+	
+	# Unlock mining buildings
+	unlock_building = welsh_mines_01
+	
+	# Mountain county bonuses
+	county_modifier = {
+		tax_mult = 0.1
+		development_growth = 0.1
+	}
+	
+	flag = "innovation_mountain_mining"
+}
+
+innovation_coastal_navigation = {
+	group = culture_group_regional
+	
+	culture = {
+		culture:welsh
+		culture:morgannwg
+		culture:deheubarth
+	}
+	
+	unlock_date = 950.1.1
+	
+	# Naval and coastal benefits
+	character_modifier = {
+		monthly_income = 0.1
+		naval_speed = 0.15
+		embarkation_cost = -0.25
+	}
+	
+	# Trade bonuses
+	county_modifier = {
+		tax_mult = 0.05
+		development_growth = 0.05
+	}
+	
+	flag = "innovation_coastal_navigation"
+}
+
+# High Medieval Innovations (1200-1300)
+innovation_unified_resistance = {
+	group = culture_group_military
+	
+	culture = {
+		culture:welsh
+	}
+	
+	unlock_date = 1200.1.1
+	
+	# Anti-conquest bonuses
+	character_modifier = {
+		defender_advantage = 15
+		levy_size = 0.2
+		monthly_prestige = 0.5
+	}
+	
+	# Cultural resistance
+	culture_modifier = {
+		cultural_acceptance_loss_mult = -0.25
+		different_culture_county_conversion_mult = -0.3
+	}
+	
+	# Unlock resistance mechanics
+	unlock_casus_belli = welsh_liberation_war
+	
+	flag = "innovation_unified_resistance"
+}
+
+innovation_princely_authority = {
+	group = culture_group_civic
+	
+	culture = {
+		culture:welsh
+	}
+	
+	unlock_date = 1195.1.1  # Llywelyn the Great's reign
+	
+	# Enhanced royal authority
+	character_modifier = {
+		monthly_prestige = 1.0
+		domain_limit = 2
+		vassal_limit = 5
+		diplomacy = 2
+	}
+	
+	# Centralization bonuses
+	county_modifier = {
+		tax_mult = 0.1
+		levy_size = 0.1
+	}
+	
+	# Unlock Welsh succession laws
+	unlock_law = welsh_partition
+	unlock_law = welsh_ultimogeniture
+	
+	flag = "innovation_princely_authority"
+}
+
+innovation_stone_castles = {
+	group = culture_group_military
+	
+	culture = {
+		culture:welsh
+	}
+	
+	unlock_date = 1150.1.1
+	
+	# Enhanced fortification
+	character_modifier = {
+		fort_level = 1
+		garrison_size = 0.2
+	}
+	
+	# Unlock advanced fortifications
+	unlock_building = mountain_fortress_01
+	
+	# Defensive bonuses
+	county_modifier = {
+		defender_advantage = 10
+		siege_weapon_siege_progress = -0.2
+	}
+	
+	flag = "innovation_stone_castles"
+}
+
+# Special Innovation Triggers
+innovation_triggers = {
+	# Cyfraith Hywel unlocked by decision
+	cyfraith_hywel_trigger = {
+		trigger = {
+			has_character_flag = codified_welsh_law
+		}
+		
+		effect = {
+			culture = {
+				add_innovation = innovation_cyfraith_hywel
+			}
+		}
+	}
+	
+	# Eisteddfod unlocked by decision or event
+	eisteddfod_trigger = {
+		trigger = {
+			has_character_flag = established_eisteddfod
+		}
+		
+		effect = {
+			culture = {
+				add_innovation = innovation_eisteddfod_system
+			}
+		}
+	}
+	
+	# Mountain warfare from terrain control
+	mountain_warfare_trigger = {
+		trigger = {
+			culture = culture:welsh
+			any_held_title = {
+				count >= 3
+				tier = tier_county
+				terrain = mountains
+			}
+		}
+		
+		effect = {
+			culture = {
+				add_innovation = innovation_mountain_warfare
+			}
+		}
+	}
+	
+	# Unified resistance from foreign pressure
+	resistance_trigger = {
+		trigger = {
+			culture = culture:welsh
+			any_liege = {
+				NOT = { culture = culture:welsh }
+			}
+			any_held_title = {
+				count >= 2
+				tier = tier_county
+			}
+		}
+		
+		effect = {
+			culture = {
+				add_innovation = innovation_unified_resistance
+			}
+		}
+	}
+}

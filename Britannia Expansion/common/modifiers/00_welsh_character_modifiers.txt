@@ -1,0 +1,96 @@
+# Welsh Character Modifiers
+# Modifiers for Welsh characters and decisions
+
+# Decision-related modifiers
+eisteddfod_patron = {
+	monthly_prestige = 0.5
+	cultural_acceptance_gain_mult = 0.15
+	same_culture_opinion = 10
+}
+
+cultural_resistance = {
+	county_culture_conversion_mult = -0.5
+	county_opinion_add = 10
+	levy_size = 0.1
+}
+
+codified_welsh_law = {
+	development_growth = 0.1
+	tax_mult = 0.05
+	county_opinion_add = 5
+}
+
+# Opinion modifiers
+united_wales = {
+	opinion = 30
+}
+
+cultural_defender = {
+	opinion = 15
+}
+
+codified_law = {
+	opinion = 20
+}
+
+# Event modifiers
+norman_pressure = {
+	levy_size = -0.1
+	county_opinion_add = -5
+}
+
+welsh_resistance_leader = {
+	monthly_prestige = 1.0
+	same_culture_opinion = 20
+	different_culture_opinion = -10
+}
+
+supported_norman_rule = {
+	monthly_prestige = -0.5
+	same_culture_opinion = -15
+	different_culture_opinion = 10
+}
+
+mountain_defender = {
+	advantage = 10
+	defender_advantage = 15
+}
+
+bardic_inspiration = {
+	monthly_prestige = 0.25
+	learning_per_stress_level = 1
+}
+
+cattle_raid_success = {
+	monthly_income = 2
+	monthly_prestige = 0.5
+}
+
+# County modifiers
+foreign_cultural_pressure = {
+	county_culture_conversion_mult = 0.25
+	county_opinion_add = -10
+	development_growth = -0.05
+}
+
+welsh_cultural_revival = {
+	county_culture_conversion_mult = -0.3
+	development_growth = 0.1
+	county_opinion_add = 15
+}
+
+mountain_fortifications = {
+	fort_level = 1
+	garrison_size = 0.2
+}
+
+# Dynasty modifiers
+welsh_royal_bloodline = {
+	monthly_prestige_gain_mult = 0.1
+	same_culture_opinion = 10
+}
+
+cyfraith_hywel_legacy = {
+	monthly_income = 0.1
+	domain_limit = 1
+}

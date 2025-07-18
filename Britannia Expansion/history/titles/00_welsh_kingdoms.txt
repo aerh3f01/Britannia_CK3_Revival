@@ -1,0 +1,263 @@
+# Kingdom of Wales Title History
+# Based on historical Welsh rulers and the WELSH_CHARACTERS database
+
+k_wales = {
+	# Early period - Rhodri Mawr's influence
+	867.1.1 = {
+		# No unified Wales yet, but Rhodri controls much territory
+		holder = 0 # No holder initially
+		
+		# De jure duchies
+		de_jure_liege = 0
+	}
+	
+	# Hywel Dda period
+	942.1.1 = {
+		holder = 200001 # Hywel Dda ap Cadell
+		
+		# Laws established
+		effect = {
+			holder = {
+				add_character_flag = codified_welsh_law
+			}
+		}
+	}
+	
+	# After Hywel's death - fragmentation
+	950.1.1 = {
+		holder = 0 # Back to fragmentation
+	}
+	
+	# Gruffudd ap Llywelyn's unification
+	1055.1.1 = {
+		holder = 200025 # Gruffudd ap Llywelyn
+		
+		effect = {
+			holder = {
+				add_prestige = 2000
+				add_character_modifier = {
+					modifier = welsh_resistance_leader
+					years = 10
+				}
+			}
+		}
+	}
+	
+	# Norman conquest period
+	1063.8.5 = {
+		# Gruffudd's death
+		holder = 0
+	}
+	
+	# Post-Norman fragmentation
+	1067.1.1 = {
+		holder = 0 # No unified Wales during Norman period
+	}
+	
+	# Rhys ap Gruffudd period
+	1155.1.1 = {
+		holder = 200050 # Rhys ap Gruffudd "The Lord Rhys"
+		
+		effect = {
+			holder = {
+				add_character_flag = established_eisteddfod
+				add_character_modifier = {
+					modifier = eisteddfod_patron
+					years = 20
+				}
+			}
+		}
+	}
+	
+	# Llywelyn the Great
+	1195.1.1 = {
+		holder = 200070 # Llywelyn ap Iorwerth "The Great"
+		
+		effect = {
+			holder = {
+				add_prestige = 1500
+				add_character_modifier = {
+					modifier = welsh_resistance_leader
+					years = 15
+				}
+			}
+		}
+	}
+	
+	# Llywelyn the Last
+	1246.4.11 = {
+		holder = 200080 # Llywelyn ap Gruffudd "The Last"
+		
+		effect = {
+			holder = {
+				add_character_modifier = {
+					modifier = welsh_resistance_leader
+					years = 10
+				}
+			}
+		}
+	}
+	
+	# Conquest by Edward I
+	1282.12.11 = {
+		# End of independent Wales
+		holder = 0
+		
+		effect = {
+			# Add Norman pressure to Welsh counties
+			every_in_de_jure_hierarchy = {
+				limit = { tier = tier_county }
+				add_county_modifier = {
+					modifier = norman_pressure
+					years = 50
+				}
+			}
+		}
+	}
+}
+
+# Duchy of Gwynedd
+d_gwynedd = {
+	867.1.1 = {
+		holder = 200002 # Anarawd ap Rhodri
+		
+		effect = {
+			holder = {
+				add_character_modifier = {
+					modifier = welsh_royal_bloodline
+					days = -1
+				}
+			}
+		}
+	}
+	
+	942.1.1 = {
+		holder = 200001 # Hywel Dda
+	}
+	
+	950.1.1 = {
+		holder = 200010 # Iago ab Idwal
+	}
+	
+	1023.1.1 = {
+		holder = 200015 # Llywelyn ap Seisyll
+	}
+	
+	1055.1.1 = {
+		holder = 200025 # Gruffudd ap Llywelyn
+	}
+	
+	1063.8.5 = {
+		holder = 200030 # Bleddyn ap Cynfyn
+	}
+	
+	1075.1.1 = {
+		holder = 200035 # Trahaern ap Caradog
+	}
+	
+	1081.1.1 = {
+		holder = 200040 # Gruffudd ap Cynan
+	}
+	
+	1137.1.1 = {
+		holder = 200045 # Owain Gwynedd
+	}
+	
+	1195.1.1 = {
+		holder = 200070 # Llywelyn the Great
+	}
+	
+	1246.4.11 = {
+		holder = 200080 # Llywelyn the Last
+	}
+	
+	1282.12.11 = {
+		# Conquered by Edward I
+		holder = 0
+	}
+}
+
+# Duchy of Powys
+d_powys = {
+	867.1.1 = {
+		holder = 200003 # Merfyn ap Rhodri
+	}
+	
+	900.1.1 = {
+		holder = 200005 # Llywelyn ap Merfyn
+	}
+	
+	942.1.1 = {
+		holder = 200001 # Hywel Dda (unified under him)
+	}
+	
+	950.1.1 = {
+		holder = 200012 # Owain ap Hywel
+	}
+	
+	1063.8.5 = {
+		holder = 200030 # Bleddyn ap Cynfyn
+	}
+	
+	1075.1.1 = {
+		holder = 200032 # Iorwerth ap Bleddyn
+	}
+	
+	1111.1.1 = {
+		holder = 200055 # Cadwgan ap Bleddyn
+	}
+	
+	1155.1.1 = {
+		holder = 200060 # Madog ap Maredudd
+	}
+	
+	1200.1.1 = {
+		# Divided between Powys Wenwynwyn and Powys Fadog
+		holder = 200065 # Gwenwynwyn ap Owain
+	}
+	
+	1282.12.11 = {
+		# Conquered by Edward I
+		holder = 0
+	}
+}
+
+# Duchy of Deheubarth
+d_deheubarth = {
+	867.1.1 = {
+		holder = 200004 # Cadell ap Rhodri
+	}
+	
+	909.1.1 = {
+		holder = 200001 # Hywel Dda ap Cadell
+	}
+	
+	950.1.1 = {
+		holder = 200011 # Owain ap Hywel
+	}
+	
+	999.1.1 = {
+		holder = 200020 # Maredudd ab Owain
+	}
+	
+	1055.1.1 = {
+		holder = 200025 # Gruffudd ap Llywelyn (unified Wales)
+	}
+	
+	1063.8.5 = {
+		holder = 200048 # Rhys ab Owain
+	}
+	
+	1078.1.1 = {
+		holder = 200050 # Rhys ap Gruffudd "The Lord Rhys"
+	}
+	
+	1197.4.28 = {
+		holder = 200075 # Gruffudd ap Rhys II
+	}
+	
+	1282.12.11 = {
+		# Conquered by Edward I
+		holder = 0
+	}
+}

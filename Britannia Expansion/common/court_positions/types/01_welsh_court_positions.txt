@@ -1,0 +1,388 @@
+# Welsh Court Positions for Britannia Expansion
+# Authentic Welsh court roles reflecting medieval Welsh society
+
+pencerdd = {
+    category = court_position_category_administration
+    minimum_rank = duke
+    maximum_rank = emperor
+    
+    # Chief of Song - The premier court bard
+    opinion = {
+        value = 25
+        who = liege
+    }
+    
+    # Requirements
+    valid_position = {
+        culture = { has_cultural_parameter = welsh_court_positions }
+    }
+    
+    valid_character = {
+        is_adult = yes
+        NOT = { has_trait = incapable }
+        OR = {
+            has_trait = poet
+            has_trait = gregarious
+            has_trait = eloquent_speaker
+            learning >= 12
+        }
+    }
+    
+    # Effects
+    aptitude_level_1 = {
+        learning >= 8
+    }
+    aptitude_level_2 = {
+        learning >= 12
+        OR = {
+            has_trait = poet
+            has_trait = eloquent_speaker
+        }
+    }
+    aptitude_level_3 = {
+        learning >= 16
+        has_trait = poet
+        OR = {
+            has_trait = gregarious
+            has_trait = eloquent_speaker
+        }
+    }
+    
+    # Bonuses based on aptitude
+    aptitude_level_1 = {
+        court_grandeur_baseline_add = 1
+        monthly_court_grandeur_change_add = 0.10
+    }
+    aptitude_level_2 = {
+        court_grandeur_baseline_add = 2
+        monthly_court_grandeur_change_add = 0.15
+        cultural_acceptance_gain_mult = 0.10
+    }
+    aptitude_level_3 = {
+        court_grandeur_baseline_add = 3
+        monthly_court_grandeur_change_add = 0.20
+        cultural_acceptance_gain_mult = 0.15
+        monthly_prestige = 0.25
+    }
+    
+    # Salary
+    salary = {
+        gold = standard_court_position_salary
+    }
+    
+    is_shown = {
+        highest_held_title_tier >= tier_duchy
+        culture = { has_cultural_parameter = welsh_court_positions }
+    }
+    
+    revoke_cost = {
+        prestige = standard_court_position_prestige_revoke_cost
+    }
+    
+    cancel_cost = {
+        prestige = standard_court_position_prestige_cancel_cost
+    }
+}
+
+bardd_teulu = {
+    category = court_position_category_administration
+    minimum_rank = count
+    maximum_rank = emperor
+    
+    # Household Bard - Personal bard to the ruler
+    opinion = {
+        value = 20
+        who = liege
+    }
+    
+    valid_position = {
+        culture = { has_cultural_parameter = welsh_court_positions }
+    }
+    
+    valid_character = {
+        is_adult = yes
+        NOT = { has_trait = incapable }
+        OR = {
+            has_trait = poet
+            has_trait = gregarious
+            learning >= 10
+        }
+    }
+    
+    aptitude_level_1 = {
+        learning >= 6
+    }
+    aptitude_level_2 = {
+        learning >= 10
+        has_trait = poet
+    }
+    aptitude_level_3 = {
+        learning >= 14
+        has_trait = poet
+        has_trait = gregarious
+    }
+    
+    aptitude_level_1 = {
+        monthly_prestige = 0.10
+        stress_loss_mult = 0.05
+    }
+    aptitude_level_2 = {
+        monthly_prestige = 0.15
+        stress_loss_mult = 0.10
+        cultural_acceptance_gain_mult = 0.05
+    }
+    aptitude_level_3 = {
+        monthly_prestige = 0.20
+        stress_loss_mult = 0.15
+        cultural_acceptance_gain_mult = 0.10
+        court_grandeur_baseline_add = 1
+    }
+    
+    salary = {
+        gold = minor_court_position_salary
+    }
+    
+    is_shown = {
+        highest_held_title_tier >= tier_county
+        culture = { has_cultural_parameter = welsh_court_positions }
+    }
+    
+    revoke_cost = {
+        prestige = minor_court_position_prestige_revoke_cost
+    }
+    
+    cancel_cost = {
+        prestige = minor_court_position_prestige_cancel_cost
+    }
+}
+
+distain = {
+    category = court_position_category_administration
+    minimum_rank = duke
+    maximum_rank = emperor
+    
+    # Steward/Seneschal - Administrative head of the Welsh court
+    opinion = {
+        value = 30
+        who = liege
+    }
+    
+    valid_position = {
+        culture = { has_cultural_parameter = welsh_court_positions }
+    }
+    
+    valid_character = {
+        is_adult = yes
+        NOT = { has_trait = incapable }
+        OR = {
+            has_trait = administrator
+            has_trait = diligent
+            stewardship >= 12
+        }
+    }
+    
+    aptitude_level_1 = {
+        stewardship >= 8
+    }
+    aptitude_level_2 = {
+        stewardship >= 12
+        OR = {
+            has_trait = administrator
+            has_trait = diligent
+        }
+    }
+    aptitude_level_3 = {
+        stewardship >= 16
+        has_trait = administrator
+        OR = {
+            has_trait = diligent
+            has_trait = just
+        }
+    }
+    
+    aptitude_level_1 = {
+        monthly_income_mult = 0.05
+        domain_tax_mult = 0.05
+    }
+    aptitude_level_2 = {
+        monthly_income_mult = 0.08
+        domain_tax_mult = 0.08
+        court_grandeur_baseline_add = 1
+    }
+    aptitude_level_3 = {
+        monthly_income_mult = 0.12
+        domain_tax_mult = 0.12
+        court_grandeur_baseline_add = 2
+        monthly_prestige = 0.15
+    }
+    
+    salary = {
+        gold = standard_court_position_salary
+    }
+    
+    is_shown = {
+        highest_held_title_tier >= tier_duchy
+        culture = { has_cultural_parameter = welsh_court_positions }
+    }
+    
+    revoke_cost = {
+        prestige = standard_court_position_prestige_revoke_cost
+    }
+    
+    cancel_cost = {
+        prestige = standard_court_position_prestige_cancel_cost
+    }
+}
+
+penteulu = {
+    category = court_position_category_administration
+    minimum_rank = duke
+    maximum_rank = emperor
+    
+    # Captain of the Household Guard (Teulu)
+    opinion = {
+        value = 25
+        who = liege
+    }
+    
+    valid_position = {
+        culture = { has_cultural_parameter = welsh_court_positions }
+    }
+    
+    valid_character = {
+        is_adult = yes
+        NOT = { has_trait = incapable }
+        OR = {
+            has_trait = brave
+            has_trait = wrathful
+            martial >= 12
+        }
+    }
+    
+    aptitude_level_1 = {
+        martial >= 8
+    }
+    aptitude_level_2 = {
+        martial >= 12
+        OR = {
+            has_trait = brave
+            has_trait = brilliant_strategist
+        }
+    }
+    aptitude_level_3 = {
+        martial >= 16
+        has_trait = brave
+        OR = {
+            has_trait = brilliant_strategist
+            has_trait = wrathful
+        }
+    }
+    
+    aptitude_level_1 = {
+        levy_reinforcement_rate = 0.10
+        army_damage_mult = 0.05
+    }
+    aptitude_level_2 = {
+        levy_reinforcement_rate = 0.15
+        army_damage_mult = 0.08
+        monthly_prestige = 0.10
+    }
+    aptitude_level_3 = {
+        levy_reinforcement_rate = 0.20
+        army_damage_mult = 0.12
+        monthly_prestige = 0.15
+        court_grandeur_baseline_add = 1
+    }
+    
+    salary = {
+        gold = standard_court_position_salary
+    }
+    
+    is_shown = {
+        highest_held_title_tier >= tier_duchy
+        culture = { has_cultural_parameter = welsh_court_positions }
+    }
+    
+    revoke_cost = {
+        prestige = standard_court_position_prestige_revoke_cost
+    }
+    
+    cancel_cost = {
+        prestige = standard_court_position_prestige_cancel_cost
+    }
+}
+
+ynad = {
+    category = court_position_category_administration
+    minimum_rank = count
+    maximum_rank = emperor
+    
+    # Welsh Judge - Keeper of Cyfraith Hywel
+    opinion = {
+        value = 20
+        who = liege
+    }
+    
+    valid_position = {
+        culture = { has_cultural_parameter = welsh_court_positions }
+    }
+    
+    valid_character = {
+        is_adult = yes
+        NOT = { has_trait = incapable }
+        OR = {
+            has_trait = just
+            has_trait = temperate
+            learning >= 10
+        }
+    }
+    
+    aptitude_level_1 = {
+        learning >= 8
+    }
+    aptitude_level_2 = {
+        learning >= 12
+        has_trait = just
+    }
+    aptitude_level_3 = {
+        learning >= 16
+        has_trait = just
+        OR = {
+            has_trait = temperate
+            has_trait = patient
+        }
+    }
+    
+    aptitude_level_1 = {
+        tyranny_loss_mult = 0.10
+        monthly_piety = 0.10
+    }
+    aptitude_level_2 = {
+        tyranny_loss_mult = 0.15
+        monthly_piety = 0.15
+        cultural_acceptance_gain_mult = 0.05
+    }
+    aptitude_level_3 = {
+        tyranny_loss_mult = 0.20
+        monthly_piety = 0.20
+        cultural_acceptance_gain_mult = 0.10
+        monthly_prestige = 0.10
+    }
+    
+    salary = {
+        gold = minor_court_position_salary
+    }
+    
+    is_shown = {
+        highest_held_title_tier >= tier_county
+        culture = { has_cultural_parameter = welsh_court_positions }
+    }
+    
+    revoke_cost = {
+        prestige = minor_court_position_prestige_revoke_cost
+    }
+    
+    cancel_cost = {
+        prestige = minor_court_position_prestige_cancel_cost
+    }
+}

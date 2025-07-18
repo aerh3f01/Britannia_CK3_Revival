@@ -1,0 +1,418 @@
+# Welsh Cultural Traditions
+# Unique traditions reflecting Welsh medieval culture and society
+
+tradition_cymric_law = {
+	category = realm
+	
+	layers = {
+		0 = learning
+		1 = maa
+		4 = heraldry.gfx
+	}
+	
+	is_shown = {
+		culture = { has_cultural_pillar = heritage_brythonic }
+	}
+	
+	can_pick = {
+		culture = { has_cultural_pillar = heritage_brythonic }
+	}
+	
+	parameters = {
+		unlock_succession_law_cymric_gavelkind = yes
+		bastards_inherit_equally = yes
+		female_divorce_rights = yes
+		blood_price_over_execution = yes
+		clan_collective_responsibility = yes
+	}
+	
+	character_modifier = {
+		monthly_prestige = 0.2
+		stress_gain_mult = -0.15
+		diplomacy_lifestyle_xp_mult = 0.1
+	}
+	
+	province_modifier = {
+		monthly_development = 0.1
+		tax_mult = 0.05
+	}
+	
+	cost = {
+		prestige = 3000
+	}
+	
+	ai_will_do = {
+		value = 100
+		if = {
+			limit = { culture = culture:welsh }
+			add = 200
+		}
+	}
+}
+
+tradition_bardic_courts = {
+	category = societal
+	
+	layers = {
+		0 = learning
+		1 = court_education.gfx
+		4 = music.gfx
+	}
+	
+	is_shown = {
+		OR = {
+			culture = { has_cultural_pillar = heritage_brythonic }
+			any_ruler = {
+				capital_province = { geographical_region = world_europe_west_britannia }
+				culture = { has_cultural_pillar = heritage_brythonic }
+			}
+		}
+	}
+	
+	can_pick = {
+		culture = { has_cultural_pillar = heritage_brythonic }
+	}
+	
+	parameters = {
+		bardic_court_positions = yes
+		cultural_head_poet_bonus = yes
+		genealogy_preservation = yes
+		oral_tradition_bonuses = yes
+		eisteddfod_festivals = yes
+	}
+	
+	character_modifier = {
+		monthly_prestige = 0.25
+		learning_lifestyle_xp_mult = 0.15
+		diplomacy_lifestyle_xp_mult = 0.1
+		court_grandeur_base_value = 3
+	}
+	
+	court_modifier = {
+		court_artifact_monthly_xp_gain_mult = 0.2
+		amenity_level_base_value = 1
+	}
+	
+	cost = {
+		prestige = 2500
+	}
+	
+	ai_will_do = {
+		value = 100
+		if = {
+			limit = { 
+				OR = {
+					culture = culture:welsh
+					culture = culture:welsh_gwynedd
+					culture = culture:welsh_powys  
+					culture = culture:welsh_deheubarth
+				}
+			}
+			add = 150
+		}
+	}
+}
+
+tradition_mountain_warfare = {
+	category = combat
+	
+	layers = {
+		0 = martial
+		1 = maa
+		4 = mountains.gfx
+	}
+	
+	is_shown = {
+		OR = {
+			culture = { has_cultural_pillar = heritage_brythonic }
+			capital_province = { terrain = mountains }
+			capital_province = { terrain = hills }
+		}
+	}
+	
+	can_pick = {
+		OR = {
+			culture = { has_cultural_pillar = heritage_brythonic }
+			capital_province = { terrain = mountains }
+			any_sub_realm_county = { terrain = mountains }
+		}
+	}
+	
+	parameters = {
+		mountain_terrain_bonus = yes
+		hill_terrain_bonus = yes
+		guerrilla_warfare_tactics = yes
+		castle_siege_knowledge = yes
+		terrain_based_retreat = yes
+	}
+	
+	character_modifier = {
+		prowess = 2
+		monthly_prestige = 0.1
+		martial_lifestyle_xp_mult = 0.1
+	}
+	
+	army_modifier = {
+		mountains_attrition_mult = -0.5
+		hills_attrition_mult = -0.3
+		mountains_movement_speed_mult = 0.25
+		hills_movement_speed_mult = 0.2
+		siege_weapon_siege_value_mult = 0.15
+	}
+	
+	men_at_arms_modifier = {
+		type = skirmishers
+		damage_mult = 0.3
+		toughness_mult = 0.2
+		pursuit_mult = 0.4
+		screen_mult = 0.3
+	}
+	
+	cost = {
+		prestige = 2000
+	}
+	
+	ai_will_do = {
+		value = 100
+		if = {
+			limit = { 
+				capital_province = { 
+					OR = {
+						terrain = mountains
+						terrain = hills
+					}
+				}
+			}
+			add = 100
+		}
+		if = {
+			limit = { culture = culture:welsh_gwynedd }
+			add = 150
+		}
+	}
+}
+
+tradition_longbow_mastery = {
+	category = combat
+	
+	layers = {
+		0 = martial
+		1 = maa
+		4 = bow.gfx
+	}
+	
+	is_shown = {
+		culture = { has_cultural_pillar = heritage_brythonic }
+	}
+	
+	can_pick = {
+		culture = { has_cultural_pillar = heritage_brythonic }
+		has_innovation = innovation_longbows
+	}
+	
+	parameters = {
+		longbow_maa_more_effecitve = yes
+		archer_training_camps = yes
+		bow_crafting_expertise = yes
+		hunting_culture_bonus = yes
+		ranged_combat_superiority = yes
+	}
+	
+	character_modifier = {
+		prowess = 1
+		monthly_prestige = 0.15
+		martial_lifestyle_xp_mult = 0.1
+	}
+	
+	men_at_arms_modifier = {
+		type = bowmen
+		damage_mult = 0.5
+		toughness_mult = 0.2
+		pursuit_mult = 0.3
+		screen_mult = 0.2
+		maintenance_mult = -0.2
+	}
+	
+	innovation_chance_multiplier = {
+		innovation_longbows = 2.0
+		innovation_advanced_bowmaking = 1.8
+	}
+	
+	cost = {
+		prestige = 2500
+	}
+	
+	ai_will_do = {
+		value = 100
+		if = {
+			limit = { 
+				OR = {
+					culture = culture:welsh
+					culture = culture:welsh_gwynedd
+					culture = culture:welsh_powys
+					culture = culture:welsh_deheubarth
+				}
+			}
+			add = 200
+		}
+	}
+}
+
+tradition_cattle_raids = {
+	category = realm
+	
+	layers = {
+		0 = martial
+		1 = conquest.gfx
+		4 = cattle.gfx
+	}
+	
+	is_shown = {
+		culture = { has_cultural_pillar = heritage_brythonic }
+	}
+	
+	can_pick = {
+		culture = { has_cultural_pillar = heritage_brythonic }
+	}
+	
+	parameters = {
+		cattle_raiding_cb = yes
+		wealth_redistribution = yes
+		young_warrior_training = yes
+		non_lethal_warfare = yes
+		economic_rebalancing = yes
+	}
+	
+	character_modifier = {
+		monthly_prestige = 0.1
+		prowess = 1
+		stress_gain_mult = -0.1
+	}
+	
+	army_modifier = {
+		movement_speed_mult = 0.15
+		retreat_losses_mult = -0.2
+	}
+	
+	cost = {
+		prestige = 1500
+	}
+	
+	ai_will_do = {
+		value = 75
+		if = {
+			limit = { 
+				culture = { has_cultural_pillar = heritage_brythonic }
+			}
+			add = 100
+		}
+	}
+}
+
+tradition_saint_veneration = {
+	category = societal
+	
+	layers = {
+		0 = learning
+		1 = religion.gfx
+		4 = saint.gfx
+	}
+	
+	is_shown = {
+		culture = { has_cultural_pillar = heritage_brythonic }
+		religion = religion:christianity_religion
+	}
+	
+	can_pick = {
+		culture = { has_cultural_pillar = heritage_brythonic }
+		religion = religion:christianity_religion
+	}
+	
+	parameters = {
+		local_saint_veneration = yes
+		pilgrimage_bonuses = yes
+		celtic_christian_practices = yes
+		monastery_cultural_centers = yes
+		religious_cultural_unity = yes
+	}
+	
+	character_modifier = {
+		monthly_piety = 0.2
+		monthly_prestige = 0.1
+		learning_lifestyle_xp_mult = 0.1
+		stress_gain_mult = -0.1
+	}
+	
+	county_modifier = {
+		monthly_development = 0.1
+		supply_limit_mult = 0.1
+	}
+	
+	cost = {
+		prestige = 2000
+		piety = 1500
+	}
+	
+	ai_will_do = {
+		value = 100
+		if = {
+			limit = { 
+				culture = { has_cultural_pillar = heritage_brythonic }
+				religion = religion:christianity_religion
+			}
+			add = 150
+		}
+	}
+}
+
+tradition_clan_solidarity = {
+	category = societal
+	
+	layers = {
+		0 = diplomacy
+		1 = family.gfx
+		4 = kinship.gfx
+	}
+	
+	is_shown = {
+		culture = { has_cultural_pillar = heritage_brythonic }
+	}
+	
+	can_pick = {
+		culture = { has_cultural_pillar = heritage_brythonic }
+	}
+	
+	parameters = {
+		extended_family_loyalty = yes
+		collective_responsibility = yes
+		kinship_marriage_benefits = yes
+		clan_vengeance_obligations = yes
+		family_honor_system = yes
+	}
+	
+	character_modifier = {
+		monthly_prestige = 0.1
+		stress_gain_mult = -0.15
+		diplomacy_lifestyle_xp_mult = 0.1
+		hostile_scheme_resistance_add = 10
+	}
+	
+	dynasty_modifier = {
+		dynasty_prestige_level_bonus = 0.1
+		monthly_dynasty_prestige = 0.05
+	}
+	
+	cost = {
+		prestige = 1800
+	}
+	
+	ai_will_do = {
+		value = 100
+		if = {
+			limit = { 
+				culture = { has_cultural_pillar = heritage_brythonic }
+			}
+			add = 100
+		}
+	}
+}

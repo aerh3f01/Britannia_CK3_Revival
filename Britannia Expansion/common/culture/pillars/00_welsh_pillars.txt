@@ -1,0 +1,91 @@
+# Welsh Cultural Heritage and Ethos Definitions
+
+heritage_brythonic = {
+	type = heritage
+	
+	# Brythonic Celtic heritage
+	desc = heritage_brythonic_desc
+	
+	# Heritage bonuses reflecting Celtic traditions
+	character_modifier = {
+		monthly_prestige = 0.1
+		stress_gain_mult = -0.1
+		diplomacy_lifestyle_xp_mult = 0.05
+	}
+	
+	# Terrain bonuses for Celtic homelands
+	army_modifier = {
+		mountains_attrition_mult = -0.2
+		hills_attrition_mult = -0.15
+		forest_attrition_mult = -0.1
+	}
+	
+	# Innovation preferences
+	can_always_raid = no
+	
+	# Cultural memory effects
+	ai_war_chance = { always = 15 }
+	ai_peace_chance = { always = 5 }
+	
+	# Special mechanics
+	mercenary_company_chance = 0.25
+}
+
+# Custom Welsh ethos focusing on honor, law, and cultural preservation
+ethos_cymric = {
+	type = ethos
+	
+	desc = ethos_cymric_desc
+	
+	# Core Welsh values: honor, law, cultural preservation
+	character_modifier = {
+		monthly_prestige = 0.2
+		stress_gain_mult = -0.1
+		monthly_piety = 0.05
+		stress_loss_mult = 0.1
+	}
+	
+	# Bonus to cultural activities
+	court_modifier = {
+		court_grandeur_base_value = 2
+		court_artifact_monthly_xp_gain_mult = 0.1
+	}
+	
+	# AI behavior reflecting Welsh values
+	ai_boldness = 25
+	ai_compassion = 15
+	ai_greed = -10
+	ai_honor = 25
+	ai_rationality = 10
+	ai_sociability = 20
+	ai_vengefulness = 20
+	ai_zeal = 15
+	
+	# Innovation bonuses for cultural activities
+	innovation_chance_multiplier = {
+		innovation_chronicle_writing = 1.3
+		innovation_heraldry = 1.2
+		innovation_currency_01 = 1.1
+		innovation_plenary_assemblies = 1.2
+	}
+	
+	# Court type preferences
+	court_type_preference = {
+		court_administrative = 0.2
+		court_diplomatic = 0.3
+		court_intrigue = 0.1
+		court_scholarly = 0.5
+		court_warlike = 0.4
+	}
+	
+	# Special tradition compatibility
+	tradition_compatibility = {
+		tradition_storytellers = 100
+		tradition_poetry = 100
+		tradition_zealotry = 80
+		tradition_clan_vengeance = 80
+		tradition_warrior_culture = 70
+		tradition_mountain_homes = 90
+		tradition_longbow_competitions = 85
+	}
+}

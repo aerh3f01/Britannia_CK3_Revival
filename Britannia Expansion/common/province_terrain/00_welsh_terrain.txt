@@ -1,0 +1,326 @@
+# Welsh Geographic Features
+# Special terrain and geographic modifiers for Wales
+
+# Mountain Pass Systems
+snowdonia_passes = {
+	type = special_terrain
+	
+	# Applies to Gwynedd mountain regions
+	counties = {
+		c_gwynedd
+		c_conwy
+		c_anglesey
+	}
+	
+	# Movement penalties but defensive bonuses
+	modifier = {
+		movement_speed = -0.4
+		supply_limit_mult = -0.3
+		defender_advantage = 20
+		siege_weapon_siege_progress = -0.2
+	}
+	
+	# Winter effects
+	winter_modifier = {
+		movement_speed = -0.6
+		supply_limit_mult = -0.5
+		attrition = 0.02
+	}
+	
+	# Cultural bonuses for Welsh
+	cultural_modifier = {
+		culture = welsh
+		movement_speed = 0.2  # Cancels some penalty
+		attrition = -0.01     # Reduces winter attrition
+		advantage = 5         # Extra combat bonus
+	}
+}
+
+cambrian_mountains = {
+	type = special_terrain
+	
+	# Central Wales mountain region
+	counties = {
+		c_mathrafal
+		c_montgomeryshire
+		c_radnor
+		c_builth
+		c_brecon
+	}
+	
+	modifier = {
+		movement_speed = -0.3
+		supply_limit_mult = -0.25
+		defender_advantage = 15
+		siege_weapon_siege_progress = -0.15
+	}
+	
+	# Mining opportunities
+	economic_modifier = {
+		monthly_income = 0.1
+		development_growth = 0.05
+	}
+	
+	cultural_modifier = {
+		culture = welsh
+		movement_speed = 0.15
+		levy_size = 0.1
+	}
+}
+
+black_mountains = {
+	type = special_terrain
+	
+	# Southern Wales mountain region
+	counties = {
+		c_brecon
+		c_dinefwr
+		c_carmarthen
+	}
+	
+	modifier = {
+		movement_speed = -0.25
+		supply_limit_mult = -0.2
+		defender_advantage = 12
+	}
+	
+	cultural_modifier = {
+		culture = welsh
+		movement_speed = 0.1
+		fort_level = 1
+	}
+}
+
+# Coastal Features
+cardigan_bay = {
+	type = coastal_terrain
+	
+	# Western Welsh coast
+	counties = {
+		c_ceredigion
+		c_gwynedd
+		c_anglesey
+	}
+	
+	# Naval and trade benefits
+	modifier = {
+		monthly_income = 0.15
+		naval_speed = 0.2
+		embarkation_cost = -0.25
+	}
+	
+	# Storm season penalties
+	seasonal_modifier = {
+		# Winter storms
+		months = { 11 12 1 2 }
+		naval_speed = -0.3
+		disembarkation_cost = 0.5
+	}
+	
+	cultural_modifier = {
+		culture = welsh
+		monthly_income = 0.05  # Additional fishing/trade income
+	}
+}
+
+bristol_channel = {
+	type = coastal_terrain
+	
+	# Southern Welsh coast
+	counties = {
+		c_cardiff
+		c_neath
+		c_gower
+		c_pembroke
+	}
+	
+	modifier = {
+		monthly_income = 0.2
+		tax_mult = 0.1
+		naval_speed = 0.15
+	}
+	
+	# Trade route bonuses
+	economic_modifier = {
+		development_growth = 0.1
+		stewardship = 1
+	}
+}
+
+# River Systems
+river_severn_upper = {
+	type = river_terrain
+	
+	# Upper Severn valley through Powys
+	counties = {
+		c_mathrafal
+		c_montgomeryshire
+	}
+	
+	modifier = {
+		development_growth = 0.1
+		tax_mult = 0.05
+		movement_speed = 0.1  # River routes aid movement
+	}
+	
+	# Fertile valley
+	agricultural_modifier = {
+		levy_size = 0.1
+		monthly_income = 0.1
+	}
+}
+
+river_wye = {
+	type = river_terrain
+	
+	# Wye valley
+	counties = {
+		c_builth
+		c_radnor
+		c_brecon
+	}
+	
+	modifier = {
+		development_growth = 0.08
+		tax_mult = 0.05
+		movement_speed = 0.08
+	}
+}
+
+river_towy = {
+	type = river_terrain
+	
+	# Towy valley in Deheubarth
+	counties = {
+		c_dinefwr
+		c_carmarthen
+	}
+	
+	modifier = {
+		development_growth = 0.12
+		tax_mult = 0.08
+		monthly_income = 0.1
+	}
+	
+	# Heart of Deheubarth - cultural significance
+	cultural_modifier = {
+		culture = welsh
+		monthly_prestige = 0.25
+		same_culture_opinion = 5
+	}
+}
+
+# Special Locations
+anglesey_farmlands = {
+	type = special_farmland
+	
+	# Anglesey - "Mam Cymru" (Mother of Wales)
+	counties = {
+		c_anglesey
+	}
+	
+	# Extremely fertile island
+	modifier = {
+		tax_mult = 0.25
+		levy_size = 0.2
+		development_growth = 0.2
+		monthly_income = 0.2
+	}
+	
+	# Strategic importance
+	military_modifier = {
+		garrison_size = 0.15
+		fort_level = 1
+	}
+	
+	cultural_modifier = {
+		culture = welsh
+		monthly_prestige = 0.5  # Cultural heartland
+		monthly_piety = 0.25    # Religious significance
+	}
+}
+
+gower_peninsula = {
+	type = coastal_peninsula
+	
+	counties = {
+		c_gower
+	}
+	
+	# Coastal trading benefits
+	modifier = {
+		monthly_income = 0.15
+		tax_mult = 0.1
+		naval_speed = 0.2
+	}
+	
+	# Defensive position
+	military_modifier = {
+		defender_advantage = 8
+		siege_weapon_siege_progress = -0.1
+	}
+}
+
+pembroke_coast = {
+	type = coastal_fortress
+	
+	counties = {
+		c_pembroke
+	}
+	
+	# Strategic coastal position
+	modifier = {
+		fort_level = 2
+		garrison_size = 0.2
+		naval_speed = 0.15
+	}
+	
+	# Norman foothold historically
+	cultural_conflict_modifier = {
+		different_culture_county_conversion_mult = 0.3
+		cultural_acceptance_loss_mult = 0.2
+	}
+}
+
+# Weather Patterns
+welsh_winters = {
+	type = seasonal_weather
+	
+	# Affects all of Wales
+	all_welsh_counties = yes
+	
+	# Harsh mountain winters
+	winter_modifier = {
+		months = { 12 1 2 }
+		movement_speed = -0.2
+		supply_limit_mult = -0.2
+		attrition = 0.01
+	}
+	
+	# Welsh cultural adaptation
+	cultural_modifier = {
+		culture = welsh
+		winter_attrition = -0.005
+		winter_movement_speed = 0.1
+	}
+}
+
+atlantic_storms = {
+	type = seasonal_weather
+	
+	# Western coastal counties
+	western_counties = {
+		c_anglesey
+		c_gwynedd
+		c_ceredigion
+		c_pembroke
+	}
+	
+	# Storm season
+	storm_modifier = {
+		months = { 10 11 12 1 2 3 }
+		naval_speed = -0.3
+		siege_weapon_siege_progress = -0.1
+		supply_limit_mult = -0.1
+	}
+}

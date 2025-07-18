@@ -1,0 +1,251 @@
+# Welsh Cultural Artifacts
+# Reflecting the rich material culture of medieval Wales
+
+# The Harp of Gruffydd - Legendary Welsh harp
+harp_of_gruffydd = {
+	type = crown
+	rarity = legendary
+	
+	# Cultural requirements
+	can_equip_character_trigger = {
+		culture = { has_cultural_parameter = welsh_court_positions }
+		OR = {
+			has_trait = poet
+			has_trait = gregarious
+			learning >= 15
+		}
+	}
+	
+	# Benefits of possessing this legendary harp
+	modifier = {
+		monthly_prestige = 0.5
+		court_grandeur_baseline_add = 3
+		cultural_acceptance_gain_mult = 0.2
+		stress_loss_mult = 0.15
+		poetry_power_add = 25
+	}
+	
+	# Special effects
+	wealth = insane_wealth_value
+	monthly_character_piety = 0.2
+	monthly_character_prestige = 0.3
+	
+	# Appearance
+	template = harp_template
+	
+	# Historical background
+	history = {
+		867.1.1 = {
+			holder = 163110  # Historical Welsh ruler
+		}
+		1066.1.1 = {
+			holder = 163120  # Passed down through dynasty
+		}
+	}
+	
+	# Special events when equipped
+	on_equip = {
+		character_event = welsh_artifacts.0001
+	}
+	
+	# Tooltip description
+	desc = "This legendary harp is said to have belonged to the greatest bards of Wales. Its haunting melodies can stir the hearts of warriors and bring peace to troubled souls."
+}
+
+# The Torc of Cadwallon - Ancient Welsh royal torc
+torc_of_cadwallon = {
+	type = crown
+	rarity = famed
+	
+	can_equip_character_trigger = {
+		culture = { has_cultural_parameter = welsh_court_positions }
+		highest_held_title_tier >= tier_duchy
+		dynasty_prestige_level >= 2
+	}
+	
+	modifier = {
+		monthly_prestige = 0.3
+		dynasty_opinion = 15
+		vassal_opinion = 10
+		legitimacy_add = 10
+		court_grandeur_baseline_add = 2
+	}
+	
+	wealth = high_wealth_value
+	monthly_character_prestige = 0.2
+	
+	template = torc_template
+	
+	desc = "An ancient golden torc bearing the symbols of royal Welsh lineage. This neck ornament marks its wearer as heir to the ancient kings of Britain."
+}
+
+# Gwenlliant - Legendary Welsh sword
+gwenlliant = {
+	type = weapon
+	rarity = legendary
+	
+	can_equip_character_trigger = {
+		culture = { has_cultural_parameter = welsh_court_positions }
+		OR = {
+			has_trait = brave
+			prowess >= 15
+			is_knight = yes
+		}
+	}
+	
+	modifier = {
+		prowess = 5
+		monthly_prestige = 0.4
+		knight_effectiveness_mult = 0.15
+		army_damage_mult = 0.08
+		personal_combat_skill = 10
+	}
+	
+	wealth = legendary_wealth_value
+	monthly_character_prestige = 0.25
+	
+	template = sword_template
+	
+	history = {
+		867.1.1 = {
+			holder = 163115  # Welsh warrior
+		}
+	}
+	
+	on_equip = {
+		character_event = welsh_artifacts.0002
+	}
+	
+	desc = "Gwenlliant, 'White Flood', is a sword of legend said to gleam like moonlight and strike with the force of mountain torrents. Welsh warriors speak its name in hushed reverence."
+}
+
+# The Crown of Rhodri Mawr - Great Welsh king's crown
+crown_rhodri_mawr = {
+	type = crown
+	rarity = legendary
+	
+	can_equip_character_trigger = {
+		culture = { has_cultural_parameter = welsh_court_positions }
+		highest_held_title_tier >= tier_kingdom
+		OR = {
+			has_title = k_wales
+			has_title = k_gwynedd
+			dynasty_prestige_level >= 4
+		}
+	}
+	
+	modifier = {
+		monthly_prestige = 0.6
+		legitimacy_add = 25
+		vassal_opinion = 15
+		dynasty_opinion = 20
+		court_grandeur_baseline_add = 4
+		cultural_acceptance_gain_mult = 0.25
+	}
+	
+	wealth = insane_wealth_value
+	monthly_character_prestige = 0.4
+	monthly_character_piety = 0.15
+	
+	template = crown_template
+	
+	history = {
+		844.1.1 = {
+			holder = 163100  # Rhodri Mawr
+		}
+	}
+	
+	on_equip = {
+		character_event = welsh_artifacts.0003
+	}
+	
+	desc = "The golden crown of Rhodri Mawr, who first united much of Wales under one rule. Its Celtic knotwork and precious gems speak to the ancient glory of Welsh kingship."
+}
+
+# The Book of Hywel Dda - Welsh law codex
+book_hywel_dda = {
+	type = book
+	rarity = famed
+	
+	can_equip_character_trigger = {
+		culture = { has_cultural_parameter = welsh_court_positions }
+		OR = {
+			has_trait = just
+			has_trait = temperate
+			learning >= 12
+		}
+	}
+	
+	modifier = {
+		learning = 3
+		monthly_piety = 0.2
+		tyranny_loss_mult = 0.25
+		cultural_acceptance_gain_mult = 0.15
+		court_grandeur_baseline_add = 2
+		monthly_character_prestige = 0.15
+	}
+	
+	wealth = medium_wealth_value
+	
+	template = book_template
+	
+	desc = "The codified laws of Hywel Dda, the Welsh legal system that balanced justice with mercy. This manuscript contains the wisdom that governed Wales for centuries."
+}
+
+# The Blessed Crozier of St. David - Religious artifact
+crozier_st_david = {
+	type = regalia
+	rarity = legendary
+	
+	can_equip_character_trigger = {
+		culture = { has_cultural_parameter = welsh_court_positions }
+		religion = religion:christianity_religion
+		OR = {
+			has_trait = zealous
+			learning >= 15
+			piety >= 1000
+		}
+	}
+	
+	modifier = {
+		monthly_piety = 0.5
+		learning = 2
+		cultural_acceptance_gain_mult = 0.2
+		stress_loss_mult = 0.2
+		court_grandeur_baseline_add = 3
+		clergy_opinion = 20
+	}
+	
+	wealth = high_wealth_value
+	monthly_character_piety = 0.3
+	
+	template = crozier_template
+	
+	desc = "The sacred crozier of St. David, patron saint of Wales. This holy relic carries the blessing of the Welsh church and the spiritual authority of Celtic Christianity."
+}
+
+# The Banner of Y Ddraig Goch - Welsh dragon banner
+banner_ddraig_goch = {
+	type = regalia
+	rarity = famed
+	
+	can_equip_character_trigger = {
+		culture = { has_cultural_parameter = welsh_court_positions }
+		highest_held_title_tier >= tier_duchy
+	}
+	
+	modifier = {
+		monthly_prestige = 0.25
+		army_morale_mult = 0.1
+		levy_reinforcement_rate = 0.15
+		vassal_opinion = 10
+		court_grandeur_baseline_add = 2
+	}
+	
+	wealth = medium_wealth_value
+	monthly_character_prestige = 0.2
+	
+	template = banner_template
+	
+	desc = "The proud banner bearing Y Ddraig Goch, the Red Dragon of Wales. This symbol of Welsh independence inspires warriors and terrifies enemies on the battlefield."
+}

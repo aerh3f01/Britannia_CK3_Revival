@@ -1,0 +1,191 @@
+# Welsh Cultural Icons Definition
+# This file defines sprite references for Welsh cultural elements
+
+spriteTypes = {
+	# Welsh Court Position Icons
+	spriteType = {
+		name = "GFX_welsh_court_position_pencerdd"
+		texturefile = "gfx/interface/icons/welsh_court_position_pencerdd.png"
+	}
+	
+	spriteType = {
+		name = "GFX_welsh_court_position_bardd_teulu"
+		texturefile = "gfx/interface/icons/welsh_court_position_bardd_teulu.png"
+	}
+	
+	spriteType = {
+		name = "GFX_welsh_court_position_distain"
+		texturefile = "gfx/interface/icons/welsh_court_position_distain.png"
+	}
+	
+	spriteType = {
+		name = "GFX_welsh_court_position_penteulu"
+		texturefile = "gfx/interface/icons/welsh_court_position_penteulu.png"
+	}
+	
+	spriteType = {
+		name = "GFX_welsh_court_position_ynad"
+		texturefile = "gfx/interface/icons/welsh_court_position_ynad.png"
+	}
+	
+	# Welsh Cultural Decision Icons
+	spriteType = {
+		name = "GFX_welsh_eisteddfod_icon"
+		texturefile = "gfx/interface/icons/welsh_eisteddfod_icon.png"
+	}
+	
+	spriteType = {
+		name = "GFX_welsh_language_promotion_icon"
+		texturefile = "gfx/interface/icons/welsh_language_promotion_icon.png"
+	}
+	
+	spriteType = {
+		name = "GFX_welsh_law_codification_icon"
+		texturefile = "gfx/interface/icons/welsh_law_codification_icon.png"
+	}
+	
+	spriteType = {
+		name = "GFX_welsh_cultural_festival_icon"
+		texturefile = "gfx/interface/icons/welsh_cultural_festival_icon.png"
+	}
+	
+	spriteType = {
+		name = "GFX_welsh_bardic_competition_icon"
+		texturefile = "gfx/interface/icons/welsh_bardic_competition_icon.png"
+	}
+	
+	# Welsh Cultural Artifacts
+	spriteType = {
+		name = "GFX_welsh_artifact_harp"
+		texturefile = "gfx/interface/icons/welsh_artifact_harp.png"
+	}
+	
+	spriteType = {
+		name = "GFX_welsh_artifact_crown"
+		texturefile = "gfx/interface/icons/welsh_artifact_crown.png"
+	}
+	
+	spriteType = {
+		name = "GFX_welsh_artifact_sword"
+		texturefile = "gfx/interface/icons/welsh_artifact_sword.png"
+	}
+	
+	spriteType = {
+		name = "GFX_welsh_artifact_shield"
+		texturefile = "gfx/interface/icons/welsh_artifact_shield.png"
+	}
+	
+	spriteType = {
+		name = "GFX_welsh_artifact_manuscript"
+		texturefile = "gfx/interface/icons/welsh_artifact_manuscript.png"
+	}
+	
+	spriteType = {
+		name = "GFX_welsh_artifact_torque"
+		texturefile = "gfx/interface/icons/welsh_artifact_torque.png"
+	}
+	
+	spriteType = {
+		name = "GFX_welsh_artifact_ring"
+		texturefile = "gfx/interface/icons/welsh_artifact_ring.png"
+	}
+	
+	# Welsh UI Elements
+	spriteType = {
+		name = "GFX_welsh_dragon_emblem"
+		texturefile = "gfx/interface/icons/welsh_dragon_emblem.png"
+	}
+	
+	spriteType = {
+		name = "GFX_welsh_dragon_small"
+		texturefile = "gfx/interface/icons/welsh_dragon_small.png"
+	}
+	
+	spriteType = {
+		name = "GFX_welsh_dragon_watermark"
+		texturefile = "gfx/interface/icons/welsh_dragon_watermark.png"
+	}
+	
+	spriteType = {
+		name = "GFX_welsh_icon_frame"
+		texturefile = "gfx/interface/icons/welsh_icon_frame.png"
+	}
+	
+	spriteType = {
+		name = "GFX_welsh_icon_border"
+		texturefile = "gfx/interface/icons/welsh_icon_border.png"
+	}
+	
+	spriteType = {
+		name = "GFX_welsh_corner_decoration"
+		texturefile = "gfx/interface/icons/welsh_corner_decoration.png"
+	}
+	
+	spriteType = {
+		name = "GFX_welsh_corner_small"
+		texturefile = "gfx/interface/icons/welsh_corner_small.png"
+	}
+	
+	spriteType = {
+		name = "GFX_welsh_knotwork_small"
+		texturefile = "gfx/interface/icons/welsh_knotwork_small.png"
+	}
+	
+	spriteType = {
+		name = "GFX_welsh_authenticity_seal"
+		texturefile = "gfx/interface/icons/welsh_authenticity_seal.png"
+	}
+	
+	spriteType = {
+		name = "GFX_welsh_rank_indicator"
+		texturefile = "gfx/interface/icons/welsh_rank_indicator.png"
+	}
+	
+	# Welsh Background Textures
+	spriteType = {
+		name = "GFX_welsh_parchment_background"
+		texturefile = "gfx/interface/backgrounds/welsh_parchment_background.png"
+	}
+	
+	spriteType = {
+		name = "GFX_welsh_pattern_border"
+		texturefile = "gfx/interface/backgrounds/welsh_pattern_border.png"
+	}
+	
+	spriteType = {
+		name = "GFX_welsh_pattern_subtle"
+		texturefile = "gfx/interface/backgrounds/welsh_pattern_subtle.png"
+	}
+	
+	spriteType = {
+		name = "GFX_welsh_event_border"
+		texturefile = "gfx/interface/backgrounds/welsh_event_border.png"
+	}
+	
+	# Welsh Illustrations
+	spriteType = {
+		name = "GFX_welsh_event_illustration_default"
+		texturefile = "gfx/interface/illustrations/welsh_event_illustration_default.png"
+	}
+	
+	spriteType = {
+		name = "GFX_welsh_illumination_corner"
+		texturefile = "gfx/interface/illustrations/welsh_illumination_corner.png"
+	}
+	
+	spriteType = {
+		name = "GFX_welsh_illustration_frame"
+		texturefile = "gfx/interface/illustrations/welsh_illustration_frame.png"
+	}
+	
+	# Welsh Portrait Frames
+	spriteType = {
+		name = "GFX_welsh_portrait_frame"
+		texturefile = "gfx/interface/portraits/welsh_portrait_frame.png"
+	}
+	
+	spriteType = {
+		name = "GFX_welsh_portrait_frame_ornate"
+		texturefile = "gfx/interface/portraits/welsh_portrait_frame_ornate.png"
+	}
+}

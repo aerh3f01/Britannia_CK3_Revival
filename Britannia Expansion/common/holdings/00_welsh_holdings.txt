@@ -1,0 +1,379 @@
+# Welsh Holding Names
+# Authentic Welsh names for baronies and holdings
+
+# Gwynedd Holdings
+b_deganwy = {
+	# Ancient stronghold of the princes of Gwynedd
+	holding_names = {
+		"Deganwy"
+		"Caer Deganwy"
+		"Castell Deganwy"
+	}
+	
+	cultural_names = {
+		welsh = "Deganwy"
+		norman = "Degannwy"
+		english = "Deganwy Castle"
+	}
+	
+	# Historical significance
+	special_building_slot = mountain_fortress
+	
+	# Coastal position
+	terrain_type = coastal_hills
+}
+
+b_aberffraw = {
+	# Traditional seat of the princes of Gwynedd
+	holding_names = {
+		"Aberffraw"
+		"Llys Aberffraw" # Royal Court of Aberffraw
+		"Pencadlys Gwynedd" # Headquarters of Gwynedd
+	}
+	
+	cultural_names = {
+		welsh = "Aberffraw"
+		norman = "Aberffraw"
+		english = "Aberffraw"
+	}
+	
+	special_building_slot = eisteddfod_hall
+	terrain_type = coastal_farmlands
+}
+
+b_caernarfon = {
+	holding_names = {
+		"Caernarfon"
+		"Caer yn Arfon" # Fortress in Arfon
+		"Castell Caernarfon"
+	}
+	
+	cultural_names = {
+		welsh = "Caernarfon"
+		norman = "Carnarvan"
+		english = "Caernarvon"
+	}
+	
+	special_building_slot = mountain_fortress
+	terrain_type = coastal_mountains
+}
+
+# Anglesey Holdings
+b_llangefni = {
+	holding_names = {
+		"Llangefni"
+		"Llan Gefni" # Church of Gefni
+		"Canolfan Môn" # Center of Anglesey
+	}
+	
+	cultural_names = {
+		welsh = "Llangefni"
+		norman = "Langefni"
+		english = "Llangefni"
+	}
+	
+	special_building_slot = cattle_pastures
+	terrain_type = farmlands
+}
+
+b_beaumaris = {
+	holding_names = {
+		"Biwmares"
+		"Porth y Wygyr" # Port of the Vigil
+		"Llanfaes" # Place of the Field (original Welsh name)
+	}
+	
+	cultural_names = {
+		welsh = "Biwmares"
+		norman = "Beaumaris"
+		english = "Beaumaris"
+	}
+	
+	special_building_slot = mountain_fortress
+	terrain_type = coastal_farmlands
+}
+
+# Powys Holdings
+b_mathrafal = {
+	# Traditional capital of Powys
+	holding_names = {
+		"Mathrafal"
+		"Llys Mathrafal" # Court of Mathrafal
+		"Pencadlys Powys" # Headquarters of Powys
+	}
+	
+	cultural_names = {
+		welsh = "Mathrafal"
+		norman = "Mathrafal"
+		english = "Mathrafal"
+	}
+	
+	special_building_slot = eisteddfod_hall
+	terrain_type = hills
+}
+
+b_welshpool = {
+	holding_names = {
+		"Y Trallwng"
+		"Trallwng Powys" # Pool of Powys
+		"Porth Powys" # Gate of Powys
+	}
+	
+	cultural_names = {
+		welsh = "Y Trallwng"
+		norman = "Welshpool"
+		english = "Welshpool"
+	}
+	
+	special_building_slot = cattle_pastures
+	terrain_type = farmlands
+}
+
+b_montgomery = {
+	holding_names = {
+		"Trefaldwyn"
+		"Castell Trefaldwyn"
+		"Caer Daldwyn" # Baldwin's Fort
+	}
+	
+	cultural_names = {
+		welsh = "Trefaldwyn"
+		norman = "Montgomery"
+		english = "Montgomery"
+	}
+	
+	special_building_slot = mountain_fortress
+	terrain_type = hills
+}
+
+# Deheubarth Holdings
+b_dinefwr = {
+	# Ancient seat of Deheubarth
+	holding_names = {
+		"Dinefwr"
+		"Caer Dinefwr"
+		"Llys Dinefwr" # Court of Dinefwr
+	}
+	
+	cultural_names = {
+		welsh = "Dinefwr"
+		norman = "Dynevor"
+		english = "Dynevor"
+	}
+	
+	special_building_slot = eisteddfod_hall
+	terrain_type = hills
+}
+
+b_llandeilo = {
+	holding_names = {
+		"Llandeilo"
+		"Llandeilo Fawr" # Great Llandeilo
+		"Llan Sant Teilo" # Church of Saint Teilo
+	}
+	
+	cultural_names = {
+		welsh = "Llandeilo"
+		norman = "Landeilo"
+		english = "Llandeilo"
+	}
+	
+	special_building_slot = bardic_school
+	terrain_type = farmlands
+}
+
+b_carmarthen = {
+	holding_names = {
+		"Caerfyrddin"
+		"Caer Fyrddin" # Merlin's Fort
+		"Prifddinas Deheubarth" # Capital of Deheubarth
+	}
+	
+	cultural_names = {
+		welsh = "Caerfyrddin"
+		norman = "Carmarthen"
+		english = "Carmarthen"
+	}
+	
+	special_building_slot = bardic_school
+	terrain_type = farmlands
+}
+
+b_pembroke = {
+	holding_names = {
+		"Penfro"
+		"Castell Penfro"
+		"Pen y Bro" # Head of the Land
+	}
+	
+	cultural_names = {
+		welsh = "Penfro"
+		norman = "Pembroke"
+		english = "Pembroke"
+	}
+	
+	special_building_slot = mountain_fortress
+	terrain_type = coastal_hills
+}
+
+b_aberystwyth = {
+	holding_names = {
+		"Aberystwyth"
+		"Aber Ystwyth" # Mouth of the Ystwyth
+		"Porth Ceredigion" # Port of Ceredigion
+	}
+	
+	cultural_names = {
+		welsh = "Aberystwyth"
+		norman = "Aberystwyth"
+		english = "Aberystwyth"
+	}
+	
+	special_building_slot = eisteddfod_hall
+	terrain_type = coastal_hills
+}
+
+# Morgannwg Holdings
+b_cardiff = {
+	holding_names = {
+		"Caerdydd"
+		"Caer Daf" # Fort on the Taff
+		"Porth Morgannwg" # Port of Morgannwg
+	}
+	
+	cultural_names = {
+		welsh = "Caerdydd"
+		norman = "Cardiff"
+		english = "Cardiff"
+	}
+	
+	special_building_slot = eisteddfod_hall
+	terrain_type = coastal_farmlands
+}
+
+b_llandaff = {
+	holding_names = {
+		"Llandaf"
+		"Llan Daf" # Church of David
+		"Eglwys Gadeiriol" # Cathedral Church
+	}
+	
+	cultural_names = {
+		welsh = "Llandaf"
+		norman = "Llandaff"
+		english = "Llandaff"
+	}
+	
+	special_building_slot = bardic_school
+	terrain_type = farmlands
+}
+
+b_neath = {
+	holding_names = {
+		"Castell-nedd"
+		"Nedd" # River Neath
+		"Glyn Nedd" # Neath Valley
+	}
+	
+	cultural_names = {
+		welsh = "Castell-nedd"
+		norman = "Neath"
+		english = "Neath"
+	}
+	
+	special_building_slot = welsh_mines
+	terrain_type = hills
+}
+
+b_swansea = {
+	holding_names = {
+		"Abertawe"
+		"Aber Tawe" # Mouth of the Tawe
+		"Tre'r Môr" # Town by the Sea
+	}
+	
+	cultural_names = {
+		welsh = "Abertawe"
+		norman = "Swansea"
+		english = "Swansea"
+	}
+	
+	special_building_slot = cattle_pastures
+	terrain_type = coastal_farmlands
+}
+
+# Mountain Holdings with Welsh Mining
+b_merthyr = {
+	holding_names = {
+		"Merthyr Tudful"
+		"Merthyr" # Martyr (of Tudful)
+		"Glyn Rhondda" # Rhondda Valley
+	}
+	
+	cultural_names = {
+		welsh = "Merthyr Tudful"
+		norman = "Merthyr"
+		english = "Merthyr Tydfil"
+	}
+	
+	special_building_slot = welsh_mines
+	terrain_type = mountains
+}
+
+b_rhondda = {
+	holding_names = {
+		"Rhondda"
+		"Cwm Rhondda" # Rhondda Valley
+		"Glyn Mwynau" # Valley of Mines
+	}
+	
+	cultural_names = {
+		welsh = "Rhondda"
+		norman = "Rhondda"
+		english = "Rhondda"
+	}
+	
+	special_building_slot = welsh_mines
+	terrain_type = mountains
+}
+
+# Religious Centers
+b_st_davids = {
+	holding_names = {
+		"Tyddewi"
+		"Mynyw" # Ancient name
+		"Llan Dewi Sant" # Church of Saint David
+	}
+	
+	cultural_names = {
+		welsh = "Tyddewi"
+		norman = "St. Davids"
+		english = "St. Davids"
+	}
+	
+	special_building_slot = bardic_school
+	terrain_type = coastal_hills
+	
+	# Religious significance
+	religious_modifier = {
+		monthly_piety = 0.5
+		same_religion_opinion = 10
+	}
+}
+
+b_bangor = {
+	holding_names = {
+		"Bangor"
+		"Bangor Fawr" # Great Bangor
+		"Prifysgol Bangor" # University of Bangor
+	}
+	
+	cultural_names = {
+		welsh = "Bangor"
+		norman = "Bangor"
+		english = "Bangor"
+	}
+	
+	special_building_slot = bardic_school
+	terrain_type = coastal_hills
+}

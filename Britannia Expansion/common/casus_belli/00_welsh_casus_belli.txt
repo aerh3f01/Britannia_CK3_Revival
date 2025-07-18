@@ -1,0 +1,277 @@
+# Welsh Casus Belli
+# Special war declarations for Welsh liberation and border conflicts
+
+border_raid_war = {
+	group = struggle
+	
+	ai_only_against_enemies = yes
+	ai_only_against_neighbors = yes
+	ai_peace_desire_mult = 0.75
+	
+	allowed_for = ALL
+	allowed_against = ALL
+	
+	target_titles = neighbor_land
+	target_title_tier = tier_county
+	target_de_jure_regions_above = no
+	
+	war_name = "BORDER_RAID_WAR_NAME"
+	war_name_base = "BORDER_RAID_WAR_NAME_BASE"
+	cb_name = "BORDER_RAID_CB_NAME"
+	
+	interface_priority = 50
+	
+	use_de_jure_wargoal = yes
+	
+	valid_to_start = {
+		scope:attacker = {
+			culture = { has_cultural_pillar = heritage_brythonic }
+		}
+	}
+	
+	is_valid = {
+		# Must be neighboring territory
+		scope:target = {
+			any_in_list = {
+				list = scope:attacker.neighboring_realms
+			}
+		}
+	}
+	
+	on_declaration = {
+		on_declared_war = yes
+	}
+	
+	cost = {
+		piety = {
+			value = 0
+			if = {
+				limit = {
+					scope:attacker.faith = scope:defender.faith
+				}
+				add = medium_piety_value
+			}
+		}
+		prestige = minor_prestige_value
+	}
+	
+	on_victory_desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { scope:attacker = { is_local_player = yes } }
+				desc = border_raid_war_victory_desc_attacker
+			}
+			desc = border_raid_war_victory_desc
+		}
+	}
+	
+	on_victory = {
+		scope:attacker = { 
+			add_prestige = major_prestige_value
+		}
+		
+		# Gain counties if successful
+		create_title_and_vassal_change = {
+			type = conquest
+			save_scope_as = change
+			add_claim_on_loss = yes
+		}
+		
+		scope:target = {
+			change_title_holder = {
+				holder = scope:attacker
+				change = scope:change
+			}
+		}
+		
+		resolve_title_and_vassal_change = scope:change
+	}
+	
+	on_white_peace_desc = {
+		desc = border_raid_war_white_peace_desc
+	}
+	
+	on_white_peace = {
+		# No territorial changes
+		scope:attacker = { add_prestige = minor_prestige_value }
+	}
+	
+	on_defeat_desc = {
+		desc = border_raid_war_defeat_desc
+	}
+	
+	on_defeat = {
+		scope:attacker = { 
+			add_prestige = major_prestige_value_loss
+		}
+	}
+	
+	transfer_behavior = transfer_type_conquest
+	
+	attacker_allies_inherit = yes
+	defender_allies_inherit = yes
+	
+	war_contribution = yes
+	full_occupation_gives_victory = yes
+	occupation_participation = yes
+	max_defender_score_from_occupation = 150
+	max_attacker_score_from_occupation = 150
+}
+
+welsh_liberation_war = {
+	group = conquest
+	
+	ai_only_against_enemies = no
+	ai_only_against_neighbors = no
+	ai_peace_desire_mult = 0.5
+	
+	allowed_for = ALL
+	allowed_against = ALL
+	
+	target_titles = neighbor_land
+	target_title_tier = tier_county
+	target_de_jure_regions_above = yes
+	
+	war_name = "WELSH_LIBERATION_WAR_NAME"
+	war_name_base = "WELSH_LIBERATION_WAR_NAME_BASE"
+	cb_name = "WELSH_LIBERATION_CB_NAME"
+	
+	interface_priority = 80
+	
+	use_de_jure_wargoal = yes
+	
+	valid_to_start = {
+		scope:attacker = {
+			culture = { has_cultural_pillar = heritage_brythonic }
+		}
+		
+		scope:target = {
+			# Must be Welsh de jure territory
+			de_jure_liege = {
+				OR = {
+					title = k_wales
+					title = k_gwynedd
+					title = k_powys
+					title = d_deheubarth
+					title = d_morgannwg
+				}
+			}
+		}
+		
+		scope:defender = {
+			NOT = { culture = { has_cultural_pillar = heritage_brythonic } }
+		}
+	}
+	
+	is_valid = {
+		scope:target = {
+			# Target must be Welsh de jure land
+			de_jure_liege = {
+				OR = {
+					title = k_wales
+					title = k_gwynedd
+					title = k_powys
+					title = d_deheubarth
+					title = d_morgannwg
+				}
+			}
+		}
+	}
+	
+	on_declaration = {
+		on_declared_war = yes
+		
+		# Rally Welsh support
+		every_ruler = {
+			limit = {
+				culture = { has_cultural_pillar = heritage_brythonic }
+				NOT = { this = scope:attacker }
+			}
+			add_opinion = {
+				target = scope:attacker
+				modifier = welsh_liberation_leader
+				opinion = 20
+			}
+		}
+	}
+	
+	cost = {
+		piety = {
+			value = minor_piety_value
+			if = {
+				limit = {
+					scope:attacker.faith = scope:defender.faith
+				}
+				add = medium_piety_value
+			}
+		}
+		prestige = medium_prestige_value
+	}
+	
+	on_victory_desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { scope:attacker = { is_local_player = yes } }
+				desc = welsh_liberation_war_victory_desc_attacker
+			}
+			desc = welsh_liberation_war_victory_desc
+		}
+	}
+	
+	on_victory = {
+		scope:attacker = { 
+			add_prestige = massive_prestige_value
+			add_piety = medium_piety_value
+		}
+		
+		# Liberate Welsh territories
+		create_title_and_vassal_change = {
+			type = conquest
+			save_scope_as = change
+			add_claim_on_loss = yes
+		}
+		
+		scope:target = {
+			change_title_holder = {
+				holder = scope:attacker
+				change = scope:change
+			}
+		}
+		
+		resolve_title_and_vassal_change = scope:change
+		
+		# Cultural conversion back to Welsh
+		scope:target = {
+			set_county_culture = scope:attacker.culture
+		}
+	}
+	
+	on_white_peace_desc = {
+		desc = welsh_liberation_war_white_peace_desc
+	}
+	
+	on_white_peace = {
+		scope:attacker = { add_prestige = minor_prestige_value }
+	}
+	
+	on_defeat_desc = {
+		desc = welsh_liberation_war_defeat_desc
+	}
+	
+	on_defeat = {
+		scope:attacker = { 
+			add_prestige = major_prestige_value_loss
+		}
+	}
+	
+	transfer_behavior = transfer_type_conquest
+	
+	attacker_allies_inherit = yes
+	defender_allies_inherit = yes
+	
+	war_contribution = yes
+	full_occupation_gives_victory = yes
+	occupation_participation = yes
+	max_defender_score_from_occupation = 150
+	max_attacker_score_from_occupation = 150
+}

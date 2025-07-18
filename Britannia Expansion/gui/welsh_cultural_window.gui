@@ -1,0 +1,255 @@
+# Welsh Cultural Decision View Enhancement
+# Custom widgets for displaying Welsh decisions with cultural styling
+
+types WelshDecisionTypes {
+	type welsh_decision_category = widget {
+		size = { 400 300 }
+		
+		using = WelshWindowBackground
+		
+		vbox = {
+			layoutpolicy_horizontal = expanding
+			layoutpolicy_vertical = expanding
+			margin = { 20 15 }
+			spacing = 10
+			
+			text_single = {
+				text = "WELSH_CULTURAL_DECISIONS"
+				default_format = "#high"
+				fontsize = 18
+				layoutpolicy_horizontal = expanding
+			}
+			
+			divider_decorative = {}
+			
+			scrollbox = {
+				layoutpolicy_horizontal = expanding
+				layoutpolicy_vertical = expanding
+				
+				using = WelshScrollboxBackground
+				
+				blockoverride "scrollbox_content" {
+					vbox = {
+						layoutpolicy_horizontal = expanding
+						spacing = 8
+						margin = { 10 10 }
+						
+						welsh_decision_button = {
+							visible = "[GetPlayer.CanTakeDecision('hold_eisteddfod')]"
+							onclick = "[GetPlayer.TakeDecision('hold_eisteddfod')]"
+							
+							blockoverride "decision_icon" {
+								texture = "GFX_welsh_eisteddfod_icon"
+							}
+							
+							blockoverride "decision_title" {
+								text = "DECISION_HOLD_EISTEDDFOD"
+							}
+							
+							blockoverride "decision_desc" {
+								text = "DECISION_HOLD_EISTEDDFOD_DESC"
+							}
+						}
+						
+						welsh_decision_button = {
+							visible = "[GetPlayer.CanTakeDecision('promote_welsh_language')]"
+							onclick = "[GetPlayer.TakeDecision('promote_welsh_language')]"
+							
+							blockoverride "decision_icon" {
+								texture = "GFX_welsh_language_promotion_icon"
+							}
+							
+							blockoverride "decision_title" {
+								text = "DECISION_PROMOTE_WELSH_LANGUAGE"
+							}
+							
+							blockoverride "decision_desc" {
+								text = "DECISION_PROMOTE_WELSH_LANGUAGE_DESC"
+							}
+						}
+						
+						welsh_decision_button = {
+							visible = "[GetPlayer.CanTakeDecision('codify_welsh_law')]"
+							onclick = "[GetPlayer.TakeDecision('codify_welsh_law')]"
+							
+							blockoverride "decision_icon" {
+								texture = "GFX_welsh_law_codification_icon"
+							}
+							
+							blockoverride "decision_title" {
+								text = "DECISION_CODIFY_WELSH_LAW"
+							}
+							
+							blockoverride "decision_desc" {
+								text = "DECISION_CODIFY_WELSH_LAW_DESC"
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+window = {
+	name = "welsh_cultural_window"
+	layer = windows
+	using = Window_Size_MainTab
+	using = WelshWindowBackground
+	
+	vbox = {
+		layoutpolicy_horizontal = expanding
+		layoutpolicy_vertical = expanding
+		margin = { 30 25 }
+		spacing = 15
+		
+		# Header
+		hbox = {
+			layoutpolicy_horizontal = expanding
+			spacing = 15
+			
+			icon = {
+				size = { 64 64 }
+				texture = "gfx/interface/icons/welsh_dragon_emblem.dds"
+			}
+			
+			vbox = {
+				layoutpolicy_horizontal = expanding
+				spacing = 5
+				
+				text_single = {
+					text = "WELSH_CULTURAL_INTERFACE_TITLE"
+					default_format = "#high"
+					fontsize = 24
+				}
+				
+				text_single = {
+					text = "WELSH_CULTURAL_INTERFACE_SUBTITLE"
+					fontsize = 14
+					alpha = 0.8
+				}
+			}
+			
+			button_close = {
+				onclick = "[GetVariableSystem.Clear('show_welsh_cultural_window')]"
+			}
+		}
+		
+		divider_decorative = {}
+		
+		# Main Content Tabs
+		hbox = {
+			layoutpolicy_horizontal = expanding
+			layoutpolicy_vertical = expanding
+			spacing = 20
+			
+			# Court Positions Tab
+			vbox = {
+				layoutpolicy_horizontal = expanding
+				layoutpolicy_vertical = expanding
+				spacing = 10
+				
+				text_single = {
+					text = "WELSH_COURT_POSITIONS"
+					default_format = "#high"
+					fontsize = 16
+				}
+				
+				scrollbox = {
+					layoutpolicy_horizontal = expanding
+					layoutpolicy_vertical = expanding
+					
+					using = WelshScrollboxBackground
+					
+					blockoverride "scrollbox_content" {
+						vbox = {
+							layoutpolicy_horizontal = expanding
+							spacing = 5
+							margin = { 10 10 }
+							
+							# Court Position Slots
+							welsh_court_position_slot = {
+								datacontext = "[GetPlayer.GetCourtPosition('pencerdd')]"
+								
+								blockoverride "position_icon" {
+									texture = "GFX_welsh_court_position_pencerdd"
+								}
+							}
+							
+							welsh_court_position_slot = {
+								datacontext = "[GetPlayer.GetCourtPosition('bardd_teulu')]"
+								
+								blockoverride "position_icon" {
+									texture = "GFX_welsh_court_position_bardd_teulu"
+								}
+							}
+							
+							welsh_court_position_slot = {
+								datacontext = "[GetPlayer.GetCourtPosition('distain')]"
+								
+								blockoverride "position_icon" {
+									texture = "GFX_welsh_court_position_distain"
+								}
+							}
+							
+							welsh_court_position_slot = {
+								datacontext = "[GetPlayer.GetCourtPosition('penteulu')]"
+								
+								blockoverride "position_icon" {
+									texture = "GFX_welsh_court_position_penteulu"
+								}
+							}
+							
+							welsh_court_position_slot = {
+								datacontext = "[GetPlayer.GetCourtPosition('ynad')]"
+								
+								blockoverride "position_icon" {
+									texture = "GFX_welsh_court_position_ynad"
+								}
+							}
+						}
+					}
+				}
+			}
+			
+			# Cultural Decisions Tab
+			welsh_decision_category = {}
+			
+			# Welsh Artifacts Tab
+			vbox = {
+				layoutpolicy_horizontal = expanding
+				layoutpolicy_vertical = expanding
+				spacing = 10
+				
+				text_single = {
+					text = "WELSH_CULTURAL_ARTIFACTS"
+					default_format = "#high"
+					fontsize = 16
+				}
+				
+				scrollbox = {
+					layoutpolicy_horizontal = expanding
+					layoutpolicy_vertical = expanding
+					
+					using = WelshScrollboxBackground
+					
+					blockoverride "scrollbox_content" {
+						fixedgridbox = {
+							datamodel = "[GetPlayer.GetArtifacts]"
+							addcolumn = 80
+							addrow = 80
+							maxhorizontalslots = 4
+							
+							item = {
+								welsh_artifact_display = {
+									datacontext = "[Artifact]"
+									visible = "[Artifact.IsWelshCultural]"
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

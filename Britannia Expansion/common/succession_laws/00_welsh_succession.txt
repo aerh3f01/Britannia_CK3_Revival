@@ -1,0 +1,204 @@
+# Welsh Succession Laws
+# Based on Cyfraith Hywel (Laws of Hywel Dda)
+
+cymric_gavelkind = {
+	# Welsh partible inheritance including acknowledged bastards
+	
+	can_keep_dynasty_on_primary_heir = yes
+	can_keep_dynasty_on_all_heirs = yes
+	
+	valid_for_culture = {
+		culture = { has_cultural_pillar = heritage_brythonic }
+	}
+	
+	can_title_have = {
+		OR = {
+			tier = tier_county
+			tier = tier_duchy
+			tier = tier_kingdom
+		}
+		
+		# Must be Welsh culture or have Welsh tradition
+		holder.culture = { 
+			OR = {
+				has_cultural_pillar = heritage_brythonic
+				has_cultural_tradition = tradition_cymric_law
+			}
+		}
+	}
+	
+	can_character_have = {
+		culture = { 
+			OR = {
+				has_cultural_pillar = heritage_brythonic
+				has_cultural_tradition = tradition_cymric_law
+			}
+		}
+	}
+	
+	succession_order = inheritance_oldest_child
+	gender_law = male_preference
+	
+	# Key feature: Bastards inherit equally
+	bastards_inherit = yes
+	bastard_inheritance_penalty = 0
+	
+	# Multiple heirs
+	allows_multiple_heirs = yes
+	
+	primary_heir_minimum_share = 0.4
+	primary_heir_extra_share = 0.1
+	
+	# Cultural modifiers
+	character_modifier = {
+		monthly_prestige = 0.1
+		dynasty_opinion = 10
+		direct_vassal_opinion = -5  # Nobles prefer primogeniture
+	}
+	
+	flag = succession_law_cymric_gavelkind
+	
+	# Opinion effects
+	vassal_opinion = -5
+	dynasty_opinion = 15
+	
+	# Innovations required
+	requires = {
+		innovation_gavelkind
+	}
+	
+	# Cost to change to this law
+	cost = {
+		prestige = 1500
+	}
+	
+	# AI considerations
+	ai_will_do = {
+		value = 10
+		
+		modifier = {
+			factor = 3
+			culture = { has_cultural_pillar = heritage_brythonic }
+		}
+		
+		modifier = {
+			factor = 2
+			culture = { has_cultural_tradition = tradition_cymric_law }
+		}
+		
+		modifier = {
+			factor = 0.1
+			NOT = { culture = { has_cultural_pillar = heritage_brythonic } }
+		}
+	}
+}
+
+welsh_tanistry = {
+	# Elder selection from eligible candidates
+	
+	can_keep_dynasty_on_primary_heir = no
+	can_keep_dynasty_on_all_heirs = yes
+	
+	valid_for_culture = {
+		culture = { has_cultural_pillar = heritage_brythonic }
+	}
+	
+	can_title_have = {
+		OR = {
+			tier = tier_duchy
+			tier = tier_kingdom
+		}
+		
+		holder.culture = { has_cultural_pillar = heritage_brythonic }
+	}
+	
+	can_character_have = {
+		culture = { has_cultural_pillar = heritage_brythonic }
+		highest_held_title_tier >= tier_duchy
+	}
+	
+	succession_order = inheritance_election
+	
+	# Eligible voters: Welsh nobles and clan heads
+	electors = {
+		add_if_exists = holder.dynasty.dynasty_head
+		
+		# Add Welsh vassals
+		every_vassal = {
+			limit = {
+				highest_held_title_tier >= tier_county
+				culture = { has_cultural_pillar = heritage_brythonic }
+			}
+		}
+		
+		# Add family members
+		every_close_family_member = {
+			limit = {
+				is_adult = yes
+				culture = { has_cultural_pillar = heritage_brythonic }
+			}
+		}
+	}
+	
+	# Eligible candidates: Welsh dynasty members
+	candidates = {
+		every_dynasty_member = {
+			limit = {
+				is_adult = yes
+				is_male = yes  # Traditional male preference
+				culture = { has_cultural_pillar = heritage_brythonic }
+				is_imprisoned = no
+				NOT = { has_trait = incapable }
+			}
+		}
+		
+		# Include acknowledged bastards (Welsh tradition)
+		every_child = {
+			limit = {
+				is_adult = yes
+				is_male = yes
+				dynasty = root.dynasty
+			}
+		}
+	}
+	
+	# Cultural bonuses
+	character_modifier = {
+		monthly_prestige = 0.2
+		vassal_opinion = 10
+		dynasty_opinion = 5
+	}
+	
+	flag = succession_law_welsh_tanistry
+	
+	# Opinion effects
+	vassal_opinion = 10
+	dynasty_opinion = 5
+	
+	# Requirements
+	requires = {
+		innovation_plenary_assemblies
+	}
+	
+	cost = {
+		prestige = 2000
+		piety = 500
+	}
+	
+	ai_will_do = {
+		value = 15
+		
+		modifier = {
+			factor = 2
+			culture = { has_cultural_pillar = heritage_brythonic }
+			highest_held_title_tier >= tier_kingdom
+		}
+		
+		modifier = {
+			factor = 0.5
+			any_child = {
+				is_heir_of = root
+			}
+		}
+	}
+}

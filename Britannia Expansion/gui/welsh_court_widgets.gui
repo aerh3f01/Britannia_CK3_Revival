@@ -1,0 +1,207 @@
+# Welsh Court Positions GUI Enhancement
+# Custom widgets for displaying Welsh court positions with cultural styling
+
+types WelshCourtTypes {
+	type welsh_court_position_slot = widget {
+		size = { 300 60 }
+		
+		background = {
+			texture = "gfx/interface/backgrounds/welsh_pattern_border.dds"
+			alpha = 0.8
+			tintcolor = { 0.8 0.2 0.2 1.0 }  # Welsh red theme
+		}
+		
+		hbox = {
+			layoutpolicy_horizontal = expanding
+			spacing = 10
+			margin = { 10 5 }
+			
+			icon = {
+				name = "position_icon"
+				size = { 48 48 }
+				texture = "[CourtPosition.GetIcon]"
+			}
+			
+			vbox = {
+				layoutpolicy_horizontal = expanding
+				layoutpolicy_vertical = expanding
+				
+				text_single = {
+					name = "position_name"
+					text = "[CourtPosition.GetName]"
+					default_format = "#high"
+					fontsize = 16
+				}
+				
+				text_single = {
+					name = "position_description"
+					text = "[CourtPosition.GetDescription]"
+					fontsize = 12
+					alpha = 0.8
+					max_width = 200
+					elide = right
+				}
+			}
+			
+			vbox = {
+				spacing = 2
+				
+				text_single = {
+					visible = "[CourtPosition.HasHolder]"
+					text = "WELSH_COURT_POSITION_HOLDER"
+					fontsize = 10
+					alpha = 0.7
+				}
+				
+				text_single = {
+					visible = "[CourtPosition.HasHolder]"
+					text = "[CourtPosition.GetHolder.GetNameNoTooltip]"
+					fontsize = 12
+					default_format = "#high"
+				}
+				
+				text_single = {
+					visible = "[Not(CourtPosition.HasHolder)]"
+					text = "WELSH_COURT_POSITION_VACANT"
+					fontsize = 12
+					alpha = 0.6
+				}
+			}
+		}
+	}
+	
+	type welsh_artifact_display = widget {
+		size = { 80 80 }
+		
+		container = {
+			icon = {
+				size = { 64 64 }
+				parentanchor = center
+				texture = "[Artifact.GetIcon]"
+				
+				state = {
+					name = _mouse_hierarchy_enter
+					alpha = 1.2
+					duration = 0.2
+				}
+				
+				state = {
+					name = _mouse_hierarchy_leave
+					alpha = 1.0
+					duration = 0.2
+				}
+			}
+			
+			icon = {
+				visible = "[Artifact.IsWelshCultural]"
+				size = { 20 20 }
+				parentanchor = bottom|right
+				position = { -5 -5 }
+				texture = "gfx/interface/icons/welsh_cultural_marker.dds"
+			}
+		}
+		
+		tooltip = "[Artifact.GetTooltip]"
+	}
+	
+	type welsh_decision_button = button_standard {
+		size = { 350 80 }
+		
+		background = {
+			texture = "gfx/interface/backgrounds/welsh_window_background.dds"
+			alpha = 0.9
+		}
+		
+		hbox = {
+			layoutpolicy_horizontal = expanding
+			margin = { 15 10 }
+			spacing = 12
+			
+			icon = {
+				size = { 48 48 }
+				texture = "[Decision.GetIcon]"
+			}
+			
+			vbox = {
+				layoutpolicy_horizontal = expanding
+				layoutpolicy_vertical = expanding
+				spacing = 4
+				
+				text_single = {
+					text = "[Decision.GetTitle]"
+					default_format = "#high"
+					fontsize = 16
+					layoutpolicy_horizontal = expanding
+					max_width = 250
+				}
+				
+				text_multi = {
+					text = "[Decision.GetDescription]"
+					fontsize = 11
+					alpha = 0.8
+					layoutpolicy_horizontal = expanding
+					max_width = 250
+					max_height = 40
+				}
+			}
+			
+			vbox = {
+				spacing = 2
+				
+				text_single = {
+					visible = "[Decision.HasCost]"
+					text = "[Decision.GetCostText]"
+					fontsize = 10
+					default_format = "#weak"
+				}
+				
+				text_single = {
+					visible = "[Decision.HasRequirements]"
+					text = "WELSH_DECISION_REQUIREMENTS"
+					fontsize = 9
+					alpha = 0.6
+				}
+			}
+		}
+		
+		state = {
+			name = _mouse_hierarchy_enter
+			alpha = 1.1
+			duration = 0.15
+		}
+		
+		state = {
+			name = _mouse_hierarchy_leave
+			alpha = 1.0
+			duration = 0.15
+		}
+	}
+}
+
+# Welsh Cultural Window Template
+template WelshWindowBackground {
+	background = {
+		texture = "gfx/interface/backgrounds/welsh_window_background.dds"
+		spriteType = Corneredstretched
+		spriteborder = { 20 20 }
+		tintcolor = { 1.0 0.95 0.9 1.0 }
+	}
+	
+	background = {
+		texture = "gfx/interface/backgrounds/welsh_pattern_border.dds"
+		spriteType = Corneredstretched
+		spriteborder = { 15 15 }
+		alpha = 0.3
+		tintcolor = { 0.8 0.2 0.2 1.0 }
+	}
+}
+
+template WelshScrollboxBackground {
+	background = {
+		texture = "gfx/interface/backgrounds/scrollbox_background.dds"
+		spriteType = Corneredstretched
+		spriteborder = { 10 10 }
+		tintcolor = { 0.95 0.9 0.85 1.0 }
+		alpha = 0.8
+	}
+}

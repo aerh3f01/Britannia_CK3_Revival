@@ -1,0 +1,266 @@
+# Welsh Color Definitions
+# Defines the Welsh cultural color palette for consistent theming
+
+colors = {
+	# Primary Welsh Colors
+	welsh_red = { 204 41 54 255 }          # Deep Welsh red
+	welsh_white = { 248 248 255 255 }      # Welsh white with slight blue tint
+	welsh_green = { 34 102 68 255 }        # Welsh landscape green
+	
+	# Accent Colors
+	welsh_gold = { 212 175 55 255 }        # Celtic gold
+	welsh_bronze = { 139 87 42 255 }       # Ancient bronze
+	welsh_slate = { 79 89 102 255 }        # Welsh slate grey
+	
+	# Text Colors
+	welsh_text_light = { 245 245 250 255 } # Light text on dark backgrounds
+	welsh_text_dark = { 45 45 55 255 }     # Dark text on light backgrounds
+	welsh_text_accent = { 180 35 45 255 }  # Accent text color
+	
+	# UI Element Colors
+	welsh_background = { 28 28 35 255 }     # Dark background
+	welsh_background_light = { 240 238 235 255 } # Light parchment background
+	welsh_border = { 120 30 40 255 }        # Border color
+	welsh_highlight = { 220 50 65 255 }     # Highlight color
+	
+	# Status Colors (Welsh themed)
+	welsh_positive = { 45 125 75 255 }      # Success/positive actions
+	welsh_negative = { 155 45 45 255 }      # Failure/negative actions
+	welsh_neutral = { 85 85 95 255 }        # Neutral actions
+	welsh_warning = { 190 140 45 255 }      # Warning/caution
+	
+	# Transparency Variants
+	welsh_red_alpha_50 = { 204 41 54 128 }
+	welsh_red_alpha_25 = { 204 41 54 64 }
+	welsh_red_alpha_10 = { 204 41 54 26 }
+	
+	welsh_background_alpha_75 = { 28 28 35 191 }
+	welsh_background_alpha_50 = { 28 28 35 128 }
+	welsh_background_alpha_25 = { 28 28 35 64 }
+}
+
+# Welsh Color Templates
+template Color_Welsh_Red {
+	tintcolor = [1.0, 0.16, 0.21, 1.0]
+}
+
+template Color_Welsh_White {
+	tintcolor = [0.97, 0.97, 1.0, 1.0]
+}
+
+template Color_Welsh_Green {
+	tintcolor = [0.13, 0.4, 0.27, 1.0]
+}
+
+template Color_Welsh_Gold {
+	tintcolor = [0.83, 0.69, 0.22, 1.0]
+}
+
+template Color_Welsh_Background {
+	tintcolor = [0.11, 0.11, 0.14, 1.0]
+}
+
+template Color_Welsh_Text_Light {
+	tintcolor = [0.96, 0.96, 0.98, 1.0]
+}
+
+template Color_Welsh_Text_Dark {
+	tintcolor = [0.18, 0.18, 0.22, 1.0]
+}
+
+template Color_Welsh_Accent {
+	tintcolor = [0.71, 0.14, 0.18, 1.0]
+}
+
+# Background Templates
+template WelshWindowBackground {
+	background = {
+		using = Background_Area_With_Header
+		
+		# Welsh cultural overlay
+		modify_texture = {
+			texture = "gfx/interface/colors/red.dds"
+			blend_mode = overlay
+			alpha = 0.03
+		}
+		
+		# Subtle pattern
+		icon = {
+			size = { 100% 100% }
+			texture = "GFX_welsh_pattern_subtle"
+			alpha = 0.05
+		}
+	}
+}
+
+template WelshScrollboxBackground {
+	background = {
+		using = Background_Area_Dark
+		
+		# Welsh themed scrollbox
+		modify_texture = {
+			texture = "gfx/interface/colors/red.dds"
+			blend_mode = overlay
+			alpha = 0.02
+		}
+	}
+}
+
+template WelshButtonBackground {
+	background = {
+		using = Background_Button
+		
+		# Welsh button styling
+		modify_texture = {
+			texture = "gfx/interface/colors/red.dds"
+			blend_mode = overlay
+			alpha = 0.08
+		}
+	}
+}
+
+template WelshTooltipBackground {
+	background = {
+		using = Background_Tooltip
+		
+		# Welsh tooltip accent
+		icon = {
+			parentanchor = left|vcenter
+			position = { 0 0 }
+			size = { 3 100% }
+			texture = "gfx/interface/colors/red.dds"
+			alpha = 0.6
+		}
+	}
+}
+
+# Text Formatting Templates
+template Welsh_Title_Format {
+	default_format = "#high"
+	using = Font_Size_Big
+	using = Color_Welsh_Text_Light
+}
+
+template Welsh_Body_Format {
+	default_format = "#weak"
+	using = Font_Size_Medium
+	using = Color_Welsh_Text_Light
+	alpha = 0.9
+}
+
+template Welsh_Accent_Format {
+	default_format = "#high"
+	using = Font_Size_Medium
+	using = Color_Welsh_Accent
+}
+
+template Welsh_Subtitle_Format {
+	default_format = "#low"
+	using = Font_Size_Small
+	using = Color_Welsh_Text_Light
+	alpha = 0.8
+}
+
+# Icon Styling Templates
+template WelshIconStyling {
+	# Welsh cultural frame
+	icon = {
+		parentanchor = center
+		size = { 110% 110% }
+		texture = "GFX_welsh_icon_border"
+		alpha = 0.7
+	}
+}
+
+template WelshPortraitFrame {
+	# Welsh portrait styling
+	icon = {
+		parentanchor = center
+		size = { 120% 120% }
+		texture = "GFX_welsh_portrait_frame_ornate"
+		alpha = 0.9
+	}
+	
+	# Corner decorations
+	icon = {
+		parentanchor = top|left
+		position = { -5 -5 }
+		size = { 16 16 }
+		texture = "GFX_welsh_corner_small"
+	}
+	
+	icon = {
+		parentanchor = top|right
+		position = { 5 -5 }
+		size = { 16 16 }
+		texture = "GFX_welsh_corner_small"
+		mirror = horizontal
+	}
+	
+	icon = {
+		parentanchor = bottom|left
+		position = { -5 5 }
+		size = { 16 16 }
+		texture = "GFX_welsh_corner_small"
+		mirror = vertical
+	}
+	
+	icon = {
+		parentanchor = bottom|right
+		position = { 5 5 }
+		size = { 16 16 }
+		texture = "GFX_welsh_corner_small"
+		mirror = horizontal
+		mirror = vertical
+	}
+}
+
+# Animation Templates
+template WelshFadeIn {
+	state = {
+		name = "fade_in"
+		start_sound = {
+			soundeffect = "event:/SFX/UI/Generic/sfx_ui_generic_icon_positive"
+		}
+		alpha = 0
+		duration = 0.3
+		using = Animation_Curve_EaseOut
+		
+		next = "visible"
+	}
+	
+	state = {
+		name = "visible"
+		alpha = 1
+	}
+}
+
+template WelshPulseEffect {
+	state = {
+		name = "pulse"
+		duration = 1.5
+		using = Animation_Curve_EaseInOut
+		
+		modify_texture = {
+			texture = "gfx/interface/colors/red.dds"
+			blend_mode = overlay
+			alpha = 0.15
+		}
+		
+		next = "pulse_fade"
+	}
+	
+	state = {
+		name = "pulse_fade"
+		duration = 1.5
+		using = Animation_Curve_EaseInOut
+		
+		modify_texture = {
+			texture = "gfx/interface/colors/red.dds"
+			blend_mode = overlay
+			alpha = 0.05
+		}
+		
+		next = "pulse"
+	}
+}

@@ -1,0 +1,53 @@
+l_english:
+ # Welsh Artifacts
+ harp_of_gruffydd: "Harp of Gruffydd"
+ harp_of_gruffydd_desc: "This legendary harp is said to have belonged to the greatest bards of Wales. Its haunting melodies can stir the hearts of warriors and bring peace to troubled souls. The intricate Celtic carvings and silver strings mark it as a treasure of Welsh culture."
+ 
+ torc_of_cadwallon: "Torc of Cadwallon"
+ torc_of_cadwallon_desc: "An ancient golden torc bearing the symbols of royal Welsh lineage. This neck ornament marks its wearer as heir to the ancient kings of Britain. The twisted gold gleams with the authority of generations of Welsh rulers."
+ 
+ gwenlliant: "Gwenlliant"
+ gwenlliant_desc: "Gwenlliant, 'White Flood', is a sword of legend said to gleam like moonlight and strike with the force of mountain torrents. Welsh warriors speak its name in hushed reverence, for it has tasted the blood of Saxon and Norman alike."
+ 
+ crown_rhodri_mawr: "Crown of Rhodri Mawr"
+ crown_rhodri_mawr_desc: "The golden crown of Rhodri Mawr, who first united much of Wales under one rule. Its Celtic knotwork and precious gems speak to the ancient glory of Welsh kingship. To wear it is to claim the legacy of the greatest Welsh king."
+ 
+ book_hywel_dda: "Book of Hywel Dda"
+ book_hywel_dda_desc: "The codified laws of Hywel Dda, the Welsh legal system that balanced justice with mercy. This illuminated manuscript contains the wisdom that governed Wales for centuries, written in both Latin and Welsh."
+ 
+ crozier_st_david: "Blessed Crozier of St. David"
+ crozier_st_david_desc: "The sacred crozier of St. David, patron saint of Wales. This holy relic carries the blessing of the Welsh church and the spiritual authority of Celtic Christianity. Its wood is said to have grown in the holy soil of Menevia."
+ 
+ banner_ddraig_goch: "Banner of Y Ddraig Goch"
+ banner_ddraig_goch_desc: "The proud banner bearing Y Ddraig Goch, the Red Dragon of Wales. This symbol of Welsh independence inspires warriors and terrifies enemies on the battlefield. The dragon's eyes seem to burn with the fire of Welsh defiance."
+ 
+ # Artifact Events
+ welsh_artifacts.0001.t: "The Harp Sings"
+ welsh_artifacts.0001.desc: "As I hold the legendary Harp of Gruffydd, its strings seem to vibrate with the echoes of ancient songs. The court gathers to hear the melodies that once inspired kings and comforted the dying. This is more than an instrument - it is the voice of Wales itself."
+ welsh_artifacts.0001.a: "Let the harp sing of our glory!"
+ welsh_artifacts.0001.b: "Such beauty brings peace to my soul."
+ 
+ welsh_artifacts.0002.t: "Gwenlliant Awakens"
+ welsh_artifacts.0002.desc: "The moment I grasp Gwenlliant's hilt, I feel the weight of Welsh martial tradition. The blade seems eager for battle, its edge gleaming with an inner light. My warriors look upon me with new respect - I am now worthy to lead them into the storm of war."
+ welsh_artifacts.0002.a: "This sword shall defend Wales!"
+ welsh_artifacts.0002.b: "With this blade, we are invincible."
+ 
+ welsh_artifacts.0003.t: "The Crown of Kings"
+ welsh_artifacts.0003.desc: "As the Crown of Rhodri Mawr settles upon my brow, I feel the weight of Welsh history. The spirits of ancient kings seem to whisper their approval. I am no longer merely a ruler - I am the inheritor of a legacy that stretches back to the mists of time."
+ welsh_artifacts.0003.a: "I shall be worthy of this crown."
+ welsh_artifacts.0003.b: "Wales shall be united once more."
+ 
+ # Artifact Properties
+ poetry_power_add: "Poetry Power"
+ personal_combat_skill: "Personal Combat Skill"
+ legitimacy_add: "Legitimacy"
+ 
+ # Artifact Categories
+ welsh_royal_regalia: "Welsh Royal Regalia"
+ welsh_weapons: "Welsh Weapons"
+ welsh_religious_artifacts: "Welsh Religious Artifacts"
+ welsh_cultural_items: "Welsh Cultural Items"
+ 
+ # Historical Context
+ welsh_artifact_tradition: "Welsh Craftsmanship"
+ welsh_artifact_tradition_desc: "The artifacts of Wales reflect centuries of Celtic artistry, from the golden torcs of ancient princes to the masterwork swords of legendary warriors. Each piece tells a story of Welsh pride and cultural achievement."

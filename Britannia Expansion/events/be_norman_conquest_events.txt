@@ -1,0 +1,450 @@
+namespace = be_norman_conquest
+
+# Event chain: Norman advance into Wales (1067-1093)
+# Based on WELSH_EVENTS.md timeline and historical documentation
+
+# be_norman_conquest.0001 - The Norman Tide Begins (1067)
+be_norman_conquest.0001 = {
+	type = character_event
+	title = be_norman_conquest.0001.t
+	desc = be_norman_conquest.0001.desc
+	theme = war
+	
+	left_portrait = {
+		character = scope:norman_aggressor
+		animation = aggressive
+	}
+	right_portrait = {
+		character = root
+		animation = worried
+	}
+	
+	trigger = {
+		# Historical trigger for Norman expansion into Wales
+		current_date >= 1067.1.1
+		current_date < 1070.1.1
+		
+		# Must be Welsh ruler on border with Norman territory
+		culture = { has_cultural_pillar = heritage_brythonic }
+		
+		# Must border Norman-controlled territory
+		any_neighboring_realm_same_rank_or_above = {
+			culture = culture:norman
+			any_realm_county = {
+				any_neighboring_county = {
+					holder = root
+				}
+			}
+		}
+		
+		# Hasn't fired before
+		NOT = { has_character_flag = norman_welsh_conflict_begun }
+	}
+	
+	weight_multiplier = {
+		base = 100
+		
+		# More likely for border kingdoms
+		modifier = {
+			add = 50
+			primary_title = { tier = tier_kingdom }
+		}
+		
+		# Historical priority areas
+		modifier = {
+			add = 100
+			capital_county = {
+				OR = {
+					title = c_gwynedd
+					title = c_powys
+					title = c_morgannwg
+					title = c_deheubarth
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		# Find the Norman aggressor
+		random_neighboring_realm_same_rank_or_above = {
+			limit = {
+				culture = culture:norman
+			}
+			save_scope_as = norman_aggressor
+		}
+		
+		# Mark event as fired
+		add_character_flag = {
+			flag = norman_welsh_conflict_begun
+			years = 10
+		}
+		
+		# Set up regional conflict
+		every_held_title = {
+			limit = { tier = tier_county }
+			add_county_modifier = {
+				modifier = border_tensions
+				years = 5
+			}
+		}
+	}
+	
+	# Option A: Prepare for War
+	option = {
+		name = be_norman_conquest.0001.a
+		
+		# Fortify defenses
+		add_gold = -200
+		add_military_strength_modifier = {
+			modifier = welsh_border_fortifications
+			years = 3
+		}
+		
+		# Start developing defensive innovations
+		culture = {
+			add_innovation_progress = {
+				innovation = innovation_battlements
+				progress = 15
+			}
+		}
+		
+		# Gain defensive bonuses but lose economic development
+		capital_county = {
+			add_county_modifier = {
+				modifier = wartime_preparations
+				years = 3
+			}
+		}
+		
+		# Stress for peaceful rulers
+		if = {
+			limit = { 
+				OR = {
+					has_trait = content
+					has_trait = craven
+					has_trait = compassionate
+				}
+			}
+			add_stress = 25
+		}
+		
+		# Follow-up event in 6 months
+		trigger_event = {
+			id = be_norman_conquest.0002
+			months = 6
+		}
+		
+		ai_chance = {
+			base = 60
+			
+			# Martial rulers prefer this
+			ai_value_modifier = {
+				ai_boldness = 1.0
+				ai_honor = 0.5
+			}
+			
+			# Welsh culture prefers resistance
+			modifier = {
+				add = 30
+				culture = { has_cultural_pillar = heritage_brythonic }
+			}
+		}
+	}
+	
+	# Option B: Seek Diplomatic Solution
+	option = {
+		name = be_norman_conquest.0001.b
+		
+		# Attempt diplomacy with Norman neighbor
+		scope:norman_aggressor = {
+			add_opinion = {
+				target = root
+				modifier = attempted_diplomacy
+				opinion = 15
+			}
+		}
+		
+		# Gain temporary peace but show weakness
+		add_prestige = -50
+		add_gold = 100  # Trade benefits
+		
+		# May trigger submission demand
+		random = {
+			chance = 40
+			trigger_event = {
+				id = be_norman_conquest.0003
+				months = 3
+			}
+		}
+		
+		# Stress for warlike rulers
+		if = {
+			limit = { 
+				OR = {
+					has_trait = wrathful
+					has_trait = brave
+					has_trait = ambitious
+				}
+			}
+			add_stress = 15
+		}
+		
+		ai_chance = {
+			base = 30
+			
+			# Diplomatic rulers prefer this
+			ai_value_modifier = {
+				ai_rationality = 1.0
+				ai_compassion = 0.5
+			}
+		}
+	}
+	
+	# Option C: Rally Welsh Unity
+	option = {
+		name = be_norman_conquest.0001.c
+		
+		# Attempt to create Welsh alliance
+		every_ruler = {
+			limit = {
+				culture = { has_cultural_pillar = heritage_brythonic }
+				NOT = { this = root }
+				any_realm_county = {
+					kingdom = { this = root.primary_title.kingdom }
+				}
+			}
+			add_opinion = {
+				target = root
+				modifier = welsh_unity_call
+				opinion = 20
+			}
+		}
+		
+		# Prestige for leadership
+		add_prestige = 100
+		
+		# Possible alliance formation
+		random = {
+			chance = 30
+			trigger_event = {
+				id = be_norman_conquest.0010  # Welsh alliance event
+				months = 2
+			}
+		}
+		
+		# Only available for kings or with high prestige
+		trigger = {
+			OR = {
+				primary_title = { tier = tier_kingdom }
+				prestige >= 500
+			}
+		}
+		
+		ai_chance = {
+			base = 20
+			
+			# Ambitious rulers more likely
+			modifier = {
+				add = 40
+				has_trait = ambitious
+			}
+			
+			# Kings more likely to attempt this
+			modifier = {
+				add = 30
+				primary_title = { tier = tier_kingdom }
+			}
+		}
+	}
+}
+
+# be_norman_conquest.0002 - Norman Castle Construction
+be_norman_conquest.0002 = {
+	type = character_event
+	title = be_norman_conquest.0002.t
+	desc = be_norman_conquest.0002.desc
+	theme = war
+	
+	left_portrait = {
+		character = scope:norman_aggressor
+		animation = scheme
+	}
+	right_portrait = {
+		character = root
+		animation = angry
+	}
+	
+	trigger = {
+		has_character_flag = norman_welsh_conflict_begun
+	}
+	
+	immediate = {
+		# Norman neighbor builds castles
+		scope:norman_aggressor = {
+			capital_county = {
+				add_county_modifier = {
+					modifier = norman_castle_construction
+					years = 10
+				}
+			}
+		}
+	}
+	
+	# Option A: Raid Construction Sites
+	option = {
+		name = be_norman_conquest.0002.a
+		
+		# Start war to disrupt construction
+		scope:norman_aggressor = {
+			start_war = {
+				cb = border_raid_war
+				target = this
+			}
+		}
+		
+		# Temporary military bonus
+		add_character_modifier = {
+			modifier = guerrilla_raids
+			years = 2
+		}
+		
+		ai_chance = {
+			base = 50
+			
+			# Brave rulers more likely
+			modifier = {
+				add = 30
+				has_trait = brave
+			}
+		}
+	}
+	
+	# Option B: Accelerate Own Fortifications
+	option = {
+		name = be_norman_conquest.0002.b
+		
+		# Invest heavily in defenses
+		add_gold = -500
+		
+		# Build competing fortifications
+		capital_county = {
+			add_county_modifier = {
+				modifier = welsh_counter_fortifications
+				years = 15
+			}
+		}
+		
+		# Innovation progress
+		culture = {
+			add_innovation_progress = {
+				innovation = innovation_battlements
+				progress = 25
+			}
+		}
+		
+		ai_chance = {
+			base = 40
+			
+			# Stewardship rulers prefer this
+			modifier = {
+				add = 20
+				stewardship >= 12
+			}
+		}
+	}
+}
+
+# be_norman_conquest.0010 - Welsh Alliance Formation
+be_norman_conquest.0010 = {
+	type = character_event
+	title = be_norman_conquest.0010.t
+	desc = be_norman_conquest.0010.desc
+	theme = diplomacy
+	
+	trigger = {
+		has_character_flag = norman_welsh_conflict_begun
+	}
+	
+	immediate = {
+		# Create temporary Welsh alliance
+		create_alliance = {
+			target = random_ruler
+			limit = {
+				culture = { has_cultural_pillar = heritage_brythonic }
+				NOT = { this = root }
+			}
+		}
+	}
+	
+	# Historical outcome paths
+	option = {
+		name = be_norman_conquest.0010.a
+		
+		# Form defensive pact
+		add_prestige = 200
+		
+		# Alliance benefits
+		add_character_modifier = {
+			modifier = welsh_defensive_alliance
+			years = 5
+		}
+		
+		# Trigger major conflict event
+		trigger_event = {
+			id = be_norman_conquest.0020
+			months = 6
+		}
+	}
+}
+
+# be_norman_conquest.0020 - The Great Welsh Resistance (1094-1100)
+be_norman_conquest.0020 = {
+	type = character_event
+	title = be_norman_conquest.0020.t
+	desc = be_norman_conquest.0020.desc
+	theme = war
+	
+	immediate = {
+		# Major Welsh uprising begins
+		every_ruler = {
+			limit = {
+				culture = { has_cultural_pillar = heritage_brythonic }
+			}
+			add_character_modifier = {
+				modifier = great_welsh_uprising
+				years = 6
+			}
+		}
+	}
+	
+	# Historical resistance path
+	option = {
+		name = be_norman_conquest.0020.a
+		
+		# Lead the resistance
+		add_prestige = 500
+		add_gold = -300
+		
+		# Military bonuses for Welsh forces
+		add_character_modifier = {
+			modifier = resistance_leader
+			years = 6
+		}
+		
+		# Start liberation wars
+		every_neighboring_realm = {
+			limit = {
+				culture = culture:norman
+				any_realm_county = {
+					de_jure_liege = root.primary_title.kingdom
+				}
+			}
+			root = {
+				start_war = {
+					cb = welsh_liberation_war
+					target = prev
+				}
+			}
+		}
+	}
+}

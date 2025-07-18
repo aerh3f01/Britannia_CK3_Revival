@@ -1,0 +1,180 @@
+# Welsh Traditional Succession Laws
+# Based on traditional Welsh partible inheritance (cyfran)
+
+# Welsh Partible Inheritance - Traditional Welsh Law
+cyfran_succession = {
+	# Based on traditional Welsh law where all legitimate sons inherit
+	realm_succession_order_priority = 10
+	
+	valid_for_both_potential_and_current_ruler = {
+		culture = { has_cultural_parameter = welsh_succession_laws }
+	}
+	
+	flag = specific_succession_law
+	
+	succession_order = {
+		# All legitimate sons inherit equally
+		inheritance_order = {
+			child = { sex = male is_legitimate = yes is_alive = yes }
+			grandchild = { sex = male through_male_line = yes is_legitimate = yes is_alive = yes }
+			great_grandchild = { sex = male through_male_line = yes is_legitimate = yes is_alive = yes }
+		}
+		
+		# If no male heirs, daughters can inherit
+		inheritance_order_fallback = {
+			child = { sex = female is_legitimate = yes is_alive = yes }
+			grandchild = { sex = female through_male_line = yes is_legitimate = yes is_alive = yes }
+		}
+		
+		# Extended male relatives as final fallback
+		inheritance_order_extended = {
+			sibling = { sex = male is_legitimate = yes is_alive = yes }
+			nephew = { sex = male is_legitimate = yes is_alive = yes }
+			uncle = { sex = male is_legitimate = yes is_alive = yes }
+		}
+	}
+	
+	# Special effects of traditional Welsh succession
+	character_modifier = {
+		dynasty_opinion = 10          # Family approves of traditional inheritance
+		vassal_opinion = -5           # Vassals may worry about realm division
+		monthly_prestige = 0.1        # Following traditional law brings honor
+	}
+	
+	realm_modifier = {
+		stress_loss_mult = 0.05       # Traditional ways reduce stress
+		cultural_acceptance_gain_mult = 0.1  # Reinforces Welsh culture
+	}
+	
+	# Multiple inheritance creates smaller realms but maintains Welsh culture
+	on_succession = {
+		character_event = welsh_succession.0001  # Brothers negotiate inheritance
+	}
+	
+	# Costs and requirements
+	cost = {
+		prestige = 100
+		piety = 50
+	}
+	
+	potential = {
+		culture = { has_cultural_parameter = welsh_succession_laws }
+		highest_held_title_tier >= tier_county
+		OR = {
+			has_trait = ambitious        # Wants to follow tradition
+			has_trait = just             # Believes in fairness
+			learning >= 12               # Understands Welsh law
+		}
+	}
+	
+	possible = {
+		custom_description = {
+			text = "Must understand traditional Welsh law"
+			OR = {
+				has_trait = just
+				learning >= 10
+				any_character_in_council = {
+					has_trait = just
+					culture = { has_cultural_parameter = welsh_succession_laws }
+				}
+			}
+		}
+	}
+	
+	effect = {
+		add_legitimacy = -20           # Reduces central authority
+		add_dynasty_prestige = 100     # But increases family honor
+		every_dynasty_member = {
+			add_opinion = {
+				target = root
+				modifier = respects_tradition_opinion
+				opinion = 15
+			}
+		}
+	}
+}
+
+# Welsh Tanistry - Elective system based on worthiness
+tanistry_welsh = {
+	# Modified tanistry focusing on Welsh cultural values
+	realm_succession_order_priority = 15
+	
+	valid_for_both_potential_and_current_ruler = {
+		culture = { has_cultural_parameter = welsh_succession_laws }
+		highest_held_title_tier >= tier_duchy
+	}
+	
+	flag = elective_succession_law
+	
+	succession_order = {
+		# Elected from dynasty members based on worthiness
+		election_system = {
+			voters = {
+				# Welsh nobles and senior family members vote
+				vassals_of_rank = { tier = tier_count tier = tier_duke }
+				dynasty_members = { is_adult = yes prowess >= 8 }
+				court_positions = { type = pencerdd type = ynad type = distain }
+			}
+			
+			candidates = {
+				# Must be worthy by Welsh standards
+				dynasty_members = {
+					is_adult = yes
+					is_capable = yes
+					OR = {
+						prowess >= 12        # Warrior prowess
+						learning >= 12       # Wisdom and law knowledge
+						has_trait = brave    # Courage
+						has_trait = just     # Justice
+						has_trait = generous # Generosity - important Welsh value
+					}
+				}
+			}
+			
+			# Voting weights based on Welsh values
+			voting_power = {
+				base = 1
+				prowess_bonus = { if prowess >= 15 then 2 }
+				wisdom_bonus = { if learning >= 15 then 2 }
+				trait_bonus = {
+					if has_trait = brave then 1
+					if has_trait = just then 1
+					if has_trait = generous then 1
+					if has_trait = poet then 1
+				}
+				culture_bonus = {
+					if culture = { has_cultural_parameter = welsh_succession_laws } then 2
+				}
+			}
+		}
+	}
+	
+	character_modifier = {
+		dynasty_opinion = 15
+		vassal_opinion = 10           # Vassals like having a say
+		monthly_prestige = 0.2
+		stress_gain_mult = -0.1       # Less stress from legitimate rule
+	}
+	
+	cost = {
+		prestige = 200
+		piety = 100
+	}
+	
+	potential = {
+		culture = { has_cultural_parameter = welsh_succession_laws }
+		highest_held_title_tier >= tier_duchy
+		dynasty_prestige_level >= 2
+	}
+	
+	effect = {
+		add_legitimacy = 25
+		every_vassal = {
+			add_opinion = {
+				target = root
+				modifier = fair_succession_opinion
+				opinion = 10
+			}
+		}
+	}
+}

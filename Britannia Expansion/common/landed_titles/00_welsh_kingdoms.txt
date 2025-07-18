@@ -1,0 +1,346 @@
+# Welsh Landed Titles
+# Implementing proper de jure structure for Welsh kingdoms
+
+# Empire of Wales (titular - created by decision)
+e_wales = {
+	color = { 180 45 45 }
+	color2 = { 255 255 255 }
+	
+	capital = c_gwynedd
+	
+	# Cultural requirements
+	culture = welsh
+	
+	# Can only be created, not inherited initially
+	landless = yes
+	
+	# De jure kingdoms
+	d_gwynedd = {
+		color = { 200 50 50 }
+		color2 = { 255 255 255 }
+		
+		capital = c_gwynedd
+		
+		# Historical counties of Gwynedd
+		c_gwynedd = {
+			color = { 220 60 60 }
+			color2 = { 255 255 255 }
+			
+			# Baronies within Gwynedd
+			b_deganwy = {
+				# Ancient seat of Gwynedd princes
+				province = 1234
+			}
+			b_aberffraw = {
+				# Traditional ceremonial capital
+				province = 1235
+			}
+			b_caernarfon = {
+				# Major fortress town
+				province = 1236
+			}
+		}
+		
+		c_anglesey = {
+			color = { 210 55 55 }
+			color2 = { 255 255 255 }
+			
+			# Fertile island of Anglesey - "Mam Cymru" (Mother of Wales)
+			b_llangefni = {
+				province = 1240
+			}
+			b_beaumaris = {
+				province = 1241
+			}
+		}
+		
+		c_conwy = {
+			color = { 215 58 58 }
+			color2 = { 255 255 255 }
+			
+			b_conwy = {
+				province = 1250
+			}
+			b_llanrwst = {
+				province = 1251
+			}
+		}
+		
+		c_flint = {
+			color = { 205 52 52 }
+			color2 = { 255 255 255 }
+			
+			b_flint = {
+				province = 1260
+			}
+			b_rhuddlan = {
+				province = 1261
+			}
+		}
+	}
+	
+	d_powys = {
+		color = { 50 50 200 }
+		color2 = { 255 255 255 }
+		
+		capital = c_mathrafal
+		
+		# Historical counties of Powys
+		c_mathrafal = {
+			color = { 60 60 220 }
+			color2 = { 255 255 255 }
+			
+			# Traditional capital of Powys
+			b_mathrafal = {
+				province = 1300
+			}
+			b_welshpool = {
+				province = 1301
+			}
+		}
+		
+		c_montgomeryshire = {
+			color = { 55 55 210 }
+			color2 = { 255 255 255 }
+			
+			b_montgomery = {
+				province = 1310
+			}
+			b_newtown = {
+				province = 1311
+			}
+		}
+		
+		c_radnor = {
+			color = { 58 58 215 }
+			color2 = { 255 255 255 }
+			
+			b_radnor = {
+				province = 1320
+			}
+			b_presteigne = {
+				province = 1321
+			}
+		}
+		
+		c_builth = {
+			color = { 52 52 205 }
+			color2 = { 255 255 255 }
+			
+			b_builth = {
+				province = 1330
+			}
+			b_llandrindod = {
+				province = 1331
+			}
+		}
+	}
+	
+	d_deheubarth = {
+		color = { 200 150 50 }
+		color2 = { 255 255 255 }
+		
+		capital = c_dinefwr
+		
+		# Historical counties of Deheubarth
+		c_dinefwr = {
+			color = { 220 170 60 }
+			color2 = { 255 255 255 }
+			
+			# Ancient seat of Deheubarth
+			b_dinefwr = {
+				province = 1400
+			}
+			b_llandeilo = {
+				province = 1401
+			}
+		}
+		
+		c_carmarthen = {
+			color = { 210 160 55 }
+			color2 = { 255 255 255 }
+			
+			b_carmarthen = {
+				province = 1410
+			}
+			b_laugharne = {
+				province = 1411
+			}
+		}
+		
+		c_pembroke = {
+			color = { 215 165 58 }
+			color2 = { 255 255 255 }
+			
+			b_pembroke = {
+				province = 1420
+			}
+			b_tenby = {
+				province = 1421
+			}
+		}
+		
+		c_ceredigion = {
+			color = { 205 155 52 }
+			color2 = { 255 255 255 }
+			
+			b_aberystwyth = {
+				province = 1430
+			}
+			b_cardigan = {
+				province = 1431
+			}
+		}
+		
+		c_brecon = {
+			color = { 200 150 50 }
+			color2 = { 255 255 255 }
+			
+			b_brecon = {
+				province = 1440
+			}
+			b_talgarth = {
+				province = 1441
+			}
+		}
+	}
+	
+	d_morgannwg = {
+		color = { 150 100 200 }
+		color2 = { 255 255 255 }
+		
+		capital = c_cardiff
+		
+		# Historical counties of Morgannwg (Glamorgan)
+		c_cardiff = {
+			color = { 170 120 220 }
+			color2 = { 255 255 255 }
+			
+			b_cardiff = {
+				province = 1500
+			}
+			b_llandaff = {
+				province = 1501
+			}
+		}
+		
+		c_neath = {
+			color = { 160 110 210 }
+			color2 = { 255 255 255 }
+			
+			b_neath = {
+				province = 1510
+			}
+			b_swansea = {
+				province = 1511
+			}
+		}
+		
+		c_gower = {
+			color = { 165 115 215 }
+			color2 = { 255 255 255 }
+			
+			b_gower = {
+				province = 1520
+			}
+			b_llanrhidian = {
+				province = 1521
+			}
+		}
+	}
+}
+
+# Individual Kingdom Definitions with Cultural Modifiers
+
+k_gwynedd = {
+	color = { 200 50 50 }
+	color2 = { 255 255 255 }
+	
+	capital = c_gwynedd
+	
+	# Kingdom modifiers for Welsh culture
+	character_modifier = {
+		monthly_prestige = 0.5
+		same_culture_opinion = 5
+		different_culture_opinion = -2
+	}
+	
+	# Terrain bonuses
+	county_modifier = {
+		levy_size = 0.1
+		fort_level = 1
+		development_growth = 0.05
+	}
+	
+	# Cultural requirements
+	culture = welsh
+	
+	# Mountain kingdom traits
+	terrain_bonus = mountains
+}
+
+k_powys = {
+	color = { 50 50 200 }
+	color2 = { 255 255 255 }
+	
+	capital = c_mathrafal
+	
+	# Central Wales - strategic location
+	character_modifier = {
+		monthly_income = 0.1
+		diplomacy = 1
+		stewardship = 1
+	}
+	
+	county_modifier = {
+		tax_mult = 0.05
+		development_growth = 0.1
+	}
+	
+	culture = welsh
+	terrain_bonus = hills
+}
+
+k_deheubarth = {
+	color = { 200 150 50 }
+	color2 = { 255 255 255 }
+	
+	capital = c_dinefwr
+	
+	# Wealthy southern kingdom
+	character_modifier = {
+		monthly_income = 0.15
+		learning = 1
+		monthly_piety = 0.25
+	}
+	
+	county_modifier = {
+		tax_mult = 0.1
+		development_growth = 0.15
+	}
+	
+	culture = welsh
+	terrain_bonus = farmlands
+}
+
+k_morgannwg = {
+	color = { 150 100 200 }
+	color2 = { 255 255 255 }
+	
+	capital = c_cardiff
+	
+	# Coastal kingdom with trade benefits
+	character_modifier = {
+		monthly_income = 0.2
+		stewardship = 1
+		intrigue = 1
+	}
+	
+	county_modifier = {
+		tax_mult = 0.15
+		levy_size = 0.05
+	}
+	
+	culture = welsh
+	terrain_bonus = farmlands
+}

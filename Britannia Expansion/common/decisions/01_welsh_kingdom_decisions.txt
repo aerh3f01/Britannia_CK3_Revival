@@ -1,0 +1,171 @@
+# Welsh Kingdom Decisions
+# Major decisions for Welsh rulers
+
+unite_wales_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_dynasty_house.dds"
+	major = yes
+	ai_check_interval = 120
+	
+	desc = unite_wales_decision_desc
+	selection_tooltip = unite_wales_decision_tooltip
+	
+	is_shown = {
+		culture = culture:welsh
+		highest_held_title_tier >= tier_kingdom
+		NOT = { exists = title:e_wales.holder }
+	}
+	
+	is_valid_showing_failures_only = {
+		is_independent_ruler = yes
+		is_at_war = no
+		prestige >= 1500
+	}
+	
+	effect = {
+		show_as_tooltip = {
+			add_prestige = 2000
+			add_piety = 500
+		}
+		trigger_event = {
+			id = be_welsh_kingdom.0001
+		}
+	}
+	
+	ai_will_do = {
+		base = 100
+	}
+	
+	ai_potential = {
+		always = yes
+	}
+}
+
+codify_welsh_law_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+	ai_check_interval = 60
+	
+	desc = codify_welsh_law_decision_desc
+	selection_tooltip = codify_welsh_law_decision_tooltip
+	
+	is_shown = {
+		culture = culture:welsh
+		highest_held_title_tier >= tier_duchy
+		NOT = { has_character_flag = codified_welsh_law }
+	}
+	
+	is_valid_showing_failures_only = {
+		learning >= 12
+		is_adult = yes
+		is_imprisoned = no
+	}
+	
+	effect = {
+		show_as_tooltip = {
+			add_character_flag = {
+				flag = codified_welsh_law
+				days = -1
+			}
+			add_prestige = 1000
+			add_piety = 300
+		}
+		trigger_event = {
+			id = be_welsh_kingdom.0010
+		}
+	}
+	
+	ai_will_do = {
+		base = 75
+	}
+	
+	ai_potential = {
+		always = yes
+	}
+}
+
+establish_eisteddfod_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds"
+	ai_check_interval = 60
+	
+	desc = establish_eisteddfod_decision_desc
+	selection_tooltip = establish_eisteddfod_decision_tooltip
+	
+	is_shown = {
+		culture = culture:welsh
+		highest_held_title_tier >= tier_duchy
+		NOT = { has_character_flag = established_eisteddfod }
+	}
+	
+	is_valid_showing_failures_only = {
+		is_adult = yes
+		is_imprisoned = no
+		gold >= 300
+	}
+	
+	effect = {
+		show_as_tooltip = {
+			add_character_flag = {
+				flag = established_eisteddfod
+				days = -1
+			}
+			add_prestige = 500
+		}
+		trigger_event = {
+			id = be_welsh_kingdom.0020
+		}
+	}
+	
+	ai_will_do = {
+		base = 50
+	}
+	
+	ai_potential = {
+		always = yes
+	}
+}
+
+resist_cultural_conversion_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_realm.dds"
+	ai_check_interval = 36
+	
+	desc = resist_cultural_conversion_decision_desc
+	selection_tooltip = resist_cultural_conversion_decision_tooltip
+	
+	is_shown = {
+		culture = culture:welsh
+		OR = {
+			any_liege = {
+				NOT = { culture = culture:welsh }
+			}
+			any_held_title = {
+				tier = tier_county
+				NOT = { county_culture = culture:welsh }
+			}
+		}
+	}
+	
+	is_valid_showing_failures_only = {
+		is_adult = yes
+		is_imprisoned = no
+		gold >= 200
+	}
+	
+	effect = {
+		show_as_tooltip = {
+			add_stress = -25
+			add_prestige = 200
+		}
+		trigger_event = {
+			id = be_welsh_kingdom.0030
+		}
+	}
+	
+	cooldown = { years = 5 }
+	
+	ai_will_do = {
+		base = 100
+	}
+	
+	ai_potential = {
+		always = yes
+	}
+}

@@ -1,0 +1,446 @@
+# Welsh Building Types
+# Unique buildings reflecting Welsh culture and geography
+
+# Mountain Fortress - Enhanced hill fort for Welsh mountain defense
+mountain_fortress_01 = {
+	construction_time = 1825
+	
+	cost_gold = 500
+	cost_prestige = 100
+	
+	is_enabled = {
+		culture = culture:welsh
+		terrain = mountains
+	}
+	
+	can_construct_potential = {
+		barony = {
+			holder = {
+				culture = culture:welsh
+			}
+		}
+	}
+	
+	can_construct = {
+		custom_description = {
+			text = building_requirement_castle_02
+			barony = {
+				has_building_or_higher = castle_02
+			}
+		}
+	}
+	
+	character_modifier = {
+		monthly_prestige = 0.5
+		advantage = 5
+		defender_advantage = 10
+	}
+	
+	county_modifier = {
+		fort_level = 2
+		levy_size = 0.15
+		garrison_size = 0.25
+	}
+	
+	province_modifier = {
+		supply_limit_mult = -0.25
+		movement_speed = -0.3
+	}
+	
+	next_building = mountain_fortress_02
+	
+	type_icon = "building_fortifications"
+}
+
+mountain_fortress_02 = {
+	construction_time = 2190
+	
+	cost_gold = 750
+	cost_prestige = 150
+	
+	character_modifier = {
+		monthly_prestige = 0.75
+		advantage = 8
+		defender_advantage = 15
+	}
+	
+	county_modifier = {
+		fort_level = 3
+		levy_size = 0.2
+		garrison_size = 0.35
+	}
+	
+	province_modifier = {
+		supply_limit_mult = -0.35
+		movement_speed = -0.4
+	}
+	
+	next_building = mountain_fortress_03
+	
+	type_icon = "building_fortifications"
+}
+
+mountain_fortress_03 = {
+	construction_time = 2555
+	
+	cost_gold = 1000
+	cost_prestige = 200
+	
+	character_modifier = {
+		monthly_prestige = 1.0
+		advantage = 12
+		defender_advantage = 20
+	}
+	
+	county_modifier = {
+		fort_level = 4
+		levy_size = 0.25
+		garrison_size = 0.5
+	}
+	
+	province_modifier = {
+		supply_limit_mult = -0.5
+		movement_speed = -0.5
+	}
+	
+	type_icon = "building_fortifications"
+}
+
+# Eisteddfod Hall - Cultural center for Welsh arts
+eisteddfod_hall_01 = {
+	construction_time = 1460
+	
+	cost_gold = 400
+	cost_prestige = 200
+	
+	is_enabled = {
+		culture = culture:welsh
+	}
+	
+	can_construct_potential = {
+		barony = {
+			holder = {
+				culture = culture:welsh
+				has_character_flag = established_eisteddfod
+			}
+		}
+	}
+	
+	can_construct = {
+		custom_description = {
+			text = building_requirement_castle_01
+			barony = {
+				has_building_or_higher = castle_01
+			}
+		}
+	}
+	
+	character_modifier = {
+		monthly_prestige = 1.0
+		cultural_acceptance_gain_mult = 0.1
+		same_culture_opinion = 10
+	}
+	
+	county_modifier = {
+		development_growth = 0.15
+		county_opinion_add = 10
+	}
+	
+	next_building = eisteddfod_hall_02
+	
+	type_icon = "building_leisure_palace"
+}
+
+eisteddfod_hall_02 = {
+	construction_time = 1825
+	
+	cost_gold = 600
+	cost_prestige = 300
+	
+	character_modifier = {
+		monthly_prestige = 1.5
+		cultural_acceptance_gain_mult = 0.15
+		same_culture_opinion = 15
+		learning = 2
+	}
+	
+	county_modifier = {
+		development_growth = 0.2
+		county_opinion_add = 15
+	}
+	
+	next_building = eisteddfod_hall_03
+	
+	type_icon = "building_leisure_palace"
+}
+
+eisteddfod_hall_03 = {
+	construction_time = 2190
+	
+	cost_gold = 800
+	cost_prestige = 400
+	
+	character_modifier = {
+		monthly_prestige = 2.0
+		cultural_acceptance_gain_mult = 0.2
+		same_culture_opinion = 20
+		learning = 3
+		diplomacy = 1
+	}
+	
+	county_modifier = {
+		development_growth = 0.25
+		county_opinion_add = 20
+	}
+	
+	type_icon = "building_leisure_palace"
+}
+
+# Cattle Pastures - Economic building for Welsh cattle culture
+cattle_pastures_01 = {
+	construction_time = 1095
+	
+	cost_gold = 300
+	
+	is_enabled = {
+		culture = culture:welsh
+		terrain = farmlands
+	}
+	
+	can_construct_potential = {
+		barony = {
+			holder = {
+				culture = culture:welsh
+			}
+		}
+	}
+	
+	can_construct = {
+		custom_description = {
+			text = building_requirement_city_01
+			barony = {
+				has_building_or_higher = city_01
+			}
+		}
+	}
+	
+	character_modifier = {
+		monthly_income = 2.0
+		monthly_prestige = 0.25
+	}
+	
+	county_modifier = {
+		tax_mult = 0.1
+		levy_size = 0.05
+	}
+	
+	next_building = cattle_pastures_02
+	
+	type_icon = "building_farms"
+}
+
+cattle_pastures_02 = {
+	construction_time = 1460
+	
+	cost_gold = 450
+	
+	character_modifier = {
+		monthly_income = 3.0
+		monthly_prestige = 0.5
+	}
+	
+	county_modifier = {
+		tax_mult = 0.15
+		levy_size = 0.1
+	}
+	
+	next_building = cattle_pastures_03
+	
+	type_icon = "building_farms"
+}
+
+cattle_pastures_03 = {
+	construction_time = 1825
+	
+	cost_gold = 600
+	
+	character_modifier = {
+		monthly_income = 4.0
+		monthly_prestige = 0.75
+	}
+	
+	county_modifier = {
+		tax_mult = 0.2
+		levy_size = 0.15
+	}
+	
+	type_icon = "building_farms"
+}
+
+# Bardic School - Learning institution for Welsh culture
+bardic_school_01 = {
+	construction_time = 1460
+	
+	cost_gold = 350
+	cost_prestige = 100
+	
+	is_enabled = {
+		culture = culture:welsh
+	}
+	
+	can_construct_potential = {
+		barony = {
+			holder = {
+				culture = culture:welsh
+			}
+		}
+	}
+	
+	can_construct = {
+		custom_description = {
+			text = building_requirement_temple_01
+			barony = {
+				has_building_or_higher = temple_01
+			}
+		}
+	}
+	
+	character_modifier = {
+		monthly_piety = 0.5
+		learning = 2
+		cultural_acceptance_gain_mult = 0.05
+	}
+	
+	county_modifier = {
+		development_growth = 0.1
+		county_culture_conversion_mult = -0.25
+	}
+	
+	next_building = bardic_school_02
+	
+	type_icon = "building_temple_school"
+}
+
+bardic_school_02 = {
+	construction_time = 1825
+	
+	cost_gold = 525
+	cost_prestige = 150
+	
+	character_modifier = {
+		monthly_piety = 0.75
+		learning = 3
+		cultural_acceptance_gain_mult = 0.1
+	}
+	
+	county_modifier = {
+		development_growth = 0.15
+		county_culture_conversion_mult = -0.35
+	}
+	
+	next_building = bardic_school_03
+	
+	type_icon = "building_temple_school"
+}
+
+bardic_school_03 = {
+	construction_time = 2190
+	
+	cost_gold = 700
+	cost_prestige = 200
+	
+	character_modifier = {
+		monthly_piety = 1.0
+		learning = 4
+		cultural_acceptance_gain_mult = 0.15
+		diplomacy = 1
+	}
+	
+	county_modifier = {
+		development_growth = 0.2
+		county_culture_conversion_mult = -0.5
+	}
+	
+	type_icon = "building_temple_school"
+}
+
+# Welsh Mining Works - Mountain resource extraction
+welsh_mines_01 = {
+	construction_time = 1825
+	
+	cost_gold = 600
+	
+	is_enabled = {
+		culture = culture:welsh
+		terrain = mountains
+	}
+	
+	can_construct_potential = {
+		barony = {
+			holder = {
+				culture = culture:welsh
+			}
+		}
+	}
+	
+	can_construct = {
+		custom_description = {
+			text = building_requirement_city_02
+			barony = {
+				has_building_or_higher = city_02
+			}
+		}
+	}
+	
+	character_modifier = {
+		monthly_income = 3.0
+		stewardship = 1
+	}
+	
+	county_modifier = {
+		tax_mult = 0.15
+		development_growth = 0.1
+	}
+	
+	next_building = welsh_mines_02
+	
+	type_icon = "building_mines"
+}
+
+welsh_mines_02 = {
+	construction_time = 2190
+	
+	cost_gold = 900
+	
+	character_modifier = {
+		monthly_income = 4.5
+		stewardship = 2
+	}
+	
+	county_modifier = {
+		tax_mult = 0.2
+		development_growth = 0.15
+	}
+	
+	next_building = welsh_mines_03
+	
+	type_icon = "building_mines"
+}
+
+welsh_mines_03 = {
+	construction_time = 2555
+	
+	cost_gold = 1200
+	
+	character_modifier = {
+		monthly_income = 6.0
+		stewardship = 3
+	}
+	
+	county_modifier = {
+		tax_mult = 0.25
+		development_growth = 0.2
+	}
+	
+	type_icon = "building_mines"
+}

@@ -1,0 +1,321 @@
+# Welsh Decision View Integration
+# Enhances the decision view with Welsh cultural styling
+
+types DecisionViewTypes {
+	type welsh_decision_view_background = widget {
+		using = Window_Background
+		
+		# Welsh cultural pattern overlay
+		icon = {
+			size = { 100% 100% }
+			texture = "GFX_welsh_pattern_border"
+			alpha = 0.1
+			using = Color_Welsh_Red
+		}
+		
+		# Celtic knotwork corners
+		icon = {
+			parentanchor = top|left
+			position = { 10 10 }
+			size = { 32 32 }
+			texture = "GFX_welsh_corner_decoration"
+		}
+		
+		icon = {
+			parentanchor = top|right
+			position = { -42 10 }
+			size = { 32 32 }
+			texture = "GFX_welsh_corner_decoration"
+			mirror = horizontal
+		}
+		
+		icon = {
+			parentanchor = bottom|left
+			position = { 10 -42 }
+			size = { 32 32 }
+			texture = "GFX_welsh_corner_decoration"
+			mirror = vertical
+		}
+		
+		icon = {
+			parentanchor = bottom|right
+			position = { -42 -42 }
+			size = { 32 32 }
+			texture = "GFX_welsh_corner_decoration"
+			mirror = horizontal
+			mirror = vertical
+		}
+	}
+	
+	type welsh_enhanced_decision_button = button_standard {
+		size = { 400 80 }
+		
+		background = {
+			using = Background_Area_With_Header
+			
+			modify_texture = {
+				texture = "gfx/interface/component_masks/mask_fade_vertical.dds"
+				spriteType = Corneredtiled
+				spriteborder = { 0 0 }
+				blend_mode = alphamultiply
+			}
+			
+			# Welsh cultural accent
+			icon = {
+				parentanchor = left|vcenter
+				position = { 8 0 }
+				size = { 4 60 }
+				texture = "gfx/interface/colors/red.dds"
+				alpha = 0.8
+			}
+		}
+		
+		hbox = {
+			layoutpolicy_horizontal = expanding
+			layoutpolicy_vertical = expanding
+			margin = { 15 10 }
+			spacing = 12
+			
+			# Decision Icon
+			icon = {
+				size = { 56 56 }
+				parentanchor = vcenter
+				
+				block "decision_icon" {
+					texture = "GFX_decision_icon_default"
+				}
+				
+				# Welsh cultural frame
+				icon = {
+					size = { 64 64 }
+					parentanchor = center
+					position = { 0 0 }
+					texture = "GFX_welsh_icon_frame"
+				}
+			}
+			
+			# Decision Text Content
+			vbox = {
+				layoutpolicy_horizontal = expanding
+				layoutpolicy_vertical = expanding
+				spacing = 4
+				margin_top = 5
+				
+				# Title
+				text_single = {
+					layoutpolicy_horizontal = expanding
+					max_width = 280
+					fontsize = 16
+					
+					block "decision_title" {
+						text = "DECISION_TITLE"
+					}
+					
+					default_format = "#high"
+					using = Font_Size_Medium
+					
+					# Welsh accent color for titles
+					modify_texture = {
+						texture = "gfx/interface/colors/red.dds"
+						blend_mode = overlay
+						alpha = 0.1
+					}
+				}
+				
+				# Description
+				text_multi = {
+					layoutpolicy_horizontal = expanding
+					layoutpolicy_vertical = expanding
+					max_width = 280
+					fontsize = 12
+					
+					block "decision_desc" {
+						text = "DECISION_DESC"
+					}
+					
+					default_format = "#low"
+					alpha = 0.8
+				}
+				
+				# Cost indicators
+				hbox = {
+					layoutpolicy_horizontal = expanding
+					spacing = 8
+					margin_top = 2
+					
+					block "decision_costs" {
+						# Will be populated by specific decision implementations
+					}
+				}
+			}
+			
+			# Status indicator
+			vbox = {
+				parentanchor = vcenter
+				spacing = 5
+				
+				# Cooldown or requirement indicator
+				icon = {
+					size = { 24 24 }
+					
+					block "status_icon" {
+						texture = "GFX_icon_checkmark"
+						visible = no
+					}
+				}
+				
+				# Welsh dragon accent for available decisions
+				icon = {
+					size = { 20 20 }
+					texture = "GFX_welsh_dragon_small"
+					alpha = 0.6
+					
+					block "welsh_available" {
+						visible = no
+					}
+				}
+			}
+		}
+		
+		# Hover effects
+		state = {
+			name = _mouse_hover
+			
+			modify_texture = {
+				texture = "gfx/interface/colors/red.dds"
+				blend_mode = overlay
+				alpha = 0.05
+			}
+			
+			on_start = "[PdxGuiWidget.AccessibleSetCanClick('yes')]"
+		}
+		
+		# Pressed state
+		state = {
+			name = _mouse_press
+			
+			modify_texture = {
+				texture = "gfx/interface/colors/red.dds"
+				blend_mode = overlay
+				alpha = 0.1
+			}
+		}
+		
+		# Disabled state
+		state = {
+			name = _mouse_disabled
+			alpha = 0.5
+		}
+	}
+}
+
+# Enhanced tooltips for Welsh decisions
+template WelshDecisionTooltip {
+	tooltip_type = widget_tooltip
+	
+	using = GeneralTooltipSetup
+	using = welsh_decision_view_background
+	
+	vbox = {
+		layoutpolicy_horizontal = expanding
+		margin = { 15 12 }
+		spacing = 8
+		
+		# Header with Welsh styling
+		hbox = {
+			layoutpolicy_horizontal = expanding
+			spacing = 10
+			
+			icon = {
+				size = { 32 32 }
+				texture = "GFX_welsh_dragon_emblem"
+			}
+			
+			text_single = {
+				layoutpolicy_horizontal = expanding
+				text = "[Decision.GetName]"
+				default_format = "#high"
+				fontsize = 16
+				using = Font_Size_Medium
+			}
+		}
+		
+		divider_decorative = {}
+		
+		# Description
+		text_multi = {
+			layoutpolicy_horizontal = expanding
+			max_width = 320
+			text = "[Decision.GetDescription]"
+			default_format = "#weak"
+			margin_bottom = 5
+		}
+		
+		# Requirements section
+		vbox = {
+			layoutpolicy_horizontal = expanding
+			spacing = 3
+			visible = "[Decision.HasRequirements]"
+			
+			text_single = {
+				text = "DECISION_REQUIREMENTS_HEADER"
+				default_format = "#high"
+				fontsize = 14
+				margin_bottom = 3
+			}
+			
+			block "requirements_list" {
+				# Will be populated by specific decisions
+			}
+		}
+		
+		# Effects section
+		vbox = {
+			layoutpolicy_horizontal = expanding
+			spacing = 3
+			margin_top = 5
+			
+			text_single = {
+				text = "DECISION_EFFECTS_HEADER"
+				default_format = "#high"
+				fontsize = 14
+				margin_bottom = 3
+			}
+			
+			block "effects_list" {
+				# Will be populated by specific decisions
+			}
+		}
+		
+		# Cost breakdown
+		vbox = {
+			layoutpolicy_horizontal = expanding
+			spacing = 3
+			margin_top = 5
+			visible = "[Decision.HasCosts]"
+			
+			text_single = {
+				text = "DECISION_COSTS_HEADER"
+				default_format = "#high"
+				fontsize = 14
+				margin_bottom = 3
+			}
+			
+			block "costs_list" {
+				# Will be populated by specific decisions
+			}
+		}
+		
+		# Welsh cultural flavor text
+		text_multi = {
+			layoutpolicy_horizontal = expanding
+			max_width = 320
+			text = "[Decision.GetWelshFlavorText]"
+			default_format = "#flavor"
+			fontsize = 11
+			alpha = 0.8
+			margin_top = 8
+			visible = "[Decision.HasWelshFlavor]"
+		}
+	}
+}

@@ -1,0 +1,35 @@
+# Welsh Cultural Character Modifiers
+
+annual_eisteddfod = {
+	monthly_prestige = 0.25
+	court_grandeur_baseline_add = 2
+	cultural_acceptance_gain_mult = 0.15
+	stress_loss_mult = 0.10
+}
+
+promoting_welsh_culture = {
+	cultural_acceptance_gain_mult = 0.20
+	monthly_prestige = 0.15
+}
+
+codified_welsh_law = {
+	tyranny_loss_mult = 0.30
+	monthly_prestige = 0.20
+	monthly_piety = 0.15
+	vassal_opinion = 10
+	legitimacy = 25
+}
+
+welsh_law_implemented = {
+	county_opinion_add = 15
+	development_growth = 0.10
+	tax_mult = 0.05
+}
+
+codified_tradition_opinion = {
+	opinion = 20
+}
+
+just_ruler_opinion = {
+	opinion = 15
+}
