@@ -15,18 +15,22 @@
     <img style="margin-right:5px;" src="https://img.shields.io/github/contributors/aerh3f01/Britannia_CK3_Revival?color=green&style=flat-square" alt="contributors"/>
     <img style="margin-right:5px;" src="https://img.shields.io/steam/update-date/2979045549?color=white&style=flat-square" alt="steam update"/>
     <img style="margin-right:5px;" src="https://img.shields.io/steam/subscriptions/2979045549?color=gold&style=square" alt="subscriptions"/>
-    <img style="margin-right:5px;" src="https://img.shields.io/badge/CK3-1.9.*.*-blue?style=flat-square" alt="ck3 version"/>
+    <img style="margin-right:5px;" src="https://img.shields.io/badge/CK3-1.13.*.*-blue?style=flat-square" alt="ck3 version"/>
   </div>
 
   <h2>🏴󠁧󠁢󠁷󠁬󠁳󠁿 2025 CONTINUATION 🏴󠁧󠁢󠁷󠁬󠁳󠁿</h2>
-    <p><strong>Reviving and expanding this comprehensive Britannia mod for Crusader Kings 3!</strong><br>
-    Major updates planned throughout 2025 with focus on authentic Welsh culture and historical accuracy.</p>
+  <p>
+    <strong>Reviving and expanding this comprehensive Britannia mod for Crusader Kings 3!
+    </strong>
+    <br />
+    Major updates planned throughout 2025 with focus on authentic Welsh culture and historical accuracy.
+  </p>
     
-    <p align="justified">
+  <p align="justified">
     <strong>Britannia Expansion</strong> is a comprehensive cultural and historical enhancement mod for Crusader Kings 3, focusing on the rich heritage of the British Isles. Starting with an in-depth expansion of Welsh culture, the mod aims to provide authentic historical experiences through custom events, decisions, characters, and cultural mechanics that bring the medieval Celtic kingdoms to life.
-    </p>
+  </p>
     
-    <p>
+  <p>
     <a href="#features"><strong>🎯 View Features »</strong></a>
     ·
     <a href="roadmap.md"><strong>🗺️ Development Roadmap »</strong></a>
@@ -34,7 +38,7 @@
     <a href="https://github.com/aerh3f01/Britannia_CK3_Revival/issues"><strong>🐛 Report Issues »</strong></a>
     ·
     <a href="#contributing"><strong>🤝 Contribute »</strong></a>
-    </p>
+  </p>
 </div>
 
 ---
@@ -62,6 +66,7 @@
 **Britannia Expansion** transforms the experience of playing as Celtic rulers in Crusader Kings 3 by adding historical depth, cultural authenticity, and engaging gameplay mechanics focused on the British Isles. The mod currently centers on Welsh culture and kingdoms, with planned expansions to Scotland, Ireland, and England.
 
 ### 🎯 Project Goals
+
 - **Historical Authenticity**: Accurate representation of medieval Welsh culture, politics, and society
 - **Immersive Gameplay**: Custom events and decisions that reflect the unique challenges of Welsh rulers
 - **Cultural Depth**: Enhanced court positions, religious elements, and social structures
@@ -72,8 +77,9 @@
 ## ✨ Features
 
 ### 🏴󠁧󠁢󠁷󠁬󠁳󠁿 Welsh Culture Enhancement
+
 - **Custom Kingdom Formation**: Unique mechanics for uniting Wales under a single crown
-- **Historical Events**: 
+- **Historical Events**:
   - Norman invasion resistance (1067-1093)
   - Welsh uprising of 1136
   - Power struggles between Welsh princes
@@ -86,11 +92,13 @@
 - **Custom Bookmarks**: Enhanced 1066 start with detailed Welsh characters
 
 ### 🎭 Characters & Events
+
 - **Historical Figures**: Accurately portrayed Welsh rulers and nobles
 - **Dynamic Events**: Court intrigue, religious ceremonies, and political maneuvering
 - **Cultural Struggles**: Unique struggle mechanics for Welsh independence
 
 ### 🏰 Territorial Features
+
 - **Custom Titles**: Historically accurate Welsh kingdoms and duchies
 - **Coat of Arms**: Authentic Welsh heraldry and symbols
 - **Geographic Regions**: Properly defined Welsh cultural areas
@@ -100,12 +108,14 @@
 ## 🚀 Installation
 
 ### Steam Workshop (Recommended)
+
 1. Subscribe to the mod on [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=2979045549)
 2. Launch Crusader Kings 3
 3. Enable "Britannia Expansion" in the mod manager
 4. Start a new game to experience the enhanced content
 
 ### Manual Installation
+
 1. Download the latest release from the [GitHub repository](https://github.com/aerh3f01/Britannia_CK3_Revival/releases)
 2. Extract to your CK3 mod folder:
    - **Windows**: `%USERPROFILE%\Documents\Paradox Interactive\Crusader Kings III\mod\`
@@ -118,26 +128,31 @@
 ## 🏴󠁧󠁢󠁷󠁬󠁳󠁿 Welsh Culture Focus
 
 ### Historical Context
+
 The mod focuses on the period from 1066 onwards, capturing the tumultuous era when Welsh kingdoms faced Norman expansion while struggling to maintain their independence and cultural identity.
 
 ### Key Welsh Features
 
 #### 🏛️ Kingdom Formation
+
 - **Reunification Mechanics**: Special decisions to unite fractured Welsh kingdoms
 - **Cultural Requirements**: Authentic prerequisites based on Welsh heritage
 - **Dynamic AI Behavior**: Enhanced AI decision-making for Welsh rulers
 
 #### ⛪ Religious Elements
+
 - **Celtic Christianity**: Unique religious practices and traditions
 - **Saint Veneration**: Historical Welsh saints and their cultural impact
 - **Monastic Traditions**: Welsh-specific religious institutions
 
 #### 🎖️ Court Culture
+
 - **Bards and Poets**: Cultural court positions reflecting Welsh literary tradition
 - **Clan Dynamics**: Family and tribal relationship mechanics
 - **Honor System**: Welsh concepts of honor and hospitality
 
 #### 🗡️ Historical Events
+
 - **Norman Resistance**: Events depicting Welsh resistance to Norman conquest
 - **Inter-Welsh Conflicts**: Realistic portrayal of conflicts between Welsh kingdoms
 - **English Relations**: Complex diplomatic and military interactions with England
@@ -149,13 +164,15 @@ The mod focuses on the period from 1066 onwards, capturing the tumultuous era wh
 For detailed development plans, see our comprehensive [Roadmap](roadmap.md).
 
 ### Current Phase: Welsh Enhancement (v1.x)
+
 - ✅ Basic Welsh kingdom mechanics
 - 🔄 **In Progress**: Enhanced events and decisions
 - 📋 **Planned**: Character refinement and court culture
 
 ### Future Phases
+
 - **Phase 2**: Scottish expansion
-- **Phase 3**: Irish enhancement  
+- **Phase 3**: Irish enhancement
 - **Phase 4**: English refinement
 
 ---
@@ -194,6 +211,7 @@ Britannia Expansion/
 ## 📖 Documentation
 
 ### **Core Documentation**
+
 - **[🗺️ Development Roadmap](roadmap.md)** - Detailed development timeline and feature planning
 - **[🏴󠁧󠁢󠁷󠁬󠁳󠁿 Welsh Culture Guide](WELSH_CULTURE_GUIDE.md)** - Comprehensive guide to Welsh cultural elements
 - **[🏰 Welsh Historical Events](WELSH_HISTORICAL_EVENTS.md)** - Timeline of key events for CK3 implementation (867-1453)
@@ -202,9 +220,10 @@ Britannia Expansion/
 - **[📝 Contributing Guidelines](CONTRIBUTING.md)** - Guidelines for community contributions
 
 ### **Additional Resources**
+
 - **[📋 Changelog](CHANGELOG.md)** - Version history and update tracking
-- **[❓ FAQ](FAQ.md)** - Frequently asked questions *(Coming Soon)*
-- **[🎯 Known Issues](KNOWN_ISSUES.md)** - Current bugs and limitations *(Coming Soon)*
+- **[❓ FAQ](FAQ.md)** - Frequently asked questions _(Coming Soon)_
+- **[🎯 Known Issues](KNOWN_ISSUES.md)** - Current bugs and limitations _(Coming Soon)_
 
 ---
 
@@ -213,16 +232,19 @@ Britannia Expansion/
 We welcome contributions from the community! Here's how you can help:
 
 ### 🐛 Bug Reports
+
 - Use the [GitHub Issues](https://github.com/aerh3f01/Britannia_CK3_Revival/issues) page
 - Include your CK3 version, mod version, and detailed description
 - Attach save files if possible
 
 ### 💡 Feature Suggestions
+
 - Propose new features through GitHub Issues
 - Focus on historical accuracy and gameplay enhancement
 - Provide historical sources when possible
 
 ### 🔧 Code Contributions
+
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
 3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
@@ -230,6 +252,7 @@ We welcome contributions from the community! Here's how you can help:
 5. Open a Pull Request
 
 ### 📚 Historical Research
+
 - Help verify historical accuracy
 - Provide sources for events and characters
 - Suggest authentic medieval Welsh practices
@@ -239,17 +262,20 @@ We welcome contributions from the community! Here's how you can help:
 ## 🔗 Compatibility
 
 ### ✅ Compatible With
-- **CK3 Version**: 1.9.*.*
+
+- **CK3 Version**: 1.9._._
 - **Ironman Mode**: Full compatibility
 - **Achievements**: Most achievements remain available
 - **Other Mods**: Generally compatible with graphics and UI mods
 
 ### ⚠️ Known Issues
+
 - May conflict with other culture overhaul mods
 - Some total conversion mods may cause issues
 - Report compatibility problems via GitHub Issues
 
 ### 🔄 Save Game Compatibility
+
 - **New Saves**: Recommended for full experience
 - **Existing Saves**: Generally compatible, some features may not appear
 - **Mod Updates**: Most updates are save-compatible
@@ -259,17 +285,20 @@ We welcome contributions from the community! Here's how you can help:
 ## 🙏 Acknowledgments
 
 ### Historical Sources
+
 - **Primary Sources**: Welsh chronicles, Brut y Tywysogion, Mabinogion
 - **Academic Works**: Works by John Edward Lloyd, R.R. Davies, and Kari Maund
 - **Archaeological Evidence**: Recent findings on medieval Welsh culture
 
 ### Community
+
 - CK3 Modding Community for tools and resources
 - Welsh History Society for cultural consultation
 - Beta testers and feedback providers
 - Steam Workshop subscribers for ongoing support
 
 ### Technical
+
 - [CK3 Modding Documentation](https://ck3.paradoxwikis.com/Modding)
 - Paradox Interactive for Crusader Kings 3
 - Community modding tools and resources
